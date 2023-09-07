@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Rob McDonald">
+    <meta name="description"
+        content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
+    <title>Avalon Adventures - family-friendly outings on Newfoundland's Avalon Peninsula</title>
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
+    <!-- General site-wide CSS files... -->
+    <link rel="stylesheet" href="css/root-client.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/keep.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <!-- Page=specific CSS... -->
+    <!-- Save @media queries for last... -->
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body class="notes">
+    <header class="header-stick">
+        <div id="collapsed-nav">
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
+            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        </div>
+        <a id="header-logo" href="index.html"></a>
+        <nav id="site-nav">
+            <ul>
+                <li class="adventures">
+                    <a href="adventures.html"><span>Adventures!</span></a>
+                    <ul>
+                        <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
+                                    Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
+                        </li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
+                                    Jigging</span></a></li>
+                    </ul>
+                </li>
+                <li class="about"><a href="about.html"><span>About</span></a></li>
+                <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
+                <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero-static hiking2">
+            <span class="big-text centered mixed-caps standout-text">Project Notes<hr>NEED NEW PIC</span>
+            <span class="citation-watermark"></span>
+        </div>
+        <section class="newspaper-layout">
+            <div class="newspaper-thin">
+                <div class="sticky">
+                    <h4>Local Interest</h4>
+                    <p>The future home of relevant RSS feeds, such as...</p>
+                    <ul>
+                        <li>Weather</li>
+                        <li>Tourism News</li>
+                        <li>Events</li>
+                        <li>Etc.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="newspaper-big">
+                <h4>NOTES GO HERE</h4>
+                <p>Checkboxes reappeared after changes elsewhere.</p>
+                <p>Have JavaScript "lazy load" citations/hrefs? Does this impact accessibility/screen readers?</p>
+                <hr>
+                <section id="fairdealing">
+                    <span class="link-anchor" id="fairdealing"></span>
+                    <h4 class="mixed-caps">Fair Dealing/Use Notice</h4>
+                    <p>"Avalon Adventures" is a fictional company invented by the <a
+                            href="https://murphycentre.ca/career-services/techprep/" target="_blank"
+                            rel="noopener noreferrer external" class="fairuse">Murphy Centre TechPrep program</a> as a
+                        basis for student web development projects. The Avalon Adventures logo and the bulk of the
+                        descriptive text are
+                        the creation and property of Murphy Centre.</p>
+                    <p>My expression of the project contains images and video excerpts independently acquired from the
+                        internet, the use of which has not been specifically authorized by the copyright owners. I
+                        believe the purely educational nature of this project constitutes a fair dealing/use of any such
+                        copyrighted material as provided for in both the <a
+                            href="https://laws-lois.justice.gc.ca/eng/acts/c-42/page-6.html#h-103270" target="_blank"
+                            rel="noopener noreferrer external" class="fairuse">Canadian Copyright Act</a> and in <a
+                            href="https://www.copyright.gov/fair-use/" target="_blank"
+                            rel="noopener noreferrer external" class="fairuse">section 107 of the U.S. Copyright Act of
+                            1976</a>. This material is</p>
+                    <p>Below is an accounting of source images and videos, with links when available, and likely
+                        copyright holders indicated when
+                        possible:</p>
+                    <div class="citations-collapsible">
+                        <input id="video-citations" class="citations-collapsible" type="checkbox" />
+                        <label for="video-citations" class="citations-collapsible-label">Videos...</label>
+                        <div class="citations-collapsible-content">
+                            <p>Little of the video content presented here is in its original form. Most clips have been
+                                edited
+                                (using the <a href="https://www.openshot.org/" target="_blank"
+                                    rel="noopener noreferrer external"><i>OpenShot Video Editor</i></a>) to remove
+                                audio, to highlight content relevant to the business premise, and for length. Some of
+                                the videos as presented are composites from multiple sources.
+                                Files were reduced in size (using <a href="https://handbrake.fr/" target="_blank"
+                                    rel="noopener noreferrer external"><i>Handbrake</i></a>) or resolution to improve
+                                load times.</p>
+                            <p>Click to view the originals.</p>
+                            <div class="album">
+                                <a href="https://www.youtube.com/watch?v=5EfDz1jO5qM" target="_blank"
+                                    rel="noopener noreferrer external"><span
+                                        class="polaroid icebergs-whales media-citation"></span></a>
+                                <a href="https://www.youtube.com/watch?v=BJlHTTQ-3fA" target="_blank"
+                                    rel="noopener noreferrer external"><span
+                                        class="polaroid RMR media-citation"></span></a>
+                                <a href="https://www.youtube.com/watch?v=86mCkMCOHkI" target="_blank"
+                                    rel="noopener noreferrer external"><span
+                                        class="polaroid whale-tales media-citation"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="citations-collapsible">
+                        <input id="hiking-citations" class="citations-collapsible" type="checkbox" />
+                        <label for="hiking-citations" class="citations-collapsible-label"> Hiking-related images From
+                            the
+                            <a href="https://eastcoasttrail.com/" target="_blank" rel="noopener noreferrer external"
+                                class="fairuse">East Coast Trail</a> website...</label>
+                        <div class="citations-collapsible-content">
+                            <p>Unfortunately, individual links aren't possible as these images appear in banners and
+                                slideshows, and have no reliable URL. Use the link above to peruse the site.</p>
+                            <div class="album">
+                                <span class="polaroid hiking2 media-citation"></span>
+                                <span class="polaroid hiking3 media-citation"></span>
+                                <span class="polaroid hiking4 media-citation"></span>
+                                <span class="polaroid hiking5 media-citation"></span>
+                                <span class="polaroid hiking6 media-citation"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="citations-collapsible">
+                        <input id="whale-cod-citations" class="citations-collapsible" type="checkbox" />
+                        <label for="whale-cod-citations" class="citations-collapsible-label">Whales and Cod...</label>
+                        <div class="citations-collapsible-content">
+                            <div class="album">
+                                <a href="https://www.backpackwithbrock.com/newfoundland-canada-road-trip-cod-jigging-kissing-fishing/"
+                                    target="_blank" rel="noopener noreferrer external"><span
+                                        class="polaroid cod-kissing media-citation"></span></a>
+                                <a href="https://www.margareeoutfitters.ca/cod-jigging-tours/" target="_blank"
+                                    rel="noopener noreferrer external"><span
+                                        class="polaroid cod-jigging7 media-citation"></span></a>
+                                <a href="https://www.margareeoutfitters.ca/cod-jigging-tours/" target="_blank"
+                                    rel="noopener noreferrer external"><span
+                                        class="polaroid cod-jigging11 media-citation"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="citations-collapsible">
+                        <input id="staff-citations" class="citations-collapsible" type="checkbox" />
+                        <label for="staff-citations" class="citations-collapsible-label">"Staff
+                            pics"...</label>
+                        <div class="citations-collapsible-content">
+                            <p>The "staff" (assigned by Murphy Centre) are names from <a
+                                    href="https://www.royalroad.com/fiction/26294/he-who-fights-with-monsters"
+                                    target="_blank" rel="noopener noreferrer external" class="fairuse">He Who Fights
+                                    with
+                                    Monsters</a> (Team Biscuit and Rufus' Team). The
+                                images are from a variety of places; click to visit the sources.</p>
+                            <div class="album">
+                                <a href="https://www.deviantart.com/friby/art/Jason-Asano-925374871" target="_blank"
+                                    rel="noopener noreferrer external"><span
+                                        class="polaroid Jason-Asano media-citation"></span></a>
+                                <a href="https://www.pinterest.ca/pin/811773901570938316/" target="_blank"
+                                    rel="noopener noreferrer external"><span
+                                        class="polaroid Gary-Xandier media-citation"></span></a>
+                                <a href="https://he-who-fights-with-monsters.fandom.com/wiki/Neil_Davone"
+                                    target="_blank" rel="noopener noreferrer external"><span
+                                        class="polaroid Neil-Davone media-citation"></span></a>
+                                <a href="https://static.wikia.nocookie.net/he-who-fights-with-monsters/images/9/90/Humphrey_Geller_AI.jpg/revision/latest?cb=20230324102355"
+                                    target="_blank" rel="noopener noreferrer external"><span
+                                        class="polaroid Humphrey-Geller media-citation"></span></a>
+                                <a href="https://www.reddit.com/r/StableDiffusion/comments/zwcklt/comment/jgbzm3p/?utm_source=reddit&utm_medium=web2x&context=3"
+                                    target="_blank" rel="noopener noreferrer external"><span
+                                        class="polaroid Sophie-Wexler media-citation"></span></a>
+                                <a href="https://he-who-fights-with-monsters.fandom.com/wiki/Rufus_Remore"
+                                    target="_blank" rel="noopener noreferrer external"><span
+                                        class="polaroid Rufus-Remore media-citation"></span></a>
+                                <a href="https://www.dailymail.co.uk/news/article-10676691/Multi-millionaire-investment-banker-estranged-wife-lock-horns-High-Court-battle.html"
+                                    target="_blank" rel="noopener noreferrer external"><span
+                                        class="polaroid Clive-Standish media-citation"></span></a>
+                                <a href="https://www.instagram.com/p/CrTmebOunJl/" title="facebook icons"
+                                    target="_blank" rel="noopener noreferrer external"><span
+                                        class="polaroid Belinda-Callahan media-citation"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="citations-collapsible">
+                        <input id="icon-citations" class="citations-collapsible" type="checkbox" />
+                        <label for="icon-citations" class="citations-collapsible-label">Icons...</label>
+                        <div class="citations-collapsible-content">
+                            <ul>
+                                <li><a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons"
+                                        target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link facebook inline-block"></div><span>Facebook icon by Pixel
+                                            perfect - Flaticon</span>
+                                    </a></li>
+                                <li><a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons"
+                                        target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link instagram inline-block"></div><span>Instagram icon by
+                                            Freepik
+                                            - Flaticon</span>
+                                    </a></li>
+                                <li><a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons"
+                                        target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link youtube inline-block"></div><span>Youtube icon by Freepik
+                                            -
+                                            Flaticon</span>
+                                    </a></li>
+                                <li><a href="https://www.flaticon.com/free-icons/camera" title="camera icons"
+                                        target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link camera inline-block"></div><span>Camera icon by Good Ware
+                                            -
+                                            Flaticon</span>
+                                    </a></li>
+                                <li><a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons"
+                                        target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link hamburger inline-block"></div><span>Hamburger icon by See
+                                            Icons - Flaticon</span>
+                                    </a></li>
+                                <li><a href="https://www.flaticon.com/free-icons/close-button"
+                                        title="close button icons" target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link closeX inline-block"></div><span>Close button icon by bsd
+                                            -
+                                            Flaticon</span>
+                                    </a></li>
+                                <li><a href="https://www.flaticon.com/free-icons/scroll" title="scroll icons"
+                                        target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link scroll-arrow inline-block"></div><span>Scroll arrow icon
+                                            by Freepik
+                                            -
+                                            Flaticon</span>
+                                    </a></li>
+<!--                                <li><a href="https://www.cleanpng.com/users/@rayioma.html" title="pause button icon"
+                                        target="_blank" rel="noopener noreferrer external">
+                                        <div class="media-link pause-original inline-block"></div><span>Pause button
+                                            icon by
+                                            rayioma - CleanPNG</span>-->
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="social-media">
+            <div id="footer-land-acknowledgement" class="modal-container">
+                <span>Land Acknowledgement</span>
+                <div class="disappear modal-pop">
+                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as
+                        the ancestral homelands of the
+                        Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island
+                        of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the
+                        Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us,
+                        those who live with us now, and the seven generations to come. As First Peoples have done since
+                        time immemorial, we strive to be responsible stewards of the land and to respect the cultures,
+                        ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past,
+                        we commit ourselves to working in a spirit of truth and reconciliation to make a better future
+                        for all.</p>
+                    <p>Land acknowledgement is just a first step. Visit <a
+                            href="https://nativegov.org/news/beyond-land-acknowledgment-guide/"
+                            aria-label="A link to NativeGov.org. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">NativeGov.org</a> for information on action that
+                        directly supports indigenous nations.</p>
+                    <p class="user-directions">(click anywhere to close)</p>
+                </div>
+            </div>
+            <div id="footer-media-links">
+                <ul class="flexy">
+                    <li>
+                        <a href="https://www.facebook.com/MurphyCentre/"
+                            aria-label="Our Facebook page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link facebook"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/TheMurphyCentre/"
+                            aria-label="Our Instagram page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link instagram"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw"
+                            aria-label="Our YouTube page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link youtube"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer-fair-dealing">
+                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank"
+                    rel="noopener noreferrer external">
+                    Fair Dealing/Use Statement
+                </a>
+            </div>
+        </div>
+        
+        <div id="copyright">
+            <span>Copyright © 2023 Avalon Adventures.</span>
+            <span>All rights reserved.</span>
+            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn"
+                    aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank"
+                    rel="noopener noreferrer external">Jawn</a>.</span>
+        </div>
+    </footer>
+    <!-- loading javascript at the end assures complete page load before any execution -->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

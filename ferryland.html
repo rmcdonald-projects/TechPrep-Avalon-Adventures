@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Rob McDonald">
+    <meta name="description"
+        content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
+    <title>Avalon Adventures - family-friendly outings on Newfoundland's Avalon Peninsula</title>
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
+    <!-- General site-wide CSS files... -->
+    <link rel="stylesheet" href="css/root-client.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/keep.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <!-- Page=specific CSS... -->
+    <!-- Save @media queries for last... -->
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body class="ferryland">
+    <header class="header-stick">
+        <div id="collapsed-nav">
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
+            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        </div>
+        <a id="header-logo" href="index.html"></a>
+        <nav id="site-nav">
+            <ul>
+                <li class="adventures">
+                    <a href="adventures.html"><span>Adventures!</span></a>
+                    <ul>
+                        <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
+                                    Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland
+                                    Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
+                        </li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
+                                    Jigging</span></a></li>
+                    </ul>
+                </li>
+                <li class="about"><a href="about.html"><span>About</span></a></li>
+                <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
+                <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="fixed-background Ferryland-wide-view"></div>
+        <div class="hero-static Ferryland-lighthouse">
+            <span class="big-text centered standout-text milk">NEED TITLE & DIFF PIC</span>
+            <span class="citation-watermark"></span>
+        </div>
+        <div class="one-column">
+            <p>Avalon Adventures offers an exciting family package for visitors to the Avalon Peninsula that includes a
+                visit to the historic Colony of Avalon and a scenic Lighthouse Picnic in Ferryland, Newfoundland and
+                Labrador.</p>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">Colony of Avalon...</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="no-frame Avalon1 is-modal-pic""></span></div>
+                <div class="slides-plus-desc-slide1 no-frame Avalon2 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame Avalon3 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame Avalon4 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc">
+                    <p>The adventure begins with a visit to the Colony of Avalon, a 17th century archeological site that
+                        offers
+                        a glimpse into the early European settlement of Newfoundland. Families can explore the site's
+                        restored
+                        buildings, including a governor's mansion, a church, and a bakery. Visitors can also learn about
+                        the
+                        history and culture of the area through interactive exhibits, costumed interpreters, and guided
+                        tours.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">Ferryland...</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="no-frame Ferryland-approach is-modal-pic""></span></div>
+                <div class="slides-plus-desc-slide1 no-frame Ferryland-lighthouse is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame Ferryland-picnic3 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame Ferryland-picnic1 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc">
+                    <p>After exploring the Colony of Avalon, families will travel to the picturesque town of Ferryland,
+                        where
+                        they will enjoy a scenic Lighthouse Picnic. The picnic takes place at the foot of the historic
+                        Ferryland
+                        Lighthouse, which offers stunning views of the Atlantic Ocean and the rugged coastline. Families
+                        can
+                        relax on the grassy hillside and enjoy a delicious picnic lunch, featuring fresh local
+                        ingredients and
+                        homemade baked goods.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-static Ferryland-picnic2">
+            <span class="big-text centered mixed-caps standout-text">Hungry for History?</span>
+            <span class="citation-watermark"></span>
+        </div>
+        <div class="one-column">
+            <p>This family package includes admission to the Colony of Avalon for 2 adults and 2 children, as well as a
+                guided tour of the site. The package also includes transportation to and from the Colony of Avalon and
+                Ferryland, so families can sit back and enjoy the scenery along the way. The Lighthouse Picnic includes
+                a blanket, a picnic basket filled with a variety of delicious foods, and beverages.</p>
+            <p>Overall, this family package is a great way for families to experience the history and natural beauty of
+                the Avalon Peninsula, while enjoying a delicious picnic lunch along the way.</p>
+            <hr>
+            <P>Price $300 taxes included.</p>
+            <p>Price can be adjusted to add additional party members.</p>
+        </div>
+    </main>
+    <footer>
+        <div id="social-media">
+            <div id="footer-land-acknowledgement" class="modal-container">
+                <span>Land Acknowledgement</span>
+                <div class="disappear modal-pop">
+                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as
+                        the ancestral homelands of the
+                        Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island
+                        of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the
+                        Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us,
+                        those who live with us now, and the seven generations to come. As First Peoples have done since
+                        time immemorial, we strive to be responsible stewards of the land and to respect the cultures,
+                        ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past,
+                        we commit ourselves to working in a spirit of truth and reconciliation to make a better future
+                        for all.</p>
+                    <p>Land acknowledgement is just a first step. Visit <a
+                            href="https://nativegov.org/news/beyond-land-acknowledgment-guide/"
+                            aria-label="A link to NativeGov.org. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">NativeGov.org</a> for information on action that
+                        directly supports indigenous nations.</p>
+                    <p class="user-directions">(click anywhere to close)</p>
+                </div>
+            </div>
+            <div id="footer-media-links">
+                <ul class="flexy">
+                    <li>
+                        <a href="https://www.facebook.com/MurphyCentre/"
+                            aria-label="Our Facebook page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link facebook"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/TheMurphyCentre/"
+                            aria-label="Our Instagram page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link instagram"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw"
+                            aria-label="Our YouTube page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link youtube"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer-fair-dealing">
+                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank"
+                    rel="noopener noreferrer external">
+                    Fair Dealing/Use Statement
+                </a>
+            </div>
+        </div>
+
+        <div id="copyright">
+            <span>Copyright © 2023 Avalon Adventures.</span>
+            <span>All rights reserved.</span>
+            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn"
+                    aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank"
+                    rel="noopener noreferrer external">Jawn</a>.</span>
+        </div>
+    </footer>
+    <!-- loading javascript at the end assures complete page load before any execution -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

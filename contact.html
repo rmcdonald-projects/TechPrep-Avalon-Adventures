@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Rob McDonald">
+    <meta name="description"
+        content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
+    <title>Avalon Adventures - family-friendly outings on Newfoundland's Avalon Peninsula</title>
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
+    <!-- General site-wide CSS files... -->
+    <link rel="stylesheet" href="css/root-client.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/keep.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <!-- Page=specific CSS... -->
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Save @media queries for last... -->
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body class="contact">
+    <header class="header-stick">
+        <div id="collapsed-nav">
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
+            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        </div>
+        <a id="header-logo" href="index.html"></a>
+        <nav id="site-nav">
+            <ul>
+                <li class="adventures">
+                    <a href="adventures.html"><span>Adventures!</span></a>
+                    <ul>
+                        <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
+                                    Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
+                        </li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
+                                    Jigging</span></a></li>
+                    </ul>
+                </li>
+                <li class="about"><a href="about.html"><span>About</span></a></li>
+                <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
+                <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="two-column">
+            <div class="two-column-container">
+                <h2 class="scroll-in"><br>FORMAT FUBAR AFTER CHANGES ELSEWHERE</h2>
+            </div>
+            <div class="two-column-container">
+                <form id="contact" name="contact" method="post">
+                    <span>
+                        <input type="text" name="contactname" id="contactname" data-formkey="Name"
+                            data-nicetext="A name" required minlength="2" maxlength="30" size="30"
+                            placeholder="Your name" aria-label="A required input for your name." />
+                        <label for="contactname">Name</label>
+                    </span>
+                    <span>
+                        <input type="email" name="contactemail" id="contactemail" data-formkey="Email"
+                            data-nicetext="An email" required minlength="7" maxlength="50" size="50" placeholder="Email"
+                            aria-label="A required input for your contact email address." />
+                        <label for="contactemail">Email</label>
+                    </span>
+                    <span>
+                        <input type="tel" name="contactphone" id="contactphone" data-formkey="Phone" minlength="10"
+                            maxlength="50" size="50" placeholder="Phone"
+                            aria-label="An optional input for your contact phone number." />
+                        <label for="contactphone">Phone</label>
+                    </span>
+                    <fieldset id="checkboxfields" name="checkboxfields">
+                        <legend for="checkboxfields">Which package(s) are you keen on?</legend>
+                        <span class="checkboxes">
+                            <input type="checkbox" id="brewerycrawl" name="brewerycrawl" value="Adult Brewery Crawl" />
+                            <label for="brewerycrawl">Adult Brewery Crawl</label>
+                        </span>
+                        <span class="checkboxes">
+                            <input type="checkbox" id="culturepackage" name="culturepackage"
+                                value="Family Culture Package" />
+                            <label for="culturepackage">Family Culture Package</label>
+                        </span>
+                        <span class="checkboxes">
+                            <input type="checkbox" id="ferryland" name="ferryland" value="Family Ferryland Adventure" />
+                            <label for="ferryland">Family Ferryland Adventure</label>
+                        </span>
+                        <span class="checkboxes">
+                            <input type="checkbox" id="hiking" name="hiking" value="Novice East Coast Hiking" />
+                            <label for="hiking">Novice East Coast Hiking</label>
+                        </span>
+                        <span class="checkboxes">
+                            <input type="checkbox" id="whalewatching" name="whalewatching"
+                                value="Whale Watching & Cod Jigging" />
+                            <label for="whalewatching">Whale Watching & Cod Jigging</label>
+                        </span>
+                    </fieldset>
+                    <span>
+                        <textarea name="contactquestion" id="contactquestion" data-formkey="Question"
+                            data-nicetext="A question" required minlength="10" maxlength="500" rows="10" cols="50"
+                            placeholder="Your question here..."
+                            aria-label="A required input for your question."></textarea>
+                        <label for="contactquestion">How can we help you?</label>
+                    </span>
+                    <span class="warning" aria-hidden="true">* indicates required field...</span>
+                    <span>
+                        <input type="button" id="submit" name="submit" value="SUBMIT"
+                            aria-label="A buttton to submit your completed question." />
+                    </span>
+                    <span>
+                        <input type="button" id="reset" name="reset" value="RESET"
+                            aria-label="A buttton to reset your question form." />
+                    </span>
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section id="addresses">
+            <address>
+                <h4>Prince Philip Drive Location</h4>
+                <a href="https://goo.gl/maps/LGhvGQg7cmUkntHn6"
+                    aria-label="A Google Maps link to our address on Prince Phillip Drive in St.John's. Opens in a new tab."
+                    target="_blank" rel="noopener noreferrer external">
+                    <span class="brspace"></span>1 Prince Phillip Drive<br>St. John's, NL A1A 5B2
+                </a>
+                <p aria-label="The contact phone number for our Prince Philip Drive location.">709.579.6606</p>
+            </address>
+            <address>
+                <h4>Torbay Road Location</h4>
+                <a href="https://goo.gl/maps/Gwz98FY4P8yJyHwp6"
+                    aria-label="A Google Maps link to our address on Torbay Road in St.John's. Opens in a new tab."
+                    target="_blank" rel="noopener noreferrer external">
+                    Fall River Plaza<br>320 Torbay Road, Suite 201<br>St. John's, NL A1A 0L3
+                </a>
+                <p aria-label="The contact phone number for our Torbay Road location.">709.753.2830</p>
+            </address>
+        </section>
+    </main>
+    <footer>
+        <div id="social-media">
+            <div id="footer-land-acknowledgement" class="modal-container">
+                <span>Land Acknowledgement</span>
+                <div class="disappear modal-pop">
+                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as
+                        the ancestral homelands of the
+                        Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island
+                        of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the
+                        Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us,
+                        those who live with us now, and the seven generations to come. As First Peoples have done since
+                        time immemorial, we strive to be responsible stewards of the land and to respect the cultures,
+                        ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past,
+                        we commit ourselves to working in a spirit of truth and reconciliation to make a better future
+                        for all.</p>
+                    <p>Land acknowledgement is just a first step. Visit <a
+                            href="https://nativegov.org/news/beyond-land-acknowledgment-guide/"
+                            aria-label="A link to NativeGov.org. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">NativeGov.org</a> for information on action that
+                        directly supports indigenous nations.</p>
+                    <p class="user-directions">(click anywhere to close)</p>
+                </div>
+            </div>
+            <div id="footer-media-links">
+                <ul class="flexy">
+                    <li>
+                        <a href="https://www.facebook.com/MurphyCentre/"
+                            aria-label="Our Facebook page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link facebook"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/TheMurphyCentre/"
+                            aria-label="Our Instagram page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link instagram"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw"
+                            aria-label="Our YouTube page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link youtube"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer-fair-dealing">
+                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank"
+                    rel="noopener noreferrer external">
+                    Fair Dealing/Use Statement
+                </a>
+            </div>
+        </div>
+        <div id="copyright">
+            <span>Copyright © 2023 Avalon Adventures.</span>
+            <span>All rights reserved.</span>
+            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn"
+                    aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank"
+                    rel="noopener noreferrer external">Jawn</a>.</span>
+        </div>
+    </footer>
+    <!-- loading javascript at the end assures complete page load before any execution -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

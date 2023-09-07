@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Rob McDonald">
+    <meta name="description"
+        content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
+    <title>Avalon Adventures - family-friendly outings on Newfoundland's Avalon Peninsula</title>
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
+    <!-- General site-wide CSS files... -->
+    <link rel="stylesheet" href="css/root-client.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/keep.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <!-- Page=specific CSS... -->
+    <!-- Save @media queries for last... -->
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body class="about">
+    <header class="header-stick">
+        <div id="collapsed-nav">
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
+            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        </div>
+        <a id="header-logo" href="index.html"></a>
+        <nav id="site-nav">
+            <ul>
+                <li class="adventures">
+                    <a href="adventures.html"><span>Adventures!</span></a>
+                    <ul>
+                        <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
+                                    Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland
+                                    Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
+                        </li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
+                                    Jigging</span></a></li>
+                    </ul>
+                </li>
+                <li class="about"><a href="about.html"><span>About</span></a></li>
+                <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
+                <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="fixed-background the-Battery"></div>
+        <div class="hero-static St-Johns-harbour">
+            <span class="big-text centered mixed-caps standout-text">About Us</span>
+            <span class="citation-watermark"></span>
+        </div>
+        <section class="one-column">
+            <p>Welcome to <span class="mixed-caps"><strong>Avalon Adventures</strong></span>, your local destination for
+                unforgettable family adventures on the
+                Avalon
+                Peninsula of Newfoundland! We are a team of travel enthusiasts who are passionate about showcasing
+                the
+                beauty and wonder of this incredible region to families from near and far.</p>
+            <p>Our mission is to help families create lifelong memories while exploring the unique culture, history,
+                and
+                natural wonders of the Avalon Peninsula. We believe that travel is a transformative experience that
+                has
+                the power to bring families closer together and create lasting bonds.</p>
+            <p>At Avalon Adventures, we understand the unique needs of families, and we go above and beyond to make
+                sure
+                that every aspect of your trip is enjoyable and stress-free. From carefully selecting
+                family-friendly
+                accommodations to planning activities that are suitable for all ages, we take care of all the
+                details so
+                that you can focus on making memories with your loved ones.</p>
+            <p>Our team of expert guides is dedicated to ensuring that every moment of your adventure is fun, safe,
+                and
+                educational. Whether you're exploring the rugged coastline, discovering the unique flora and fauna
+                of
+                the region, or learning about the history and culture of the local communities, our guides will
+                share
+                their knowledge and expertise to make your experience unforgettable.</p>
+            <p>So, whether you're a local looking to explore the hidden gems of the Avalon Peninsula or a visitor
+                eager
+                to discover all that this region has to offer, let Avalon Adventures help you create the family
+                vacation
+                of a lifetime. <a href="contact.html">Contact us today</a> to start planning your next family
+                adventure on the Avalon Peninsula
+                of
+                Newfoundland!</p>
+        </section>
+        <section id="mission-statement" class="one-column">
+            <h1 class="mixed-caps">Our Mission...</h1>
+            <p>...is to create memorable and immersive experiences that inspire
+                families
+                to connect with nature, each other, and the rich cultural heritage of the Avalon Peninsula. We
+                strive to
+                provide safe, educational, and enjoyable activities that promote environmental stewardship and
+                foster a
+                deeper appreciation for the natural world. Our goal is to be the premier family adventure company on
+                the
+                Avalon Peninsula, providing exceptional customer service and leaving a positive impact on the
+                communities we serve.</p>
+        </section>
+        <section id="vision-statement" class="one-column">
+            <h1 class="mixed-caps">Our Vision...</h1>
+            <p>...is to be the leading family adventure company in Newfoundland,
+                providing
+                unparalleled outdoor experiences that connect families with nature, culture, and each other. We aim
+                to
+                inspire a sense of wonder, curiosity, and appreciation for the natural world, while fostering a
+                community of like-minded adventurers who share our values of environmental stewardship, education,
+                and
+                fun. Through our commitment to excellence, innovation, and sustainability, we strive to create a
+                positive impact on the lives of our guests, employees, and the communities we serve.</p>
+        </section>
+        <div class="blankspace"></div>
+        <div class="hero-static Signal-Hill">
+            <span class="big-text centered mixed-caps standout-text">Meet Our Team</span>
+            <span class="citation-watermark"></span>
+        </div>
+        <section id="staff-bios" class="one-column">
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="chef"></span>
+                <span class="subheader mixed-caps">Chef —<span class="spacebr"></span>Jason Asano</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Jason-Asano" data-polaroid-caption="Crêpes RULE!"
+                            data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <p>Chef <em>Jason Asano</em> is a culinary expert who takes pride in crafting simple yet
+                            delicious
+                            food
+                            using only the freshest and highest quality ingredients. He is particularly passionate
+                            about
+                            creating beautiful and delicious picnic baskets that are perfect for enjoying in the
+                            great
+                            outdoors. Chef Asano's extensive training and experience have equipped him with the
+                            skills
+                            and knowledge needed to create meals that are not only delicious but also visually
+                            stunning.
+                            He believes that food should be enjoyed in a relaxed and informal setting, and that's
+                            why
+                            his specialty lies in creating simple and approachable dishes that everyone can enjoy.
+                            Chef
+                            Asano is excited to bring his passion for simple, delicious food to the customers of
+                            Avalon
+                            Adventures and help them create unforgettable memories during their adventures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="beersafariguide"></span>
+                <span class="subheader mixed-caps">Beer Safari Guide —<span class="spacebr"></span>Gary
+                    Xandier</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Gary-Xandier" data-polaroid-caption="It me!"
+                            data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <p><em>Gary Xandier</em> is a seasoned brewery crawl guide with a passion for craft beer and a
+                            wealth
+                            of
+                            knowledge about the local brewery scene. He is an expert in leading groups on memorable
+                            brewery tours, providing interesting insights into the brewing process and the unique
+                            characteristics of each brewery. With his friendly and outgoing personality, Gary
+                            creates a
+                            fun and engaging atmosphere for everyone to enjoy. Whether you're a beer enthusiast or
+                            just
+                            looking for a great time, Gary is the perfect guide for an unforgettable brewery crawl
+                            experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="wavewhisperer"></span>
+                <span class="subheader mixed-caps">Wave Whisperer —<span class="spacebr"></span>Neil
+                    Davone</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Neil-Davone" data-polaroid-caption="Avast, ye!"
+                            data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <P><em>Captain Neil Davone</em> has been sailing the waters off the coast of Newfoundland for
+                            over 20
+                            years. With a passion for marine life and a deep respect for the ocean, he has become a
+                            knowledgeable and experienced guide for whale watching and cod jigging excursions. With
+                            his
+                            keen eye for spotting marine wildlife and his love for sharing his knowledge with
+                            others,
+                            Captain Jack is the perfect guide for an unforgettable adventure on the waters of
+                            Conception
+                            Bay.</P>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="trailblazer-geller"></span>
+                <span class="subheader mixed-caps">Trailblazer —<span class="spacebr"></span>Humphrey
+                    Geller</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Humphrey-Geller" data-polaroid-caption="It's always Humpday"
+                            data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <p><em>Humphrey Geller</em> is an experienced hiking guide who has been leading groups on the
+                            East Coast Trail for over 10 years. He has a deep passion for the outdoors and a love of
+                            adventure,
+                            which he shares with his clients. Humphrey is known for his extensive knowledge of the
+                            trails and the flora and fauna of the area. His goal is to help his clients connect with
+                            nature and discover the beauty of the East Coast Trail.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="trailblazer-wexler"></span>
+                <span class="subheader mixed-caps">Trailblazer —<span class="spacebr"></span>Sophie
+                    Wexler</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Sophie-Wexler" data-polaroid-caption="Shhh..."
+                            data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <p><em>Sophie Wexler</em> is a skilled hiking guide who has been leading groups on the East
+                            Coast
+                            Trail
+                            for over 5 years. She has a background in environmental science and a deep love for the
+                            natural world. Sophie is passionate about helping people of all ages and abilities
+                            experience the beauty of the outdoors. She is known for her patience, kindness, and
+                            attention to detail, and always goes the extra mile to ensure her clients have a
+                            memorable
+                            and enjoyable hiking experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="funmaster"></span>
+                <span class="subheader mixed-caps">Ferryland Fun Master —<span class="spacebr"></span>Rufus
+                    Remore</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Rufus-Remore" data-polaroid-caption="the fun-meister"
+                            data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <P><em>Rufus Remore</em> is the ultimate fun master in Ferryland, Newfoundland. With years of
+                            experience
+                            in planning and executing exciting adventures for visitors and locals alike, Rufus knows
+                            all
+                            the best spots and hidden gems to make any trip to Ferryland a truly unforgettable
+                            experience.</P>
+                        <p>Rufus is passionate about the outdoors and loves nothing more than sharing his enthusiasm
+                            with others. Whether you're looking to hike scenic trails, catch a glimpse of local
+                            wildlife, or explore the rich history and culture of the area, Rufus has got you
+                            covered.
+                        </p>
+                        <p>With a wealth of knowledge and a warm, friendly demeanor, Rufus is the perfect guide for
+                            anyone looking to experience the best of Ferryland. So if you're ready for an adventure
+                            you'll never forget, let Rufus be your guide!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="facilitator"></span>
+                <span class="subheader mixed-caps">Family Fun Facilitator —<span class="spacebr"></span>Clive
+                    Standish</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Clive-Standish"
+                            data-polaroid-caption="Get that camera away from me" data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <p><em>Clive Standish</em> is a cultural expert and a PhD holder in Newfoundland and Labrador
+                            folklore.
+                            With a passion for sharing his knowledge and experience, he has become an exceptional
+                            guide
+                            for cultural activities in Newfoundland. Clive's unique ability to engage with people of
+                            all
+                            ages, including children, has made him a popular Family Fun Facilitator. His love for
+                            the
+                            rich cultural heritage of Newfoundland and Labrador is contagious, and he is always
+                            eager to
+                            share stories, songs, and traditions with visitors. With Clive as your guide, you can be
+                            assured of a memorable and educational experience that will leave you with a deeper
+                            appreciation for the cultural history of Newfoundland and Labrador.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box" data-add-animation="scroll-in">
+                <span class="link-anchor" id="administrator"></span>
+                <span class="subheader mixed-caps">Administration Ace —<span class="spacebr"></span>Belinda
+                    Callahan</span>
+                <div class="pic-plus-desc">
+                    <div class="pic">
+                        <span class="in-frame polaroid Belinda-Callahan" data-polaroid-caption="Cake, me duckie?"
+                            data-add-animation="dangling"></span>
+                    </div>
+                    <div class="pic-plus-desc-desc ">
+                        <p><em>Belinda Callahan</em>, our Administration Ace extraordinaire! With over a decade of
+                            experience
+                            in
+                            administrative roles, Belinda brings a wealth of knowledge and skill to our team. Her
+                            attention to detail and organizational prowess keep our office running smoothly day in
+                            and
+                            day out.</p>
+                        <p>Belinda has a passion for creating streamlined processes and systems that maximize
+                            efficiency, allowing our team to focus on what they do best. She is a master of
+                            multitasking
+                            and can often be found juggling multiple projects with ease.</p>
+                        <p>In her free time, Belinda loves to read and travel. She is also an avid baker and her
+                            delicious treats are often the highlight of our office gatherings. We are lucky to have
+                            Belinda on our team and appreciate all that she does to keep us organized and on track.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="social-media">
+            <div id="footer-land-acknowledgement" class="modal-container">
+                <span>Land Acknowledgement</span>
+                <div class="disappear modal-pop">
+                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as
+                        the ancestral homelands of the
+                        Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island
+                        of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the
+                        Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us,
+                        those who live with us now, and the seven generations to come. As First Peoples have done since
+                        time immemorial, we strive to be responsible stewards of the land and to respect the cultures,
+                        ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past,
+                        we commit ourselves to working in a spirit of truth and reconciliation to make a better future
+                        for all.</p>
+                    <p>Land acknowledgement is just a first step. Visit <a
+                            href="https://nativegov.org/news/beyond-land-acknowledgment-guide/"
+                            aria-label="A link to NativeGov.org. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">NativeGov.org</a> for information on action that
+                        directly supports indigenous nations.</p>
+                    <p class="user-directions">(click anywhere to close)</p>
+                </div>
+            </div>
+            <div id="footer-media-links">
+                <ul class="flexy">
+                    <li>
+                        <a href="https://www.facebook.com/MurphyCentre/"
+                            aria-label="Our Facebook page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link facebook"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/TheMurphyCentre/"
+                            aria-label="Our Instagram page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link instagram"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw"
+                            aria-label="Our YouTube page. Opens in a new window." target="_blank"
+                            rel="noopener noreferrer external">
+                            <div class="media-link youtube"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer-fair-dealing">
+                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank"
+                    rel="noopener noreferrer external">
+                    Fair Dealing/Use Statement
+                </a>
+            </div>
+        </div>
+        <div id="copyright">
+            <span>Copyright © 2023 Avalon Adventures.</span>
+            <span>All rights reserved.</span>
+            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn"
+                    aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank"
+                    rel="noopener noreferrer external">Jawn</a>.</span>
+        </div>
+    </footer>
+    <!-- loading javascript at the end assures complete page load before any execution -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
