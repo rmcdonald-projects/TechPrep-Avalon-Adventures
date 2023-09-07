@@ -1,0 +1,105 @@
+/*  ---------------------------------------------------
+    Root-level and client-specific styling variables...
+    --------------------------------------------------- */
+
+/*  --------------------------------------------------
+    A note on z-indices...
+    *   the header has an index of 10;
+    *   "modal-pop" elements have an index of 9;
+    *   No other elements should have indices above 8;
+    *   "polaroid" caption text has an index of 2;
+    -------------------------------------------------- */
+
+/*  -------------------------------------------------------------------------------------
+    A note on legibility...
+    A number of settings are based on suggestions from a 2020 Smashing article by Edoardo
+    Cavazza (https://www.smashingmagazine.com/2020/07/css-techniques-legibility/). The
+    defaullt light colour ("linen": #F8F6F3, rgb(248, 246, 243) against the client's
+    preferred dark colour (#292929, rgb(41, 41, 41)) offers a contrast of 13.48:1 (per
+    WebAIM (https://webaim.org/resources/contrastchecker/), well above the minimum 4.5:1
+    recommended. Line-height and some margins are calculated based on "ex" units, and
+    differ by text size. Other settings may be changed/added in the future based on
+    recommendations and site feedback.
+    ------------------------------------------------------------------------------------- */
+
+/*  -------------------------------
+    Client-independent variables...
+    ------------------------------- */
+
+:root {
+    --light-text: #F8F6F3;
+    --light-text-RGB: 248, 246, 243;
+    --slide-duration: 8;
+    --long-transition-duration: 600ms;
+    --short-transition-duration: 300ms;
+    --transition-timing-function: linear; /*cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+    --font-size-normal: 1rem;
+    --line-height-normal: 1rem;
+    --font-size-tiny: calc(var(--font-size-normal) * .5);
+    --font-size-small: calc(var(--font-size-normal) * .875);
+    --font-size-large: 1.5rem;
+    --line-height-large: calc(1ex / 0.37);
+    --font-margin-large: calc(.5ex / 0.37) 0;
+    --font-size-xlarge: calc(var(--font-size-large) * 1.25);
+    --line-height-xlarge: calc(1ex / 0.38);
+    --font-margin-xlarge: calc(.5ex / 0.38) 0;
+    --font-size-huge: calc(var(--font-size-xlarge) * 1.25);
+    --line-height-huge: calc(1ex / 0.42);
+    --font-margin-huge: calc(.5ex / 0.42) 0;
+    --font-size-titanic: calc(var(--font-size-huge) * 1.5);
+    --line-height-titanic: calc(1ex / 0.42);
+    --font-margin-titanic: calc(.5ex / 0.42) 0;
+
+}
+
+/*  -------------------------------------
+    Avalon Adventures (AA) preferences...
+    ------------------------------------- */
+
+:root {
+    --dark-colour: #292929;
+    --dark-colour-RGB: 41, 41, 41;
+    --medium-colour: #1d4286;
+    --medium-colour-RGB: 29, 66, 134;
+    --light-colour: #0097b2;
+    --light-colour-RGB: 0, 151, 178;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+/*  --------------------------------------------
+    Remaining non-variable site-wide settings...
+    -------------------------------------------- */
+
+:root {
+    font-style: normal;
+    text-decoration: none;
+    line-height: calc(3ex + 4px);
+    --dark-text: var(--dark-colour);
+    --dark-text-RGB: var(--dark-colour-RGB);
+    --bg-colour: var(--light-text);
+    --bg-colour-RGB: var(--light-text-RGB);
+    --text-colour: var(--dark-text);
+    --text-colour-RGB: var(--dark-text-RGB);
+    --light-text-shadow: 2px 2px 5px rgba(var(--light-text-RGB), .1), 5px 5px 70px rgba(var(--dark-text-RGB), .2);
+    --dark-text-shadow: 2px 2px 5px rgba(var(--dark-text-RGB), .1), 5px 5px 70px rgba(var(--light-text-RGB), .3);
+    --use-text-shadow: var(--dark-text-shadow);
+    box-sizing: border-box;
+    border-width: 0px;
+    --use-border-image: linear-gradient(to right, var(--bg-colour), var(--medium-colour) 40%, var(--light-colour) 60%, var(--bg-colour)) 5;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: var(--header-height);
+    --main-content-width: 80vw;
+    --main-content-left-margin: calc((98vw - var(--main-content-width)) * .5);
+
+/*	NOTE: the --show-videos boolean is used by JavaScript
+    to disable videos for smaller devices... */
+    --show-videos: 1;
+
+/*  NOTE: variables for @media queries are not currently
+    supported. These are for future consideration... */ 
+    --mobile-width-breakpoint: 600px;
+    --tablet-width-breakpoint: 900px;
+}

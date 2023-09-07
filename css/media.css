@@ -1,0 +1,487 @@
+/*  -------------------------------------------------------------------
+    Image classes:
+
+    When an image is needed in an element (especially as a background),
+    add the appropriate class; other classes refer to the variable when
+    determining what image to paint.
+
+    Image class names should be descriptive. Use upper-camel case ids
+    for proper nouns, lower-case hyphenated ids for everything else.
+
+    Store names in alphabetical order.
+    ------------------------------------------------------------------- */
+
+.Avalon1 {
+	--use-image: url("../images/Avalon1.jpg");
+	--citation-text: "Trip Advisor, Beachwalker4955";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d4131883-Reviews-Colony_of_Avalon-Ferryland_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/4131883/703815555:p/?albumid=101&type=0&category=101";
+}
+
+.Avalon2 {
+	--use-image: url("../images/Avalon2.jpg");
+	--citation-text: "Trip Advisor, Astrokeener";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d4131883-Reviews-Colony_of_Avalon-Ferryland_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/4131883/703815555:p/?albumid=101&type=0&category=101";
+}
+
+.Avalon3 {
+	--use-image: url("../images/Avalon3.jpg");
+	--citation-text: "Trip Advisor, Colony of Avalon";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d648416-Reviews-Ferryland-Ferryland_Newfoundland_Newfoundland_and_Labrador.html";
+}
+
+.Avalon4 {
+	--use-image: url("../images/Avalon4.jpg");
+	--citation-text: "Trip Advisor, GlobeTrotterNL1";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d4131883-Reviews-Colony_of_Avalon-Ferryland_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/4131883/703815555:p/?albumid=101&type=0&category=101";
+}
+
+.Avalon5 {
+	--use-image: url("../images/Avalon5.jpg");
+	--citation-text: "Trip Advisor, Andy Z";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d4131883-Reviews-Colony_of_Avalon-Ferryland_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/4131883/703815555:p/?albumid=101&type=0&category=101";
+}
+
+.baroqueframe1 {
+	--use-frame-image: url("../images/baroque-frame.svg");
+	--citation-text: "Freepik, liligraphie";
+	--citation-full-URL: "https://www.freepik.com/premium-photo/baroque-style-golden-picture-frame_8511515.htm";
+	--use-border-image-slice: 70 90;
+	--use-border-image-width: auto;
+	--use-border-image-outset: 30px;
+	--use-border-image-repeat: round;
+}
+
+.Baccalieu-Trail-beer {
+	--use-image: url("../images/Baccalieu-Trail-beer.jpg");
+	--citation-text: "Baccalieu Trail Brewing Company Facebook page, Baccalieu Trail Brewing";
+	--citation-full-URL: "https://www.facebook.com/baccalieutrailbrewco/photos/pb.100063474854869.-2207520000/2126946104082719/?type=3";
+}
+
+.Bannerman-Brewing-beer {
+	--use-image: url("../images/Bannerman-Brewing-beer.jpg");
+	--citation-text: "RyansBooze.com, D. Patrick Ryan";
+	--citation-full-URL: "https://ryansbooze.com/2019/07/bannerman-brewing-co-thirst-trap-american-pale-ale-at-5-5-abv/";
+}
+
+.Bay-de-Verde-Brewing-beer {
+	--use-image: url("../images/Bay-de-Verde-Brewing-beer.png");
+	--citation-text: "Newfoundland & Labrador Tourism site, NL Tourism";
+	--citation-full-URL: "https://www.newfoundlandlabrador.com/plan-and-book/attractions/36376363";
+}
+
+.beer-and-wood {
+	--use-image: url("../images/beer-and-wood.jpg");
+	--citation-text: "Marinara Market, Marinara Market";
+	--citation-full-URL: "https://www.marinamarket.com/beverages/beer-wine/beer/";
+}
+
+.beer-bg {
+	--use-image: url("../images/beer-bottles5.svg");
+}
+
+.Belinda-Callahan {
+	--use-image: url("../images/Belinda-Callahan.jpg");
+	--citation-text: "Instagram, Sarah Simon-Blum";
+}
+
+.camera {
+	--use-image: url("../images/camera.png");
+	--citation-text: "Flaticon.com, Flaticon/Good Ware";
+}
+
+.Clive-Standish {
+	--use-image: url("../images/Clive-Standish.jpg");
+	--citation-text: "Daily Mail UK, Ewan Galvin/Solent News";
+}
+
+.closeX {
+	--use-image: url("../images/closeX.png");
+	--citation-text: "Flaticon.com, Flaticon/bsd";
+}
+
+.cod-jigging7 {
+	--use-image: url("../images/codjigging07.webp");
+	--citation-text: "Margaree Outfitters, Margaree Outfitters";
+}
+
+.cod-jigging11 {
+	--use-image: url("../images/codjigging11.webp");
+	--citation-text: "Margaree Outfitters, Margaree Outfitters";
+}
+
+.cod-kissing {
+	--use-image: url("../images/cod-kissing.jpg");
+	--citation-text: "Backpack with Brock, Brock";
+}
+
+.Dildo-Brewing-beer {
+	--use-image: url("../images/Dildo-Brewing-beer.jpg");
+	--citation-text: "Suitcase and Heels, Melissa Hogan";
+	--citation-full-URL: "https://suitcaseandheels.com/guide-newfoundland-breweries/";
+}
+
+.facebook {
+	--use-image: url("../images/facebook.png");
+	--citation-text: "Flaticon.com, Flaticon/Pixel Perfect";
+}
+
+.Ferryland-approach {
+	--use-image: url("../images/Ferryland-approach.jpg");
+	--citation-text: "Lighthouse Picnics";
+	--citation-full-URL: "https://lighthousepicnics.ca/about-us/";
+}
+
+.Ferryland-lighthouse {
+	--use-image: url("../images/Ferryland-lighthouse.jpg");
+}
+
+.Ferryland-picnic1 {
+	--use-image: url("../images/Ferryland-picnic1.jpg");
+	--citation-text: "Trip Advisor, StormsEnd";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d660622-Reviews-Lighthouse_Picnics-Ferryland_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/660622/631269001:p/?albumid=-160&type=0&category=-160";
+}
+
+.Ferryland-picnic2 {
+	--use-image: url("../images/Ferryland-picnic2.jpg");
+	--citation-text: "Lighthouse Picnics";
+	--citation-full-URL: "https://lighthousepicnics.ca/about-us/";
+}
+
+.Ferryland-picnic3 {
+	--use-image: url("../images/Ferryland-picnic3.jpg");
+	--citation-text: "Lighthouse Picnics";
+	--citation-full-URL: "https://lighthousepicnics.ca/menu/";
+}
+
+.Ferryland-wide-view {
+	--use-image: url("../images/Ferryland-wide-view.jpg");
+	--citation-text: "Trip Advisor, Trib21";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d648416-Reviews-Ferryland-Ferryland_Newfoundland_Newfoundland_and_Labrador.html";
+}
+
+.Gary-Xandier {
+	--use-image: url("../images/Gary-Xandier.jpg");
+	--citation-text: "Beauty and the Beast 1987, Paramount?";
+}
+
+.hamburger {
+	--use-image: url("../images/hamburger.png");
+	--citation-text: "Flaticon.com, Flaticon/See Icons";
+}
+
+.hiking {
+	--use-image: url("../images/hiking.jpg");
+}
+
+.hiking2 {
+	--use-image: url("../images/hiking2.jpg");
+	--citation-text: "East Coast Trail, Calvin Tong";
+}
+
+.hiking3 {
+	--use-image: url("../images/hiking3.jpg");
+	--citation-text: "East Coast Trail, Greg Locke";
+}
+
+.hiking4 {
+	--use-image: url("../images/hiking4.jpg");
+	--citation-text: "East Coast Trail, Brandon Cooney";
+}
+
+.hiking5 {
+	--use-image: url("../images/hiking5.jpg");
+	--citation-text: "East Coast Trail, Calvin Tong";
+	font-family: 'Akshar', serif;
+}
+
+.hiking6 {
+	--use-image: url("../images/hiking6.jpg");
+	--citation-text: "East Coast Trail, Brandon Cooney";
+}
+
+.hiking-bg {
+	--use-image: url("../images/hiking-bg.jpg");
+	--citation-text: "Newfoundland & Labrador Tourism site, NL Tourism";
+	--citation-full-URL: "https://www.newfoundlandlabrador.com/trip-ideas/travel-stories/signal-hill-national-historic-site";
+}
+
+.hiking-bg2 {
+	--use-image: url("../images/hiking-bg2.jpg");
+	--citation-text: "Hike Bike Travel, Leigh McAdam";
+	--citation-full-URL: "https://hikebiketravel.com/east-coast-trail/";
+}
+
+.Humphrey-Geller {
+	--use-image: url("../images/Humphrey-Geller.jpg");
+	--citation-text: "He Who Fights with Monsters fandom, Uncredited Artist";
+}
+
+.icebergs-whales {
+	--use-image: url("http://i.ytimg.com/vi/5EfDz1jO5qM/maxresdefault.jpg");
+	--citation-text: "Youtube, Northland Discovery Boat Tours";
+}
+
+.instagram {
+	--use-image: url("../images/instagram.png");
+	--citation-text: "Flaticon.com, Flaticon/Freepik";
+}
+
+.Jason-Asano {
+	--use-image: url("../images/Jason-Asano.jpg");
+	--citation-text: "Deviant Art, Friby @ deviantart";
+}
+
+.La-Manche1 {
+	--use-image: url("../images/La-Manche1.jpg");
+	--citation-text: "Hike Bike Travel, Leigh McAdam";
+	--citation-full-URL: "https://hikebiketravel.com/east-coast-trail/";
+}
+
+.La-Manche2 {
+	--use-image: url("../images/La-Manche2.jpg");
+	--citation-text: "Hike Bike Travel, Leigh McAdam";
+	--citation-full-URL: "https://hikebiketravel.com/east-coast-trail/";
+}
+
+.Landwash-Brewery-beer {
+	--use-image: url("../images/Landwash-Brewery-beer.jpg");
+	--citation-text: "Landwash-Brewery Facebook page, Landwash-Brewery";
+	--citation-full-URL: "https://www.facebook.com/photo.php?fbid=734283658307749&set=pb.100051783643176.-2207520000&type=3";
+}
+
+.logo-blue {
+	--use-image: url("../images/logos/Avalon-Adventures.png");
+}
+
+.logo-transparent {
+	--use-image: url("../images/logos/Avalon-Adventures-Transparent.png");
+}
+
+.logo-white {
+	--use-image: url("../images/logos/Avalon-Adventures-Transparent-2.png");
+}
+
+.media-citation {
+	width: 28%;
+	min-width: 15vw;
+}
+
+.Neil-Davone {
+	--use-image: url("../images/Neil-Davone.jpg");
+	--citation-text: "He Who Fights with Monsters fandom, AI-generated";
+}
+
+.Ninepenny-Brewing-beer {
+	--use-image: url("../images/Ninepenny-Brewing-beer.jpg");
+	--citation-text: "Ninepenny-Brewing, Ninepenny-Brewing";
+	--citation-full-URL: "https://ninepennybrewing.ca/";
+}
+
+.Quidi-Vidi-beer {
+	--use-image: url("../images/Quidi-Vidi-beer.jpg");
+	--citation-text: "Suitcase and Heels, Melissa Hogan";
+	--citation-full-URL: "https://suitcaseandheels.com/guide-newfoundland-breweries/";
+}
+
+.RMR {
+	--use-image: url("http://i.ytimg.com/vi/BJlHTTQ-3fA/maxresdefault.jpg");
+	--citation-text: "Youtube, CBC/Mercer Report";
+}
+
+.Rufus-Remore {
+	--use-image: url("../images/Rufus-Remore.webp");
+	--citation-text: "He Who Fights with Monsters fandom, AI-generated";
+}
+
+.scroll-arrow {
+	--use-image: url("../images/scroll-arrow.png");
+	--citation-text: "Flaticon.com, Flaticon/Freepik";
+}
+
+.scroll-arrow-up {
+	--use-image: url("../images/scroll-arrow.png");
+	transform: rotate(180deg);
+	--citation-text: "Flaticon.com, Flaticon/Freepik";
+}
+
+.Signal-Hill {
+	--use-image: url("../images/Signal-Hill.jpg");
+}
+
+.Sophie-Wexler {
+	--use-image: url("../images/Sophie-Wexler.jpg");
+	--citation-text: "Reddit, AI-generated";
+}
+
+.St-Johns {
+	--use-image: url("../images/St-Johns.jpg");
+}
+
+.St-Johns-harbour {
+	--use-image: url("../images/St-Johns-harbour-day.jpg");
+	--citation-text: "douglas.stebila.ca, Douglas Stebila";
+	--citation-full-URL: "https://www.douglas.stebila.ca/pictures/2016-newfoundland/";
+}
+
+.the-Battery {
+	--use-image: url("../images/the-Battery.jpg");
+}
+
+.the-Rooms {
+	--use-image: url("../images/the-Rooms.jpg");
+	--citation-text: "Flickr, Lydon Keating";
+	--citation-full-URL: "https://www.flickr.com/photos/28023748@N07/4921538549/";
+}
+
+.the-Rooms-promo1 {
+	--use-image: url("../images/1_here-we-made-a-home.svg");
+}
+
+.the-Rooms-promo2 {
+	--use-image: url("../images/2_fantastic-finds.svg");
+}
+
+.the-Rooms-promo3 {
+	--use-image: url("../images/3_lighthouse.svg");
+}
+
+.the-Rooms-promo4 {
+	--use-image: url("../images/4_connectionsgallery.svg");
+}
+
+.the-Rooms-promo5 {
+	--use-image: url("../images/5_guided-tours.svg");
+}
+
+.Tinkers-Point2 {
+	--use-image: url("../images/Tinkers-Point2.jpg");
+	--citation-text: "hikingnewfoundland.gerryryall.ca, Gerry Ryall";
+	--citation-full-URL: "http://hikingnewfoundland.gerryryall.ca/tinkers-point-path/#jp-carousel-334";
+}
+
+.Tinkers-Point3 {
+	--use-image: url("../images/Tinkers-Point3.jpg");
+	--citation-text: "hikingnewfoundland.gerryryall.ca, Gerry Ryall";
+	--citation-full-URL: "http://hikingnewfoundland.gerryryall.ca/tinkers-point-path/#jp-carousel-341";
+}
+
+.Tinkers-Point4 {
+	--use-image: url("../images/Tinkers-Point4.jpg");
+	--citation-text: "hikingnewfoundland.gerryryall.ca, Gerry Ryall";
+	--citation-full-URL: "http://hikingnewfoundland.gerryryall.ca/tinkers-point-path/#jp-carousel-352";
+}
+
+.Tinkers-Point5 {
+	--use-image: url("../images/Tinkers-Point5.jpg");
+	--citation-text: "hikingnewfoundland.gerryryall.ca, Gerry Ryall";
+	--citation-full-URL: "http://hikingnewfoundland.gerryryall.ca/tinkers-point-path/#jp-carousel-354";
+}
+
+.Tinkers-Point6 {
+	--use-image: url("../images/Tinkers-Point6.jpg");
+	--citation-text: "https://newfoundsander.wordpress.com/";
+	--citation-full-URL: "https://newfoundsander.wordpress.com/2018/07/11/puffin-watching-from-the-east-coast-trail/";
+}
+
+.Tinkers-Point-Path-map {
+	--use-image: url("../images/Tinkers-Point-Path-map.png");
+	--citation-text: "East Coast Trail, OpenStreetMap";
+	--citation-full-URL: "https://eastcoasttrail.com/choose-a-path/listing/16-tinkers-point-path/";
+}
+
+.Tinkers-Point-trailhead {
+	--use-image: url("../images/Tinkers-Point-trailhead.jpg");
+	--citation-text: "Whale House Guest House";
+	--citation-full-URL: "https://www.whalehouse.ca/blog/tinkers-point-path-east-coast-trail-hike/";
+}
+
+.whale {
+	--use-image: url("../images/whale-breaching.jpg");
+}
+
+.whale-breaching {
+	--use-image: url("../images/whale-breaching.jpg");
+	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
+}
+
+.whale-tales {
+	--use-image: url("http://i.ytimg.com/vi/86mCkMCOHkI/0.jpg");
+	--citation-text: "Youtube, Newfoundland & Labrador Tourism";
+}
+
+.woodframe2 {
+	--use-frame-image: url("../images/woodframe2.png");
+	--citation-text: "Pngtree, 699pic";
+	--citation-full-URL: "https://pngtree.com/freepng/wooden-frame-wood-grain-material_5609881.html";
+	--use-border-image-slice: 70 90;
+	--use-border-image-width: auto;
+	--use-border-image-outset: 30px;
+	--use-border-image-repeat: round;
+}
+
+.Yellowbelly-beer {
+	--use-image: url("../images/Yellowbelly-Brewery-beer.jpg");
+	--citation-text: "Yellowbelly Brewery website, Yellowbelly Brewery";
+	--citation-full-URL: "https://www.yellowbellybrewery.com/wp-content/uploads/2021/07/yellowbelly-brewery-pub-floor.jpg";
+}
+
+.youtube {
+	--use-image: url("../images/youtube.png");
+	--citation-text: "Flaticon.com, Flaticon/riajulislam";
+}
+
+@media screen and (max-width: 600px) {
+
+	.media-citation {
+		width: 90%;
+		min-width: 50vw;
+	}
+
+}
+
+/*  -------------------------------
+    User "dark mode" preferences:
+
+	Change very light/bright images
+	to darker options...
+    ------------------------------- */
+
+@media (prefers-color-scheme: xxxdark) {
+
+	.aurora {
+		--use-image: url("../images/aurora.webp");
+		--citation-text: "Space.com, Adam Woodworth";
+		--citation-full-URL: "https://www.space.com/30175-viking-aurora-northern-lights-photo.html";
+	}
+
+	.Elliston {
+		--use-image: url("../images/elliston-at-night-newfoundland-labrador.jpg");
+		--citation-text: "Canadian Sky";
+		--citation-full-URL: "https://www.canadiansky.ie/newfoundland-and-labrador-holidays/road-tripping-newfoundland-labrador-self-drive-st-johns-to-the-great-northern-peninsula";
+	}
+
+	.Placentia-Bay {
+		--use-image: url("../images/Placentia-Bay-night-sky.webp");
+		--citation-text: "Reddit, NerdMachine";
+		--citation-full-URL: "https://www.reddit.com/r/newfoundland/comments/ad70kb/placentia_bay_night_sky/";
+	}
+
+	.St-Johns-harbour {
+		--use-image: url("../images/St-Johns-harbour-night.jpg");
+		--citation-text: "CBC News, Gene Herzberg";
+		--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/gallery-week-november-30-1.5819766";
+	}
+
+	.Signal-Hill {
+		--use-image: url("../images/Signal-Hill-night.jpg");
+		--citation-text: "Flickr, Rex Montalban Photography";
+		--citation-full-URL: "https://flickr.com/photos/rexmontalban/7123724139";
+	}
+
+	.the-Battery {
+		--use-image: url("../images/the-Battery-night.avif");
+		--citation-text: "CBC, Dan Arsenault";
+		--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/battery-lights-turned-off-1.6728439";
+	}
+
+}

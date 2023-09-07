@@ -1,0 +1,224 @@
+/*-----------------------------
+  Header: site navigation, etc.
+  ----------------------------- */
+
+header {
+  position: fixed !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: var(--header-height);
+  background-color: rgba(var(--bg-colour-RGB), 0.6);
+  transition: background-color var(--short-transition-duration);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.header-stick {
+  background-color: rgba(var(--bg-colour-RGB), 1);
+  box-shadow: 0rem .3rem 1rem .3rem rgba(var(--text-colour-RGB), .1);
+  border-bottom: 3px solid;
+  border-image: var(--use-border-image);
+}
+
+#header-logo {
+  --large-header-logo-multiplier: 2;
+  --small-header-logo-multiplier: .8;
+  --max-logo-height: 4rem;
+  --header-logo-multiplier: var(--large-header-logo-multiplier);
+  --logo-height: calc(min(var(--header-height), var(--max-logo-height)) * var(--header-logo-multiplier));
+  background: url("../images/logos/Avalon-Adventures-Transparent.png"), var(--bg-colour);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  top: .5vh;
+  left: 2vw;
+  /*calc(98vw - var(--logo-height)); */
+  height: var(--logo-height);
+  width: var(--logo-height);
+  text-align: center;
+  transition: all var(--short-transition-duration) linear;
+  /*var(--transition-timing-function);*/
+  border-radius: 50%;
+}
+
+#header-logo:hover {
+  scale: 1.55;
+  top: .25vh;
+  left: 1vw;
+  transform-origin: 5% -10%;
+}
+
+#collapsed-nav {
+  position: fixed;
+  top: calc(var(--header-height) * .5);
+  left: 50%;
+  width: 93vw;
+  translate: -50% -50%;
+  display: none;
+}
+
+#hamburger-menu,
+#scroll-to-top,
+#scroll-to-bottom {
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 6vw;
+  display: block;
+}
+
+#hamburger-menu {
+  grid-area: right-box;
+  justify-self: right;
+}
+
+#scroll-buttons {
+  width: 100%;
+  grid-area: center-box;
+  justify-self: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+#site-nav {
+  position: fixed;
+  top: 50%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  translate: 0% -50%;
+  left: 20vw;
+  text-align: center;
+}
+
+#site-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+#site-nav li {
+  float: left;
+  width: 12vw;
+  min-width: 8rem;
+}
+
+#site-nav a {
+  display: block;
+}
+
+#site-nav li>a:not(:only-child):after {
+  display: inline;
+  content: " \25bc";
+}
+
+#site-nav ul li:hover ul {
+  display: block;
+  animation: scroll-in var(--short-transition-duration);
+}
+
+#site-nav ul ul {
+  display: none;
+  position: absolute;
+  top: calc(var(--header-height) / 2);
+}
+
+#site-nav ul ul li {
+  background-color: var(--bg-colour);
+  position: relative;
+  text-align: left;
+  width: 20rem;
+  padding: .5rem;
+  box-shadow: 1px 1px 3px var(--text-colour);
+}
+
+body.home li.home,
+body.about li.about,
+body.contact li.contact,
+body.notes li.notes,
+body.brewery-crawl li.brewery-crawl,
+body.culture-package li.culture-package,
+body.ferryland li.ferryland,
+body.hiking li.hiking,
+body.whale-watching li.whale-watching {
+  pointer-events: none;
+}
+
+body.home li.home span,
+body.about li.about span,
+body.contact li.contact span,
+body.notes li.notes span,
+body.brewery-crawl li.brewery-crawl span,
+body.culture-package li.culture-package span,
+body.ferryland li.ferryland span,
+body.hiking li.hiking span,
+body.whale-watching li.whale-watching span {
+  color: gray;
+}
+
+/*-------------------------------------------
+	Footer: land acknowledgement, media, etc...
+	------------------------------------------- */
+
+footer {
+  width: 100vw;
+  height: auto;
+  margin-top: 2rem;
+}
+
+#copyright {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 1vw;
+  justify-content: center;
+  align-items: stretch;
+  font-size: var(--font-size-small);
+  margin-bottom: 1vh;
+	backdrop-filter: blur(50px);
+	-webkit-backdrop-filter: blur(50px);
+	border-style: solid;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,.8) 50%, rgba(255,255,255,0)) 1;
+}
+
+#footer-fair-dealing {
+  text-align: left;
+}
+
+#footer-land-acknowledgement {
+  text-align: right;
+}
+
+#footer-media-links,
+#footer-media-links ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#social-media {
+  width: 100%;
+  left: 0;;
+  background-color: rgba(var(--bg-colour-RGB), .9);
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-image: var(--use-border-image);
+}

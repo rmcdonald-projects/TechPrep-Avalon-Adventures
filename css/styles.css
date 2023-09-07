@@ -1,0 +1,440 @@
+/*	Main CSS block... */
+
+/*	-----------
+	Elements...
+	----------- */
+
+html {
+	background-color: var(--bg-colour);
+	color: var(--text-colour);
+	font-size: var(--font-size-normal);
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	text-shadow: var(--use-text-shadow);
+	overflow-wrap: break-word;
+}
+
+body {
+	--header-height: 10vh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus-within,
+a:active {
+	color: currentColor;
+}
+
+a:hover,
+a:focus-within {
+	font-weight: bold;
+}
+
+address {
+	font-style: normal;
+	text-decoration: none;
+	text-align: center;
+}
+
+blockquote {
+	position: relative;
+	border-left: .25rem solid var(--medium-colour);
+	left: -2.25rem;
+	margin-left: 0;
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+	padding-top: .5rem;
+	padding-left: 2rem;
+	font-size: var(--font-size-xlarge);
+	width: 100%;
+}
+
+div,
+p,
+span {
+	background-color: transparent;
+}
+
+fieldset {
+	border-radius: .5vh;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+h1 {
+	position: relative;
+	width: 100%;
+	border-left: .25rem solid var(--medium-colour);
+	margin-left: 0;
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+	padding-top: .5rem;
+	padding-left: 2rem;
+	font-size: var(--font-size-xlarge);
+	font-weight: normal;
+}
+
+h2 {
+	margin: 0;
+	font-size: var(--font-size-huge);
+	line-height: var(--line-height-huge);
+	margin: var(--font-margin-huge);
+	font-weight: bold;
+}
+
+h3 {
+	margin: 0;
+	font-size: var(--font-size-xlarge);
+	line-height: var(--line-height-xlarge);
+	margin: var(--font-margin-xlarge);
+	font-weight: bold;
+	text-decoration: underline;
+	display: inline;
+}
+
+h4 {
+	margin: 0;
+	font-size: var(--font-size-large);
+	line-height: calc(1ex / 0.37);
+	margin: var(--font-margin-large);
+	font-weight: bold;
+}
+
+hr {
+	width: 70%;
+	transform: translate(0%, 35%);
+	color: var(--text-colour);
+}
+
+li {
+	position: relative;
+}
+
+label {
+	display: block;
+}
+
+main {
+	position: relative;
+	display: block;
+	width: var(--main-content-width);
+	margin-left: var(--main-content-left-margin);
+}
+
+p {
+	margin: 0 0 1rem 0;
+}
+
+section {
+	margin-top: 5vh;
+}
+
+ul.links li::after {
+	content: "";
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	left: 0;
+	bottom: -3px;
+	background: var(--text-colour);
+	scale: 0 1;
+	transition: scale var(--short-transition-duration) var(--transition-timing-function);
+}
+
+ul.links li:hover::after,
+ul.links li:focus-within::after {
+	scale: 1 1;
+}
+
+ul {
+	list-style-type: none;
+	position: relative;
+}
+
+video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/*	Split-screen... */
+
+.split-screen {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 5fr 1fr;
+	gap: 0;
+	grid-template-areas: "split-left-top split-right"
+						"split-left-bottom split-right";
+	margin: 0;
+	color: var(--light-text);
+}
+
+.one-two {
+	grid-template-columns: 1fr 2fr;
+}
+
+.split-left,
+.split-left-top,
+.split-left-bottom,
+.split-right,
+.split-right-top,
+.split-right-bottom {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.split-left {
+	grid-area: split-left;
+}
+
+.split-left-top {
+	grid-area: split-left-top;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.split-left-bottom {
+	grid-area: split-left-bottom;
+}
+
+.split-right {
+	grid-area: split-right;
+}
+
+.split-right-top {
+	grid-area: split-right-top;
+}
+
+.split-right-bottom {
+	grid-area: split-right-bottom;
+}
+
+/*	------------
+	Slideshow...
+	------------ */
+
+.slideshow {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--medium-colour);
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: var(--use-image);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*	xxxtransition: all var(--long-transition-duration) var(--transition-timing-function);
+	xxxclip-path: circle(0% at 50% 0%); */
+	animation: calc(var(--long-transition-duration) * 3) cubic-bezier(.25, 1, .30, 1) wipe-out-top-left both;
+}
+
+.slide:nth-of-type(2n) {
+	animation: calc(var(--long-transition-duration) * 3) cubic-bezier(.25, 1, .30, 1) wipe-out-bottom-left both;
+}
+
+.slide:nth-of-type(3n) {
+	animation: calc(var(--long-transition-duration) * 3) cubic-bezier(.25, 1, .30, 1) wipe-out-top-right both;
+}
+
+.slide.active {
+	/*	xxxclip-path: circle(140% at 100% 50%); */
+	animation: calc(var(--long-transition-duration) * 3) cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
+	z-index: 1;
+}
+
+
+.slideshow-nav {
+	grid-area: split-left-bottom;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.slideshow-nav .nav-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--light-text);
+	cursor: pointer;
+	box-shadow: 0 0 3px var(--light-text);
+	transition: .3s ease-in-out;
+	border: solid 1px currentColor;
+}
+
+.slideshow-nav .nav-dot:hover {
+	transform: scale(1.4);
+}
+
+.slideshow-nav .nav-dot.active {
+	background-color: var(--medium-colour);
+}
+
+
+
+
+.slides-plus-desc {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 3fr;
+	grid-template-rows: 2fr 1fr;
+	grid-template-areas: "desc desc desc pic" "slide1 slide2 slide3 pic";
+	column-gap: 3vw;
+}
+
+.slides-plus-desc-slide1 {
+	grid-area: slide1;
+}
+
+.slides-plus-desc-slide2 {
+	grid-area: slide2;
+}
+
+.slides-plus-desc-slide3 {
+	grid-area: slide3;
+}
+
+.detail-box:nth-of-type(2n) .slides-plus-desc,
+.detail-box:nth-of-type(1n) .slides-plus-desc:nth-of-type(2n) {
+	grid-template-columns: 3fr 1fr 1fr 1fr;
+	grid-template-areas: "pic desc desc desc" "pic slide1 slide2 slide3";
+}
+
+
+
+
+
+
+/*	-------------------------------
+	Unused experiments:
+	save for possible future use...
+	------------------------------- */
+
+.experiment-slideshow {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	object-fit: cover;
+}
+
+.experiment-slideshow input {
+	position: absolute;
+	top: 0;
+	left: -9999px;
+}
+
+.experiment-slide-arrow-left,
+.experiment-slide-arrow-right {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	height: 15vh;
+	width: 4vw;
+	backdrop-filter: blur(20px);
+	color: rgba(var(--light-text-RGB), .5);
+	font-size: var(--font-size-titanic);
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.experiment-slide-arrow-left {
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	left: 0;
+}
+
+.experiment-slide-arrow-right {
+	width: 5vw;
+	padding-right: .5rem;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	right: 0;
+}
+
+.experiment-slideshow-nav {
+	position: absolute;
+	bottom: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	backdrop-filter: blur(20px);
+	/*	padding: 1rem 2rem;
+	border-radius: 50%;*/
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2vw;
+	z-index: 2;
+}
+
+.experiment-slide-chooser label {
+	width: max(.5rem, 1vw);
+	height: max(.5rem, 1vw);
+	background-color: rgba(var(--light-text-RGB), .4);
+	border: solid 1px var(--dark-colour);
+	border-radius: 50%;
+}
+
+.experiment-slideshow input[type=radio]:checked+span {
+	display: block;
+	left: 0;
+	opacity: 1;
+}
+
+.experiment-slide-chooser label:hover,
+.experiment-slideshow #slide1:checked~.slide-chooser .slide1,
+.experiment-slideshow #slide2:checked~.slide-chooser .slide2,
+.experiment-slideshow #slide3:checked~.slide-chooser .slide3,
+.experiment-slideshow #slide4:checked~.slide-chooser .slide4,
+.experiment-slideshow #slide5:checked~.slide-chooser .slide5 {
+	background-color: var(--light-text);
+}
+
+.experiment-slide-content {
+	position: relative;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+}
+
+.experiment-slide-content div:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.experiment-slide-content div:nth-child(2) {
+	animation-delay: calc(1s * var(--slide-duration));
+}
+
+.experiment-slide-content div:nth-child(3) {
+	animation-delay: calc(2s * var(--slide-duration));
+}

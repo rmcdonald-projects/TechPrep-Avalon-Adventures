@@ -1,0 +1,49 @@
+/*	Main CSS block... */
+
+input,
+textarea {
+	border-radius: .5vh;
+	padding: min(10px, 1vh) min(10px, 1vw);
+	width: 98%;
+	float: right;
+	font-size: 1rem;
+}
+
+input[type=checkbox] {
+	display: inline;
+	flex-basis: 20%;
+}
+
+input[type=checkbox]+label {
+	display: inline;
+}
+
+input:required+label::after,
+textarea:required+label::after {
+	content: " *";
+}
+
+#addresses {
+	display: flex;
+	flex-flow: row;
+	align-items: start;
+	justify-content: center;
+	gap: 5vw;
+}
+
+#contact {
+	display: flex;
+	flex-flow: column;
+	gap: 2vh;
+}
+
+#contact>span {
+	display: flex;
+	flex-flow: column-reverse;
+}
+
+#contact>span.checkboxes {
+	display: grid;
+	grid-template-columns: 1fr;
+	column-gap: 2vh;
+}
