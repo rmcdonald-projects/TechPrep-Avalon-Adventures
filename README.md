@@ -5,4 +5,4 @@ My expression of the project contains images and video excerpts independently ac
   Canadian Copyright Act (https://laws-lois.justice.gc.ca/eng/acts/c-42/page-6.html#h-103270); and in
   section 107 of the U.S. Copyright Act of 1976 (https://www.copyright.gov/fair-use/)
 
-As I don't own the media or the bulk of the descriptive text, I cannot offer a license, and I ask that none of the media/text be downloaded or copied.
+As I don't own the media or the bulk of the descriptive text, I cannot offer a license, and I ask that none of the media/text be shared/disseminated or used for licensed purposes.
