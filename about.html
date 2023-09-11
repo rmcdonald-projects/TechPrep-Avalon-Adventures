@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -24,40 +23,34 @@
 
 <body class="about">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
                         <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
-                                    Package</span></a></li>
-                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland
-                                    Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
-                        </li>
-                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
-                                    Jigging</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <main>
         <div class="fixed-background the-Battery"></div>
         <div class="hero-static St-Johns-harbour">
-            <span class="big-text centered mixed-caps standout-text">About Us</span>
+            <span class="big-text mixed-caps standout-text centered">About Us</span>
             <span class="citation-watermark"></span>
         </div>
         <section class="one-column">
@@ -122,7 +115,7 @@
         </section>
         <div class="blankspace"></div>
         <div class="hero-static Signal-Hill">
-            <span class="big-text centered mixed-caps standout-text">Meet Our Team</span>
+            <span class="big-text mixed-caps standout-text centered">Meet Our Team</span>
             <span class="citation-watermark"></span>
         </div>
         <section id="staff-bios" class="one-column">
@@ -190,7 +183,7 @@
                             data-add-animation="dangling"></span>
                     </div>
                     <div class="pic-plus-desc-desc ">
-                        <P><em>Captain Neil Davone</em> has been sailing the waters off the coast of Newfoundland for
+                        <p><em>Captain Neil Davone</em> has been sailing the waters off the coast of Newfoundland for
                             over 20
                             years. With a passion for marine life and a deep respect for the ocean, he has become a
                             knowledgeable and experienced guide for whale watching and cod jigging excursions. With
@@ -199,7 +192,7 @@
                             others,
                             Captain Jack is the perfect guide for an unforgettable adventure on the waters of
                             Conception
-                            Bay.</P>
+                            Bay.</p>
                     </div>
                 </div>
             </div>
@@ -254,12 +247,12 @@
                             data-add-animation="dangling"></span>
                     </div>
                     <div class="pic-plus-desc-desc ">
-                        <P><em>Rufus Remore</em> is the ultimate fun master in Ferryland, Newfoundland. With years of
+                        <p><em>Rufus Remore</em> is the ultimate fun master in Ferryland, Newfoundland. With years of
                             experience
                             in planning and executing exciting adventures for visitors and locals alike, Rufus knows
                             all
                             the best spots and hidden gems to make any trip to Ferryland a truly unforgettable
-                            experience.</P>
+                            experience.</p>
                         <p>Rufus is passionate about the outdoors and loves nothing more than sharing his enthusiasm
                             with others. Whether you're looking to hike scenic trails, catch a glimpse of local
                             wildlife, or explore the rich history and culture of the area, Rufus has got you

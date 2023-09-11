@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -24,16 +23,9 @@
 
 <body class="whale-watching">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
@@ -51,81 +43,101 @@
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <div class="true-hero">
-        <div class="hero-novideo whale-breaching"></div>
-        <video class="hero-video" playsinline autoplay muted controls controlsList="nodownload"
-            poster="video/whale_watching_poster.png">
+        <div class="hero-novideo whale-cod-poster"></div>
+        <video class="hero-video" playsinline autoplay muted controls controlsList="nodownload">
             <source src="video/whale-cod.mp4" type="video/mp4">
             <h2 class="scroll-in mixed-caps standout-text">Your browser doesn't support HTML5 video!</h2>
         </video>
         <div class="hero-overlay">
             <div class="hero-splash">
-                <h2 class="scroll-in mixed-caps standout-text">Get your adventure on!</h2>
+                <h2 class="scroll-in mixed-caps standout-text">Need text and new image</h2>
             </div>
         </div>
     </div>
     <main>
-        <div class="fixed-background whale"></div>
-        <section class="one-column">
+        <div class="fixed-background whale-breaching"></div>
+        <!--        <div class="hero-static the-Rooms">
+            <span class="big-text mixed-caps standout-text centered">NEED TITLE</span>
+            <span class="citation-watermark"></span>
+        </div>-->
+        <div class="one-column">
             <p>Join us for a thrilling family/group activity that combines the excitement of whale watching with the
                 traditional Newfoundland pastime of cod jigging!</p>
-            <div class="detail-box" data-add-animation="scroll-in">
-                <span class="subheader mixed-caps">Whale-watching!</span>
-                <div class="pic-plus-desc">
-                    <div class="pic">
-                        <span class="in-frame polaroid whale-breaching" data-polaroid-caption="Caption me!"
-                            data-add-animation="dangling"></span>
-                    </div>
-                    <div class="pic-plus-desc-desc ">
-                        <p>We'll start our adventure with a scenic boat ride along the beautiful coastline of Conception
-                            Bay, where
-                            we'll have the chance to spot majestic whales breaching and blowing. Our experienced guide
-                            will
-                            provide
-                            interesting facts about these incredible creatures and their behaviour in the wild.</p>
-                    </div>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">Whale-watching!</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="in-frame polaroid whale-slide4 is-modal-pic"
+                        data-polaroid-caption="Meditation and water are wedded forever..."
+                        data-add-animation="dangling"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame whale-slide1 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame whale-slide2 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame whale-slide3 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc">
+                    <p>We'll start our adventure with a scenic boat ride along the beautiful coastline of Conception
+                        Bay, where
+                        we'll have the chance to spot majestic whales breaching and blowing. Our experienced guide
+                        will
+                        provide
+                        interesting facts about these incredible creatures and their behaviour in the wild.
+                    </p>
                 </div>
             </div>
-            <div class="detail-box" data-add-animation="scroll-in">
-                <span class="subheader mixed-caps">Cod Jigging!</span>
-                <div class="pic-plus-desc">
-                    <div class="pic">
-                        <span class="in-frame polaroid cod-jigging11" data-polaroid-caption="Catchphrase!"
-                            data-add-animation="dangling"></span>
-                    </div>
-                    <div class="pic-plus-desc-desc ">
-                        <p>Once we've had our fill of whale watching, we'll head to a prime fishing spot where we'll try
-                            our hand at
-                            cod jigging. Our guide will provide all the necessary equipment and teach us the techniques
-                            needed to
-                            catch our own fresh cod. It's a hands-on experience that's sure to create lasting memories.
-                        </p>
-                    </div>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">Cod Jigging!</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-jigging11 is-modal-pic"
+                        data-polaroid-caption="I caught this many!" data-add-animation="dangling"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame cod-slide1 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame cod-slide2 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame cod-slide3 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc">
+                    <p>Once we've had our fill of whale watching, we'll head to a prime fishing spot where we'll try
+                        our hand at
+                        cod jigging. Our guide will provide all the necessary equipment and teach us the techniques
+                        needed to
+                        catch our own fresh cod. It's a hands-on experience that's sure to create lasting memories.
+                    </p>
                 </div>
             </div>
-            <div class="detail-box" data-add-animation="scroll-in">
-                <span class="subheader mixed-caps">Bon Appétit!</span>
-                <div class="pic-plus-desc">
-                    <div class="pic">
-                        <span class="in-frame polaroid cod-kissing" data-polaroid-caption="Say something funny!"
-                            data-add-animation="dangling"></span>
-                    </div>
-                    <div class="pic-plus-desc-desc ">
-                        <p>After a successful day on the water, we'll bring our catch back to shore and enjoy a
-                            delicious seafood
-                            feast, cooked to perfection by <a href="about.html#chef">Chef Asano</a>. It's the perfect way to cap off an
-                            unforgettable day spent
-                            exploring the natural wonders of Newfoundland.</p>
-                    </div>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">Bon Appétit!</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-kissing is-modal-pic"
+                        data-polaroid-caption="Look: I'm Irish!" data-add-animation="dangling"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame cod-meal-slide1 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame cod-meal-slide2 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame cod-meal-slide3 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc ">
+                    <p>After a successful day on the water, we'll bring our catch back to shore and enjoy a
+                        delicious seafood
+                        feast, cooked to perfection by <a href="about.html#chef">Chef Asano</a>. It's the perfect
+                        way to cap off an
+                        unforgettable day spent
+                        exploring the natural wonders of Newfoundland.
+                    </p>
                 </div>
             </div>
-            <hr>
-            <P>Price $125+tax per adult, $60 per child 12 and under.</P>
-            <p>For group rates contact our <a href="about.html#wavewhisperer">Wave Whisperer, Neil
+        </div>
+        <div class="hero-static midpage cod-interstitial">
+            <span class="big-text mixed-caps standout-text centered">Need stoggin'?<br>Get coddin'!</span>
+            <span class="citation-watermark"></span>
+        </div>
+        <div class="one-column">
+            <p class="price">$125+tax per adult, $60 per child 12 and under.<span class="spacebr"></span>For group rates, contact our <a href="about.html#wavewhisperer">Wave Whisperer, Neil
                     Davone</a>.</p>
-        </section>
+            <h2>Need outro and image;<br>Re-edit video to cut 4+ seconds</h2>
+        </div>
     </main>
     <footer>
         <div id="social-media">
@@ -182,7 +194,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div id="copyright">
             <span>Copyright © 2023 Avalon Adventures.</span>
             <span>All rights reserved.</span>

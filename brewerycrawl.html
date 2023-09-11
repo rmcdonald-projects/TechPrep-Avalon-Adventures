@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -24,40 +23,34 @@
 
 <body class="brewery-crawl">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
                         <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
-                                    Package</span></a></li>
-                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland
-                                    Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
-                        </li>
-                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
-                                    Jigging</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <main>
         <div class="fixed-background beer-and-wood"></div>
-        <div class="hero-static Quidi-Vidi-beer">
-            <span class="big-text centered mixed-caps standout-text">NEED TITLE & DIFF PIC</span>
+        <div class="hero-static clink">
+            <span class="big-text mixed-caps standout-text centered">NEED TITLE</span>
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
@@ -196,8 +189,8 @@
                 </div>
             </div>
         </div>
-        <div class="hero-static beer-bg">
-            <span class="big-text centered mixed-caps standout-text">Book Today!</span>
+        <div class="hero-static midpage beer-bg">
+            <span class="big-text mixed-caps standout-text centered">Book Today!</span>
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
@@ -207,11 +200,12 @@
             <p>As part of this package, we provide transportation to and from each brewery, light refreshments, and a
                 knowledgeable guide to enhance your experience. Our tours are perfect for groups of friends, couples,
                 and solo travelers looking to experience the best of Newfoundland and Labrador's craft beer scene.</p>
-            <P>Come discover the vibrant and growing craft beer culture on the Avalon Peninsula with Avalon Adventures.
+            <p>Come discover the vibrant and growing craft beer culture on the Avalon Peninsula with Avalon Adventures.
             </p>
             <hr>
-            <p>Price $175+tax per person (price includes one sampler beer at each brewery). Adults (19+) only.</p>
+            <p class="price">$175+tax per person (price includes one sampler beer at each brewery). Adults (19+) only.</p>
             <p>For group rates contact our Beer Safari Guide <a href="about.html#beersafariguide">Gary Xandier</a>.</p>
+            <h2>Need outro and image</h2>
         </div>
     </main>
     <footer>

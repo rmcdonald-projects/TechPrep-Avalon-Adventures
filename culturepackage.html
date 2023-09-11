@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -24,60 +23,101 @@
 
 <body class="culture-package">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
                         <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
-                                    Package</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
                         <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
-                        </li>
-                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
-                                    Jigging</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <main>
-        <div class="true-hero whale-breaching">
-            <div class="hero-overlay">
-                <div class="hero-splash">
-                    <h2 class="scroll-in mixed-caps standout-text">Get your adventure on!</h2>
-                </div>
-            </div>
+        <div class="fixed-background culture-package-bg"></div>
+        <div class="hero-static the-Rooms">
+            <span class="big-text mixed-caps standout-text centered">NEED TITLE</span>
+            <span class="citation-watermark"></span>
         </div>
-        <section class="one-column">
+        <div class="one-column">
             <p>Avalon Adventures offers an exciting family package for visitors to St. John's that includes visits to
                 The Rooms and the Johnson Geo Centre, as well as a delicious picnic lunch to feed the family of 4. This
                 package is designed for families with 2 adults and 2 children who are 12 years old or younger.</p>
-            <p>The adventure begins with a visit to The Rooms, where families can explore the rich culture and history
-                of Newfoundland and Labrador. With three floors of exhibits, galleries, and interactive displays, there
-                is something for everyone to enjoy. Children can learn about the province's natural environment,
-                discover the art and music of Newfoundland and Labrador, and even play with traditional toys and games.
-            </p>
-            <p>Next, families will head over to the Johnson Geo Centre, where they will discover the fascinating geology
-                of Newfoundland and Labrador. The centre features interactive exhibits and multimedia displays that
-                allow visitors to explore the history of the Earth and the geological forces that have shaped the
-                region. Children can enjoy hands-on activities and games that teach them about rocks, minerals, and
-                fossils.</p>
-            <p>After a morning of exploration and discovery, families will enjoy a delicious picnic lunch that will be
-                provided by Avalon Adventures. The picnic will include a variety of sandwiches, snacks, fruits, and
-                drinks that will be sure to satisfy everyone's appetite.</p>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">The Rooms...</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="no-frame the-Rooms-slide1 is-modal-pic"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame the-Rooms-slide2 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame the-Rooms-slide3 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame the-Rooms-slide4 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc">
+                    <p>The adventure begins with a visit to The Rooms, where families can explore the rich culture and
+                        history
+                        of Newfoundland and Labrador. With three floors of exhibits, galleries, and interactive
+                        displays, there
+                        is something for everyone to enjoy. Children can learn about the province's natural environment,
+                        discover the art and music of Newfoundland and Labrador, and even play with traditional toys and
+                        games.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">Johnson Geo Centre...</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="no-frame Johnson-Geo-Centre-slide1 is-modal-pic"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame Johnson-Geo-Centre-slide2 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame Johnson-Geo-Centre-slide3 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame Johnson-Geo-Centre-slide4 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc">
+                    <p>Next, families will head over to the Johnson Geo Centre, where they will discover the fascinating
+                        geology
+                        of Newfoundland and Labrador. The centre features interactive exhibits and multimedia displays
+                        that
+                        allow visitors to explore the history of the Earth and the geological forces that have shaped
+                        the
+                        region. Children can enjoy hands-on activities and games that teach them about rocks, minerals,
+                        and
+                        fossils.</p>
+                </div>
+            </div>
+        </div>
+        <div class="detail-box one-column">
+            <span class="subheader mixed-caps">Picnic!</span>
+            <div class="slides-plus-desc" data-add-animation="scroll-in">
+                <div class="slides-plus-desc-pic"><span class="no-frame culture-picnic-slide1 is-modal-pic"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame culture-picnic-slide2 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame culture-picnic-slide3 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame culture-picnic-slide4 is-modal-pic"></div>
+                <div class="slides-plus-desc-desc">
+                    <p>After a morning of exploration and discovery, families will enjoy a delicious picnic lunch that
+                        will be
+                        provided by Avalon Adventures. The picnic will include a variety of sandwiches, snacks, fruits,
+                        and
+                        drinks that will be sure to satisfy everyone's appetite.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-static midpage Johnson-Geo-Centre">
+            <span class="big-text mixed-caps standout-text centered">NEED INTERSTITIAL TEXT</span>
+            <span class="citation-watermark"></span>
+        </div>
+        <div class="one-column">
             <p>This family package includes admission to both The Rooms and the Johnson Geo Centre for 2 adults and 2
                 children, as well as a guided tour of both facilities. The package also includes transportation to and
                 from the attractions, so families can sit back and relax while enjoying the stunning views of St. John's
@@ -85,9 +125,9 @@
             <p>Overall, this family package is a great way for families to spend quality time together while learning
                 about the rich culture and history of Newfoundland and Labrador, and enjoying a delicious picnic lunch
                 along the way.</p>
-            <P>Price $135 taxes included.</P>
-            <p>Price can be adjusted to add additional party members.</p>
-        </section>
+            <p class="price">$135, taxes included.<span class="spacebr"></span>Price can be adjusted to add additional party members.</p>
+            <h2>Need outro and image</h2>
+        </div>
     </main>
     <footer>
         <div id="social-media">
@@ -144,7 +184,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div id="copyright">
             <span>Copyright © 2023 Avalon Adventures.</span>
             <span>All rights reserved.</span>

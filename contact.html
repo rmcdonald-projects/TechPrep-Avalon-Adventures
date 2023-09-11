@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -25,16 +24,9 @@
 
 <body class="contact">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
@@ -52,53 +44,64 @@
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <main>
+        <div class="fixed-background St-Johns-bg"></div>
+        <div class="hero-static mailboxes">
+            <span class="big-text mixed-caps standout-text centered">We'd love to hear from you!</span>
+            <span class="citation-watermark"></span>
+        </div>
         <section class="two-column">
             <div class="two-column-container">
-                <h2 class="scroll-in"><br>FORMAT FUBAR AFTER CHANGES ELSEWHERE</h2>
+                <h2 class="scroll-in mixed-caps">Add CTA and images</h2>
             </div>
             <div class="two-column-container">
                 <form id="contact" name="contact" method="post">
                     <span>
                         <input type="text" name="contactname" id="contactname" data-formkey="Name"
                             data-nicetext="A name" required minlength="2" maxlength="30" size="30"
-                            placeholder="Your name" aria-label="A required input for your name." />
+                            placeholder="Enter your name" aria-label="A required input for your name." />
                         <label for="contactname">Name</label>
                     </span>
                     <span>
                         <input type="email" name="contactemail" id="contactemail" data-formkey="Email"
-                            data-nicetext="An email" required minlength="7" maxlength="50" size="50" placeholder="Email"
-                            aria-label="A required input for your contact email address." />
+                            data-nicetext="An email" required minlength="7" maxlength="50" size="50"
+                            placeholder="Enter an email"
+                            aria-label="A required input for your conradiotact email address." />
                         <label for="contactemail">Email</label>
                     </span>
                     <span>
                         <input type="tel" name="contactphone" id="contactphone" data-formkey="Phone" minlength="10"
-                            maxlength="50" size="50" placeholder="Phone"
+                            maxlength="50" size="50" placeholder="Enter your phone"
                             aria-label="An optional input for your contact phone number." />
                         <label for="contactphone">Phone</label>
                     </span>
                     <fieldset id="checkboxfields" name="checkboxfields">
                         <legend for="checkboxfields">Which package(s) are you keen on?</legend>
-                        <span class="checkboxes">
+                        <span class="contact-checkboxes">
                             <input type="checkbox" id="brewerycrawl" name="brewerycrawl" value="Adult Brewery Crawl" />
                             <label for="brewerycrawl">Adult Brewery Crawl</label>
                         </span>
-                        <span class="checkboxes">
+                        <span class="contact-checkboxes">
                             <input type="checkbox" id="culturepackage" name="culturepackage"
                                 value="Family Culture Package" />
                             <label for="culturepackage">Family Culture Package</label>
                         </span>
-                        <span class="checkboxes">
+                        <span class="contact-checkboxes">
                             <input type="checkbox" id="ferryland" name="ferryland" value="Family Ferryland Adventure" />
                             <label for="ferryland">Family Ferryland Adventure</label>
                         </span>
-                        <span class="checkboxes">
+                        <span class="contact-checkboxes">
                             <input type="checkbox" id="hiking" name="hiking" value="Novice East Coast Hiking" />
                             <label for="hiking">Novice East Coast Hiking</label>
                         </span>
-                        <span class="checkboxes">
+                        <span class="contact-checkboxes">
                             <input type="checkbox" id="whalewatching" name="whalewatching"
                                 value="Whale Watching & Cod Jigging" />
                             <label for="whalewatching">Whale Watching & Cod Jigging</label>
@@ -113,34 +116,43 @@
                     </span>
                     <span class="warning" aria-hidden="true">* indicates required field...</span>
                     <span>
-                        <input type="button" id="submit" name="submit" value="SUBMIT"
-                            aria-label="A buttton to submit your completed question." />
+                        <button id="submit" name="submit" type="button"
+                            aria-label="A buttton to submit your completed question.">
+                            <p id="submit-text">Say YES to Adventure!</p>
+                        </button>
                     </span>
                     <span>
-                        <input type="button" id="reset" name="reset" value="RESET"
-                            aria-label="A buttton to reset your question form." />
+                        <button id="reset" name="reset" type="reset"
+                            aria-label="A buttton to reset your question form.">
+                            <p>Start again?</p>
+                        </button>
                     </span>
                 </form>
             </div>
         </section>
         <hr>
-        <section id="addresses">
+        <section id="addresses" class="full-bg-colour">
             <address>
                 <h4>Prince Philip Drive Location</h4>
-                <a href="https://goo.gl/maps/LGhvGQg7cmUkntHn6"
-                    aria-label="A Google Maps link to our address on Prince Phillip Drive in St.John's. Opens in a new tab."
-                    target="_blank" rel="noopener noreferrer external">
-                    <span class="brspace"></span>1 Prince Phillip Drive<br>St. John's, NL A1A 5B2
-                </a>
+                <div>
+                    <a href="https://goo.gl/maps/LGhvGQg7cmUkntHn6"
+                        aria-label="A Google Maps link to our address on Prince Phillip Drive in St.John's. Opens in a new tab."
+                        target="_blank" rel="noopener noreferrer external">
+                        <span class="brspace"></span>1 Prince Phillip Drive<br>St. John's, NL A1A 5B2
+                    </a>
+                </div>
+                <div class="spacebr"></div>
                 <p aria-label="The contact phone number for our Prince Philip Drive location.">709.579.6606</p>
             </address>
             <address>
                 <h4>Torbay Road Location</h4>
-                <a href="https://goo.gl/maps/Gwz98FY4P8yJyHwp6"
-                    aria-label="A Google Maps link to our address on Torbay Road in St.John's. Opens in a new tab."
-                    target="_blank" rel="noopener noreferrer external">
-                    Fall River Plaza<br>320 Torbay Road, Suite 201<br>St. John's, NL A1A 0L3
-                </a>
+                <div>
+                    <a href="https://goo.gl/maps/Gwz98FY4P8yJyHwp6"
+                        aria-label="A Google Maps link to our address on Torbay Road in St.John's. Opens in a new tab."
+                        target="_blank" rel="noopener noreferrer external">
+                        Fall River Plaza<br>320 Torbay Road, Suite 201<br>St. John's, NL A1A 0L3
+                    </a>
+                </div>
                 <p aria-label="The contact phone number for our Torbay Road location.">709.753.2830</p>
             </address>
         </section>

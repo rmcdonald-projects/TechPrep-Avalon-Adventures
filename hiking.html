@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -25,39 +24,33 @@
 
 <body class="hiking">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
                         <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
-                                    Package</span></a></li>
-                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland
-                                    Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
-                        </li>
-                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
-                                    Jigging</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
-    <div class="fixed-background hiking-bg"></div>
+    <div class="fixed-background hiking3"></div>
     <div class="hero-static hiking-bg2">
-        <span class="big-text centered standout-text milk">got boots?</span>
+        <span class="big-text standout-text centered milk">got boots?</span>
         <span class="citation-watermark"></span>
     </div>
     <main>
@@ -71,7 +64,7 @@
                 <div class="slides-plus-desc-pic"><span class="no-frame Tinkers-Point-trailhead is-modal-pic"></span></div>
                 <div class="slides-plus-desc-slide1 no-frame Tinkers-Point2 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide2 no-frame Tinkers-Point5 is-modal-pic"></div>
-                <div class="slides-plus-desc-slide3 no-frame Tinkers-Point5 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame Tinkers-Point1 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
                     <p>On day one, you'll start your adventure on the Tinkers Point Path route, which takes
                         you from the charming community of Mobile to the scenic Tors Cove.</p>
@@ -95,10 +88,10 @@
         <div class="detail-box one-column">
             <span class="subheader mixed-caps">Day Two...</span>
             <div class="slides-plus-desc" data-add-animation="scroll-in">
-                <div class="slides-plus-desc-pic"><span class="no-frame Tinkers-Point-trailhead is-modal-pic"></span></div>
-                <div class="slides-plus-desc-slide1 no-frame Tinkers-Point2 is-modal-pic"></div>
-                <div class="slides-plus-desc-slide2 no-frame Tinkers-Point5 is-modal-pic"></div>
-                <div class="slides-plus-desc-slide3 no-frame Tinkers-Point5 is-modal-pic"></div>
+                <div class="slides-plus-desc-pic"><span class="no-frame La-Manche7 is-modal-pic"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame La-Manche6 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame La-Manche4 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame La-Manche8 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
                     <p>On day two, you'll tackle the La Manche Village Path route, which takes you from Tors Cove to the
                         historic La Manche Village. This hike is slightly longer than the previous day, at approximately
@@ -110,8 +103,8 @@
             <div class="slides-plus-desc" data-add-animation="scroll-in">
                 <div class="slides-plus-desc-pic"><span class="no-frame hiking5 is-modal-pic"></span></div>
                 <div class="slides-plus-desc-slide1 no-frame La-Manche2 is-modal-pic"></div>
-                <div class="slides-plus-desc-slide2 no-frame Tinkers-Point5 is-modal-pic"></div>
-                <div class="slides-plus-desc-slide3 no-frame Tinkers-Point5 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame La-Manche3 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide3 no-frame La-Manche5 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
                     <p>Along the way, you'll cross over beautiful suspension bridges and pass by crystal-clear streams
                         and waterfalls.</p>
@@ -120,9 +113,9 @@
         </div>
         <div class="detail-box one-column">
             <div class="slides-plus-desc" data-add-animation="scroll-in">
-                <div class="slides-plus-desc-pic"><span class="no-frame Tinkers-Point-trailhead is-modal-pic"></span></div>
-                <div class="slides-plus-desc-slide1 no-frame Tinkers-Point2 is-modal-pic"></div>
-                <div class="slides-plus-desc-slide2 no-frame Tinkers-Point5 is-modal-pic"></div>
+                <div class="slides-plus-desc-pic"><span class="no-frame La-Manche10 is-modal-pic"></span></div>
+                <div class="slides-plus-desc-slide1 no-frame La-Manche9 is-modal-pic"></div>
+                <div class="slides-plus-desc-slide2 no-frame La-Manche11 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame La-Manche1 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
                     <p>At the end of the trail,
@@ -131,8 +124,8 @@
                 </div>
             </div>
         </div>
-        <div class="hero-static hiking">
-            <span class="big-text centered mixed-caps standout-text">Join Us Today!<br>NEED DIFF PIC</span>
+        <div class="hero-static midpage hiking-boots">
+            <span class="big-text mixed-caps standout-text centered">Join Us Today!</span>
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
@@ -141,8 +134,8 @@
                 snacks will also be provided, so you can refuel and recharge while taking in the breathtaking
                 views of Newfoundland's stunning landscape.</p>
             <hr>
-            <P>Price $250 taxes included.</P>
-            <p>Price can be adjusted to add additional party members.</p>
+            <p class="price">$250, taxes included.<span class="spacebr"></span>Price can be adjusted to add additional party members.</p>
+            <h2>Need outro and image</h2>
         </div>
     </main>
     <footer>

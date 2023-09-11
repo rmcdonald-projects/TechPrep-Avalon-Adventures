@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -24,16 +23,9 @@
 
 <body class="notes">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
@@ -51,14 +43,20 @@
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <main>
-        <div class="hero-static hiking2">
-            <span class="big-text centered mixed-caps standout-text">Project Notes<hr>NEED NEW PIC</span>
+        <div class="fixed-background fishbg"></div>
+        <div class="hero-static fishhead">
+            <span class="big-text mixed-caps standout-text centered">Project Notes</span>
             <span class="citation-watermark"></span>
         </div>
-        <section class="newspaper-layout">
+        <div class="newspaper-layout">
             <div class="newspaper-thin">
                 <div class="sticky">
                     <h4>Local Interest</h4>
@@ -72,43 +70,70 @@
                 </div>
             </div>
             <div class="newspaper-big">
-                <h4>NOTES GO HERE</h4>
-                <p>Checkboxes reappeared after changes elsewhere.</p>
-                <p>Have JavaScript "lazy load" citations/hrefs? Does this impact accessibility/screen readers?</p>
+                <h4>What's all this, then?</h4>
+                <p>A personal statement/bio and notes on project historydevelopment will go here.</p>
                 <hr>
-                <section id="fairdealing">
+                <h4>KANBAN TO-DO</h4>
+                <p>Check contact form email logic/address</p>
+                <p>Add proper main page text</p>
+                <p>Dark mode/light mode toggle</p>
+                <p>Ken Burns transitions/changes in page-top heroes, including fades and panning; requires at least
+                    2 more images per hero (does this replace videos?)</p>
+                <p>Compile complete list of image citations</p>
+                <p>Introduce more interesting transitions</p>
+                <p>Have JavaScript do polaroid caption refinement upon visibility?</p>
+                <p>Have JavaScript auto-populate citation hrefs? Does this impact accessibility/screen readers?</p>
+                <p>Replace image SPANs with IMG tags? Impact on accessibility? Impact on formatting?</p>
+                <p>Correct and complete ARIA data</p>
+                <p>RSS feeds</p>
+                <p>Add smooth "unrolling" transition to citation sections</p>
+                <p>Do more to integrate client colours</p>
+                <p>Remove unused files from github</p>
+                <p>Clean up JS</p>
+                <hr>
+                <div id="fairdealing">
                     <span class="link-anchor" id="fairdealing"></span>
                     <h4 class="mixed-caps">Fair Dealing/Use Notice</h4>
                     <p>"Avalon Adventures" is a fictional company invented by the <a
                             href="https://murphycentre.ca/career-services/techprep/" target="_blank"
-                            rel="noopener noreferrer external" class="fairuse">Murphy Centre TechPrep program</a> as a
+                            rel="noopener noreferrer external" class="fairuse">Murphy Centre TechPrep program</a> as
+                        a
                         basis for student web development projects. The Avalon Adventures logo and the bulk of the
                         descriptive text are
                         the creation and property of Murphy Centre.</p>
-                    <p>My expression of the project contains images and video excerpts independently acquired from the
+                    <p>My expression of the project contains images and video excerpts independently acquired from
+                        the
                         internet, the use of which has not been specifically authorized by the copyright owners. I
-                        believe the purely educational nature of this project constitutes a fair dealing/use of any such
+                        believe the purely educational nature of this project constitutes a fair dealing/use of any
+                        such
                         copyrighted material as provided for in both the <a
                             href="https://laws-lois.justice.gc.ca/eng/acts/c-42/page-6.html#h-103270" target="_blank"
-                            rel="noopener noreferrer external" class="fairuse">Canadian Copyright Act</a> and in <a
-                            href="https://www.copyright.gov/fair-use/" target="_blank"
-                            rel="noopener noreferrer external" class="fairuse">section 107 of the U.S. Copyright Act of
-                            1976</a>. This material is</p>
+                            rel="noopener noreferrer external" class="fairuse">Canadian Copyright
+                            Act</a> and in <a href="https://www.copyright.gov/fair-use/" target="_blank"
+                            rel="noopener noreferrer external" class="fairuse">section 107 of the U.S. Copyright Act
+                            of
+                            1976</a>. As the bulk of this material is not mine, I'm unable to offer a license
+                        through github.</p>
                     <p>Below is an accounting of source images and videos, with links when available, and likely
                         copyright holders indicated when
                         possible:</p>
                     <div class="citations-collapsible">
-                        <input id="video-citations" class="citations-collapsible" type="checkbox" />
-                        <label for="video-citations" class="citations-collapsible-label">Videos...</label>
+                        <span class="link-anchor" id="video-citations-block"></span>
+                        <input id="video-citations" class="citations-collapsible" name="citation-radio" type="checkbox" />
+                        <label for="video-citations">Videos...</label>
                         <div class="citations-collapsible-content">
-                            <p>Little of the video content presented here is in its original form. Most clips have been
+                            <br>
+                            <p>Little of the video content presented here is in its original form. Most clips have
+                                been
                                 edited
                                 (using the <a href="https://www.openshot.org/" target="_blank"
                                     rel="noopener noreferrer external"><i>OpenShot Video Editor</i></a>) to remove
-                                audio, to highlight content relevant to the business premise, and for length. Some of
+                                audio, to highlight content relevant to the business premise, and for length. Some
+                                of
                                 the videos as presented are composites from multiple sources.
                                 Files were reduced in size (using <a href="https://handbrake.fr/" target="_blank"
-                                    rel="noopener noreferrer external"><i>Handbrake</i></a>) or resolution to improve
+                                    rel="noopener noreferrer external"><i>Handbrake</i></a>) and/or resolution to
+                                improve
                                 load times.</p>
                             <p>Click to view the originals.</p>
                             <div class="album">
@@ -125,12 +150,13 @@
                         </div>
                     </div>
                     <div class="citations-collapsible">
-                        <input id="hiking-citations" class="citations-collapsible" type="checkbox" />
-                        <label for="hiking-citations" class="citations-collapsible-label"> Hiking-related images From
-                            the
+                        <span class="link-anchor" id="hiking-citations-block"></span>
+                        <input id="hiking-citations" class="citations-collapsible" name="citation-radio" type="checkbox" />
+                        <label for="hiking-citations"> Hiking-related images From the
                             <a href="https://eastcoasttrail.com/" target="_blank" rel="noopener noreferrer external"
                                 class="fairuse">East Coast Trail</a> website...</label>
                         <div class="citations-collapsible-content">
+                            <br>
                             <p>Unfortunately, individual links aren't possible as these images appear in banners and
                                 slideshows, and have no reliable URL. Use the link above to peruse the site.</p>
                             <div class="album">
@@ -143,9 +169,11 @@
                         </div>
                     </div>
                     <div class="citations-collapsible">
-                        <input id="whale-cod-citations" class="citations-collapsible" type="checkbox" />
-                        <label for="whale-cod-citations" class="citations-collapsible-label">Whales and Cod...</label>
+                        <span class="link-anchor" id="whale-cod-citations-block"></span>
+                        <input id="whale-cod-citations" class="citations-collapsible" name="citation-radio" type="checkbox" />
+                        <label for="whale-cod-citations">Whales and Cod...</label>
                         <div class="citations-collapsible-content">
+                            <br>
                             <div class="album">
                                 <a href="https://www.backpackwithbrock.com/newfoundland-canada-road-trip-cod-jigging-kissing-fishing/"
                                     target="_blank" rel="noopener noreferrer external"><span
@@ -160,10 +188,12 @@
                         </div>
                     </div>
                     <div class="citations-collapsible">
-                        <input id="staff-citations" class="citations-collapsible" type="checkbox" />
-                        <label for="staff-citations" class="citations-collapsible-label">"Staff
+                        <span class="link-anchor" id="staff-citations-block"></span>
+                        <input id="staff-citations" class="citations-collapsible" name="citation-radio" type="checkbox" />
+                        <label for="staff-citations">"Staff
                             pics"...</label>
                         <div class="citations-collapsible-content">
+                            <br>
                             <p>The "staff" (assigned by Murphy Centre) are names from <a
                                     href="https://www.royalroad.com/fiction/26294/he-who-fights-with-monsters"
                                     target="_blank" rel="noopener noreferrer external" class="fairuse">He Who Fights
@@ -199,63 +229,80 @@
                         </div>
                     </div>
                     <div class="citations-collapsible">
-                        <input id="icon-citations" class="citations-collapsible" type="checkbox" />
-                        <label for="icon-citations" class="citations-collapsible-label">Icons...</label>
+                        <span class="link-anchor" id="icon-citations-block"></span>
+                        <input id="icon-citations" class="citations-collapsible" name="citation-radio" type="checkbox" />
+                        <label for="icon-citations">Icons...</label>
                         <div class="citations-collapsible-content">
+                            <br>
                             <ul>
-                                <li><a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons"
+                                <li><a href="https://www.flaticon.com/free-icon/facebook_733603" title="facebook icons"
                                         target="_blank" rel="noopener noreferrer external">
-                                        <div class="media-link facebook inline-block"></div><span>Facebook icon by Pixel
+                                        <div class="media-link facebook inline-block"></div><span>Facebook icon by
+                                            Pixel
                                             perfect - Flaticon</span>
-                                    </a></li>
-                                <li><a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons"
+                                    </a>
+                                </li>
+                                <li><a href="https://www.flaticon.com/free-icon/instagram_1384015" title="instagram icons"
                                         target="_blank" rel="noopener noreferrer external">
                                         <div class="media-link instagram inline-block"></div><span>Instagram icon by
                                             Freepik
                                             - Flaticon</span>
-                                    </a></li>
-                                <li><a href="https://www.flaticon.com/free-icons/youtube" title="youtube icons"
+                                    </a>
+                                </li>
+                                <li><a href="https://www.flaticon.com/free-icon/youtube_4494467" title="youtube icons"
                                         target="_blank" rel="noopener noreferrer external">
-                                        <div class="media-link youtube inline-block"></div><span>Youtube icon by Freepik
+                                        <div class="media-link youtube inline-block"></div><span>Youtube icon by
+                                            Riajulislam
                                             -
                                             Flaticon</span>
-                                    </a></li>
-                                <li><a href="https://www.flaticon.com/free-icons/camera" title="camera icons"
+                                    </a>
+                                </li>
+                                <li><a href="https://www.flaticon.com/free-icon/camera_685655?term=camera&page=1&position=2&origin=tag&related_id=685655" title="camera icons"
                                         target="_blank" rel="noopener noreferrer external">
-                                        <div class="media-link camera inline-block"></div><span>Camera icon by Good Ware
+                                        <div class="media-link camera inline-block"></div><span>Camera icon by Good
+                                            Ware
                                             -
                                             Flaticon</span>
-                                    </a></li>
-                                <li><a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons"
+                                    </a>
+                                </li>
+                                <li><a href="https://www.flaticon.com/free-icon/menus_10486773" title="hamburger icons"
                                         target="_blank" rel="noopener noreferrer external">
-                                        <div class="media-link hamburger inline-block"></div><span>Hamburger icon by See
+                                        <div class="media-link hamburger inline-block"></div><span>Hamburger icon by
+                                            See
                                             Icons - Flaticon</span>
-                                    </a></li>
-                                <li><a href="https://www.flaticon.com/free-icons/close-button"
+                                    </a>
+                                </li>
+                                <li><a href="https://www.flaticon.com/free-icon/cross_8867444?term=close+button&page=1&position=22&origin=tag&related_id=8867444"
                                         title="close button icons" target="_blank" rel="noopener noreferrer external">
-                                        <div class="media-link closeX inline-block"></div><span>Close button icon by bsd
+                                        <div class="media-link closeX inline-block"></div><span>Close button icon by
+                                            bsd
                                             -
                                             Flaticon</span>
-                                    </a></li>
-                                <li><a href="https://www.flaticon.com/free-icons/scroll" title="scroll icons"
+                                    </a>
+                                </li>
+                                <li><a href="https://www.flaticon.com/free-icon/scroll-down-arrow_2117" title="scroll icons"
                                         target="_blank" rel="noopener noreferrer external">
-                                        <div class="media-link scroll-arrow inline-block"></div><span>Scroll arrow icon
+                                        <div class="media-link scroll-arrow inline-block"></div><span>Scroll arrow
+                                            icon
                                             by Freepik
                                             -
                                             Flaticon</span>
-                                    </a></li>
-<!--                                <li><a href="https://www.cleanpng.com/users/@rayioma.html" title="pause button icon"
-                                        target="_blank" rel="noopener noreferrer external">
-                                        <div class="media-link pause-original inline-block"></div><span>Pause button
-                                            icon by
-                                            rayioma - CleanPNG</span>-->
-                                    </a></li>
-                            </ul>
+                                    </a>
+                                </li>
+                                <li><a href="https://www.vecteezy.com/vector-art/12097626-cute-blue-whale-jumping-humpback-happy-isolated-cartoon-animal-illustration-flat-style-sticker-icon-design-premium-logo-vector-mascot-character" title="scroll icons"
+                                    target="_blank" rel="noopener noreferrer external">
+                                    <div class="media-link-big happy-whale inline-block"></div><span>Jumping whale
+                                        by Nawaz Sharif
+                                        -
+                                        Vecteezy</span>
+                                </a>
+                            </li>
+                         </ul>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <div id="social-media">
@@ -312,7 +359,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div id="copyright">
             <span>Copyright © 2023 Avalon Adventures.</span>
             <span>All rights reserved.</span>

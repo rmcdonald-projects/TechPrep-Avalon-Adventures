@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -24,40 +23,34 @@
 
 <body class="ferryland">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
                         <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
-                                    Package</span></a></li>
-                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland
-                                    Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
-                        </li>
-                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
-                                    Jigging</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <main>
         <div class="fixed-background Ferryland-wide-view"></div>
         <div class="hero-static Ferryland-lighthouse">
-            <span class="big-text centered standout-text milk">NEED TITLE & DIFF PIC</span>
+            <span class="big-text mixed-caps standout-text centered">Hungry for History?</span>
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
@@ -89,7 +82,7 @@
             <span class="subheader mixed-caps">Ferryland...</span>
             <div class="slides-plus-desc" data-add-animation="scroll-in">
                 <div class="slides-plus-desc-pic"><span class="no-frame Ferryland-approach is-modal-pic""></span></div>
-                <div class="slides-plus-desc-slide1 no-frame Ferryland-lighthouse is-modal-pic"></div>
+                <div class="slides-plus-desc-slide1 no-frame Ferryland-iceberg is-modal-pic"></div>
                 <div class="slides-plus-desc-slide2 no-frame Ferryland-picnic3 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame Ferryland-picnic1 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
@@ -105,8 +98,8 @@
                 </div>
             </div>
         </div>
-        <div class="hero-static Ferryland-picnic2">
-            <span class="big-text centered mixed-caps standout-text">Hungry for History?</span>
+        <div class="hero-static midpage Ferryland-picnic">
+            <span class="big-text mixed-caps standout-text centered">Gutfounded?</span>
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
@@ -117,8 +110,8 @@
             <p>Overall, this family package is a great way for families to experience the history and natural beauty of
                 the Avalon Peninsula, while enjoying a delicious picnic lunch along the way.</p>
             <hr>
-            <P>Price $300 taxes included.</p>
-            <p>Price can be adjusted to add additional party members.</p>
+            <p class="price">$300, taxes included.<span class="spacebr"></span>Price can be adjusted to add additional party members.</p>
+            <h2>Need outro and image</h2>
         </div>
     </main>
     <footer>

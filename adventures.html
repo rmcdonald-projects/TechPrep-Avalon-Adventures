@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/root-client.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/keep.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <!-- Page=specific CSS... -->
@@ -24,42 +23,37 @@
 
 <body class="adventures">
     <header class="header-stick">
-        <div id="collapsed-nav">
-            <div id="scroll-buttons">
-                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
-                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
-            </div>
-            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
         <a id="header-logo" href="index.html"></a>
         <nav id="site-nav">
-            <ul>
+            <ul id="main-nav">
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
                         <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
-                                    Package</span></a></li>
-                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland
-                                    Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
-                        </li>
-                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
-                                    Jigging</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
                 <li class="contact"><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="notes"><a href="notes.html"><span>Read Me!</span></a></li>
             </ul>
+            <div id="scroll-buttons">
+                <button id="scroll-to-bottom" class="scroll-arrow media-link" onclick="scrollToBottom()"></button>
+                <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
+            </div>
         </nav>
+        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
     </header>
     <div class="true-hero">
         <div class="full-viewport">
             <div class="slideshow">
                 <div class="split-screen">
                     <div class="split-left-top">
-                        <span class="mixed-caps standout-text">NEED TEXT, LINKS, TRANSITION EFFECTS</span>
+                        <span class="mixed-caps standout-text centered">NEED TEXT, LINKS on both sides;<br>Thematic, COHERENT TRANSITION EFFECTS;<br>
+                        Correct mobile version;<br>Eliminate first transtion on page load</span>
                     </div>
                     <div class="slideshow-nav split-left-bottom">
                         <div class="nav-dot active"></div>
@@ -69,13 +63,13 @@
                         <div class="nav-dot"></div>
                     </div>
                 <div class="split-right">
-                        <div class="slide whale">
+                        <div class="slide whale-breaching">
                             <div class="centered">
                                 <span class="mixed-caps standout-text">Whale-watching!</span>
                             </div>
                             <span class="citation-watermark"></span>
                         </div>
-                        <div class="slide Quidi-Vidi-beer">
+                        <div class="slide clink">
                             <div class="centered">
                                 <span class="mixed-caps standout-text">Pub Crawl!</span>
                             </div>
@@ -93,7 +87,7 @@
                             </div>
                             <span class="citation-watermark"></span>
                         </div>
-                        <div class="slide hiking">
+                        <div class="slide hiking-bg2">
                             <div class="centered">
                                 <span class="mixed-caps standout-text">Hiking!</span>
                             </div>
