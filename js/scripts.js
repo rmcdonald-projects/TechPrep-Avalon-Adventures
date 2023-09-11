@@ -14,17 +14,17 @@ const videos = document.querySelectorAll(`video`);
 const videoOverlays = document.querySelectorAll(`.hero-overlay`);
 const scrollDownButton = document.getElementById(`scroll-to-bottom`);
 const scrollUpButton = document.getElementById(`scroll-to-top`);
-const RSSFeeds = document.querySelectorAll(`.rss-feed`);
 const animatedElements = document.querySelectorAll(`[data-add-animation]`);
+const accordians = document.querySelectorAll(`.citations-collapsible input[type="checkbox"]`);
+const sliderBtns = document.querySelectorAll(`.nav-dot`);
+const slides = document.querySelectorAll(`div.slide`);
+const slideshowDiv = document.querySelector(`.slideshow`);
+const defaultSlideSpeed = 8; //    seconds per slide...
 
 
 /*  ----------------
     Slideshow logic:
     ---------------- */
-const sliderBtns = document.querySelectorAll(`.nav-dot`);
-const slides = document.querySelectorAll(`div.slide`);
-const slideshowDiv = document.querySelector(`.slideshow`);
-const defaultSlideSpeed = 8; //    seconds per slide...
 let slideSpeed = defaultSlideSpeed, slideActive = 0, activeInterval = false;
 let sliderNav = function (activateSlide, userClick = false) {
     if (activeInterval) { clearTimeout(activeInterval); }
@@ -82,28 +82,31 @@ window.onload = (event) => {
 
 modalPics.forEach(elem => {
     elem.addEventListener(`click`, (event) => {
-        let x = document.getElementById(`temp-cite`);
+        let x = document.getElementById(`temp-span`);
         if (x) { x.remove(); }
-        if (elem.classList.contains(`fullscreen`)) {
-            elem.classList.remove(`fullscreen`);
-            document.body.style.overflowY = `scroll`;
+        if (elem.classList.contains(`is-fullscreen`)) {
+            elem.classList.remove(`is-fullscreen`);
+            document.body.classList.remove(`noscroll`);
         } else {
+            let fsSpan = document.createElement(`span`);
+            fsSpan.id = `temp-span`;
+            fsSpan.classList.add(`fullscreen`);
             let cite = document.createElement(`span`);
-            cite.id = `temp-cite`;
             cite.classList.add(`citation-watermark`);
-            cite.style.zIndex = '11';
-            elem.appendChild(cite);
-            let fsError = toggleFullscreen(elem);
+            fsSpan.appendChild(cite);
+            elem.appendChild(fsSpan);
+            elem.classList.add(`is-fullscreen`);
+            let fsError = toggleFullscreen(fsSpan);
             if (fsError) {
-                elem.classList.add(`fullscreen`);
-                document.body.style.overflowY = `hidden`;
+                document.body.classList.add(`noscroll`);
             }
         }
     });
 });
+
 document.addEventListener(`fullscreenchange`, (event) => {
     if (!document.fullscreenElement) {
-        let x = document.getElementById(`temp-cite`);
+        let x = document.getElementById(`temp-span`);
         if (x) { x.remove(); }
     }
 });
@@ -124,19 +127,32 @@ modals.forEach(elem => {
                     fs = Math.min(fs, maxFontSize);
                     useModal.style.fontSize = fs + `px`;
                     useModal.classList.remove(`disappear`);
-                    document.body.style.overflowY = `hidden`;
+                    document.body.classList.add(`noscroll`);
                 } else {
                     useModal.classList.add(`disappear`);
-                    document.body.style.overflowY = `scroll`;
+                    document.body.classList.remove(`noscroll`);
                 }
             }
         });
     }
 });
 
+//  Accordians...
+accordians.forEach(elem => {
+    elem.addEventListener(`click`, (event) => {
+        accordians.forEach(unCheck => {
+            if (unCheck.id != event.target.id) { unCheck.checked = false; }
+        })
+        let hrefTarg = event.target.id + `-block`;
+        if (document.getElementById(hrefTarg)) {
+            document.location.href = `#` + hrefTarg;
+        }
+    })
+})
+
 //  Video play/pause on click of overlay...
 videos.forEach(elem => {
-    //  Remove controls embedded in the HTML in case JavaScript is disabled...
+    //  Remove controls that were embedded in the HTML in case JavaScript was disabled...
     elem.removeAttribute(`controls`);
 });
 videoOverlays.forEach(elem => {
@@ -152,30 +168,12 @@ videoOverlays.forEach(elem => {
 //  "Polaroid" image resizing...
 const polWatcher = new ResizeObserver((entries) => {
     for (let entry of entries) {
-        polaroidSetSize(entry.target);
+        if (entry.target.offsetParent) {
+            polaroidSetSize(entry.target);
+        }
     }
 });
 pols.forEach(elem => polWatcher.observe(elem));
-
-/*  RSS feeds...    */
-const URLPattern = /(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?\/[a-zA-Z0-9]{2,}|((https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)|(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})?/g;
-RSSFeeds.forEach(elem => {
-    let feedURL = elem.dataset.feedURL || false;
-    if (feedURL && feedURL.match(URLPattern)) {
-        let fontColour = getComputedStyle(elem).getPropertyValue(`color`);
-        let fontFamily = getComputedStyle(elem).getPropertyValue(`font-family`);
-        let fontSize = getComputedStyle(elem).getPropertyValue(`font-size`);
-        let bgColour = getComputedStyle(elem).getPropertyValue(`background-color`);
-        console.log(fontColour, fontFamily, fontSize, bgColour);
-        //  Third-party service to create and return an RSS widget from a specified URL...
-        let srcURL = `https://p3k.org/rss/main.js?align=initial&amp;boxFillColor=%23${bgColour}&amp;compact=false&amp;fontFace=${fontSize}%20${fontFamily}&amp;frameColor=%23${fontColour}&amp;headless=false&amp;height=&amp;linkColor=%23${fontColour}&amp;maxItems=2&amp;radius=5&amp;showXmlButton=false&amp;textColor=%23${fontColour}&amp;titleBarColor=${bgColour}&amp;titleBarTextColor=${fontColour}&amp;url=${feedURL}`;
-        /*  For future development...
-            fetch(srcURL)
-                .then(response => response.text())
-                .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-                .then(data => console.log(data)); */
-    }
-});
 
 /*  Scrolling...    */
 /*  To prevent an overload of scroll events (or infinite recursive loops), the
@@ -219,8 +217,7 @@ const pauseObserver = new IntersectionObserver((entries, observer) => {
                 toggleSlideshowPause(intersectVisible);
             }
         }
-    }
-    );
+    });
 }, { threshold: videoThreshold });
 
 videos.forEach(element => {
@@ -268,10 +265,12 @@ formInputs.forEach(elem => {
 if (formInputs[0]) {
     //  The form submit event...
     document.querySelector(`#contact #submit`).addEventListener(`click`, (event) => validateForm(), false);
-    //  The form reset button...
-    document.querySelector(`#contact #reset`).addEventListener(`click`, (event) => clearForm(), false);
+    //  The form reset button, if active...
+    let resetButton = document.querySelector(`#contact #reset`);
+    if (resetButton) {
+        resetButton.addEventListener(`click`, (event) => clearForm(), false);
+    }
 }
-
 
 /*  ----------------
     End Listeners...
@@ -289,16 +288,10 @@ if (formInputs[0]) {
         unobstructed at the top until the user explores below.
     --------------------------------------------------------------- */
 const toggleHeaderBG = () => {
-    let smallVal = Number(getComputedStyle(headLogo).getPropertyValue(`--small-header-logo-multiplier`)) || .9;
-    let largeVal = Number(getComputedStyle(headLogo).getPropertyValue(`--large-header-logo-multiplier`)) || 2;
     if (window.scrollY > headElem.offsetHeight) {
         headElem.classList.add(`header-stick`);
-        headLogo.style.setProperty(`--header-logo-multiplier`, smallVal);
     } else {
         headElem.classList.remove(`header-stick`);
-        if (headLogo) {
-            headLogo.style.setProperty(`--header-logo-multiplier`, largeVal);
-        }
     }
     return;
 }
@@ -468,7 +461,7 @@ function validateFormInput(inputElem = null, submitTF = false, clearError = fals
                 }
             }
         }
-        console.log(inputElem.name, inputVal, checkRegex.length);
+        //        console.log(inputElem.name, inputVal, checkRegex.length);
         //  If the input value is blank, and is not required or the form is not being submitted,
         //  remove any existing error message from the DOM...
         if (inputVal.length < minLength && (!submitTF || !reqd)) {
@@ -530,13 +523,35 @@ function validateForm() {
             emailBody += `\r${niceName}: ${value}`;
         }
     }
-    sendEmail(undefined, undefined, undefined, emailBody);
+    //sendEmail(undefined, undefined, undefined, emailBody);
     //  Reset the form...
-    clearForm();
+    let submitButton = document.querySelector(`#submit`);
+    if (submitButton) {
+        submitButton.classList.add(`submit-confirm`);
+        submitButton.firstElementChild.innerHTML = `We're jumping on it!`
+        let remPara = document.getElementById(`submit-extra-para`);
+        if (!remPara) {
+            let newPara = document.createElement(`p`);
+            newPara.id = `submit-extra-para`;
+            newPara.classList.add(`submit-confirm-para`);
+            newPara.classList.add(`happy-whale`);
+            submitButton.appendChild(newPara);
+        }
+    }
+    clearForm(true);
     return;
 }
 
-function clearForm() {
+function clearForm(didSubmit = false) {
+    if (didSubmit !== true) {
+        let submitButton = document.querySelector(`#submit`);
+        if (submitButton) {
+            submitButton.classList.remove(`submit-confirm`);
+            submitButton.firstElementChild.innerHTML = `Say YES to Adventure!`;
+            let remPara = document.getElementById(`submit-extra-para`);
+            if (remPara) { remPara.remove(); }
+        }
+    }
     formInputs.forEach(elem => {
         if (elem.type == `checkbox`) {
             elem.checked = false;
@@ -623,6 +638,7 @@ function textFitter(txt = ``, wide = 0, high = 0, fontFam = ``, elemCheck = null
         if (tempPar.scrollWidth > tempPar.clientWidth) { break; }
         fs++;
     }
+    fs -= 1;
     if (txt[0] == '<') { console.log(txt, w, h, fs); }
     //    console.log(fs, wh, w, wide, h, high, fontFam);
     tempPar.remove();
@@ -631,18 +647,16 @@ function textFitter(txt = ``, wide = 0, high = 0, fontFam = ``, elemCheck = null
 
 function toggleHamburgerMenu() {
     const menuButton = document.getElementById(`hamburger-menu`);
-    const scrollDownButton = document.getElementById(`scroll-to-bottom`);
-    const scrollUpButton = document.getElementById(`scroll-to-top`);
-    const navMenu = document.getElementById(`site-nav`);
+    const navMenu = document.getElementById(`main-nav`);
     if (!menuButton || !navMenu) { return; }
+    const scrollButtons = document.getElementById(`scroll-buttons`);
     if (menuButton.classList.contains(`hamburger`)) {
         menuButton.classList.remove(`hamburger`);
         menuButton.classList.add(`closeX`);
         headElem.style.height = `100vh`;
         headElem.classList.add(`header-stick`)
         navMenu.style.display = `block`;
-        scrollDownButton.classList.add(`disappear`);
-        scrollUpButton.classList.add(`disappear`);
+        scrollButtons.classList.add(`disappear`);
         document.body.classList.add(`noscroll`);
     } else {
         menuButton.classList.remove(`closeX`);
@@ -651,8 +665,7 @@ function toggleHamburgerMenu() {
         headElem.classList.remove(`header-stick`)
         toggleHeaderBG();
         navMenu.style.display = `none`;
-        scrollDownButton.classList.remove(`disappear`);
-        scrollUpButton.classList.remove(`disappear`);
+        scrollButtons.classList.remove(`disappear`);
         document.body.classList.remove(`noscroll`);
     }
     return;
@@ -682,8 +695,13 @@ function updateMediaCaptions() {
     return;
 }
 
-//  Create a downloadable text file of information in the DOM...
-function collectDocumentData(infoType = `class`) {
+/*  ------------------------------------------------------------
+    Create a downloadable text file of information in the DOM...
+
+    When the text file is completed, a download link is added
+    just before the footer of the page...
+    ------------------------------------------------------------ */
+function collectDocumentData(infoType = `image`) {
     let everyElem = document.querySelectorAll(`*`), allClasses = [], myClasses = null;
     everyElem.forEach((elem) => {
         switch (infoType) {
@@ -700,6 +718,15 @@ function collectDocumentData(infoType = `class`) {
                     allClasses.push(elem.id);
                 }
                 break;
+            case `image`:
+                let elemStyle = getComputedStyle(elem);
+                if (elemStyle.getPropertyValue(`--use-image`)) {
+                    allClasses.push(elemStyle.getPropertyValue(`--use-image`));
+                }
+                if (elemStyle.getPropertyValue(`--bg-image`)) {
+                    allClasses.push(elemStyle.getPropertyValue(`--bg-image`));
+                }
+                break;
             default: return;
         }
     });
@@ -707,8 +734,8 @@ function collectDocumentData(infoType = `class`) {
     let textData = uniqueClasses.join(`\n`);
     let textFile = null, makeTextFile = function (text) {
         var data = new Blob([text], { type: `text/plain` });
-        // If we are replacing a previously generated file we need to
-        // manually revoke the object URL to avoid memory leaks.
+        // If we are replacing a previously generated file, we need
+        // to manually revoke the object URL to avoid memory leaks.
         if (textFile !== null) {
             window.URL.revokeObjectURL(textFile);
         }
