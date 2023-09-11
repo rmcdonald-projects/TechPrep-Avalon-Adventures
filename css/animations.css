@@ -2,18 +2,6 @@
     Animations...
     ------------- */
 
-@keyframes scroll-in {
-	0% {
-		opacity: 0;
-		transform: scale(0, 1);
-	}
-
-	100% {
-		opacity: 1;
-		transform: scale(1, 1);
-	}
-}
-
 @keyframes dangling {
 	0% {
 		transform: rotate(calc(var(--end-rotate-angle) * 2));
@@ -71,6 +59,30 @@
 	}
 }
 
+@keyframes fade-in-up {
+	0% {
+		opacity: 0;
+		transform: translateY(10vh);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes scroll-in {
+	0% {
+		opacity: 0;
+		transform: scale(0, 1);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
 /*	-------------------------------------------------------
 	"Wipe" transitions from https://www.transition.style...
 	------------------------------------------------------- */
@@ -97,22 +109,20 @@
 
 @keyframes wipe-out-bottom-left {
 	from {
-	  clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+		clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
 	}
-	to {
-	  clip-path: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
-	}
-  }
 
-@keyframes wipe-out-top-right {
-  from {
-    clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
-  }
-  to {
-    clip-path: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
-  }
+	to {
+		clip-path: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
+	}
 }
 
-/*  -------------------------
-    User-preferred changes...
-    ------------------------- */
+@keyframes wipe-out-top-right {
+	from {
+		clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+	}
+
+	to {
+		clip-path: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
+	}
+}

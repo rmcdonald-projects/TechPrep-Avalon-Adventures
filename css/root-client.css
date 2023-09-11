@@ -30,13 +30,15 @@
     --light-text: #F8F6F3;
     --light-text-RGB: 248, 246, 243;
     --slide-duration: 8;
-    --long-transition-duration: 600ms;
-    --short-transition-duration: 300ms;
+    --transition-duration-short: 300ms;
+    --transition-duration-medium: calc(var(--transition-duration-short) * 2);
+    --transition-duration-long: calc(var(--transition-duration-medium)* 2);
     --transition-timing-function: linear; /*cubic-bezier(0.1, 0.7, 1.0, 0.1); */
     --font-size-normal: 1rem;
-    --line-height-normal: 1rem;
+    --line-height-normal: calc(3ex + 4px);
     --font-size-tiny: calc(var(--font-size-normal) * .5);
     --font-size-small: calc(var(--font-size-normal) * .875);
+    --line-height-normal: calc(2ex + 3px);
     --font-size-large: 1.5rem;
     --line-height-large: calc(1ex / 0.37);
     --font-margin-large: calc(.5ex / 0.37) 0;
@@ -63,7 +65,8 @@
     --medium-colour-RGB: 29, 66, 134;
     --light-colour: #0097b2;
     --light-colour-RGB: 0, 151, 178;
-    font-family: Tahoma, Helvetica, sans-serif;
+    --client-font-family: Tahoma, Helvetica, sans-serif;
+    font-family: var(--client-font-family);
 }
 
 /*  --------------------------------------------
@@ -73,7 +76,7 @@
 :root {
     font-style: normal;
     text-decoration: none;
-    line-height: calc(3ex + 4px);
+    line-height: var(--line-height-normal);
     --dark-text: var(--dark-colour);
     --dark-text-RGB: var(--dark-colour-RGB);
     --bg-colour: var(--light-text);

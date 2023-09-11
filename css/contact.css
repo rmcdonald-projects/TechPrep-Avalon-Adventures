@@ -1,28 +1,3 @@
-/*	Main CSS block... */
-
-input,
-textarea {
-	border-radius: .5vh;
-	padding: min(10px, 1vh) min(10px, 1vw);
-	width: 98%;
-	float: right;
-	font-size: 1rem;
-}
-
-input[type=checkbox] {
-	display: inline;
-	flex-basis: 20%;
-}
-
-input[type=checkbox]+label {
-	display: inline;
-}
-
-input:required+label::after,
-textarea:required+label::after {
-	content: " *";
-}
-
 #addresses {
 	display: flex;
 	flex-flow: row;
@@ -31,10 +6,68 @@ textarea:required+label::after {
 	gap: 5vw;
 }
 
+#addresses a {
+	text-decoration: none;
+}
+
+#addresses a:hover {
+	font-weight: bold;
+}
+
 #contact {
 	display: flex;
 	flex-flow: column;
-	gap: 2vh;
+	gap: 3vh;
+}
+
+#contact input[type=text],
+#contact input[type=email],
+#contact input[type=tel],
+#contact textarea {
+	border-radius: .5vh;
+	padding: min(10px, 1vh) min(10px, 1vw);
+	width: 95%;
+	float: right;
+	font-size: 1rem;
+	font-family: var(--client-font-family);
+}
+
+#contact input[type=button], #contact button {
+	background-color: var(--bg-color);
+	color: var(--text-colour);
+	margin: 0 2rem;
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+	padding: .5rem;
+	border-radius: 2rem;
+	border: solid 2px currentColor;
+	display: grid;
+	grid-template-columns: 1fr;
+	place-items: center;
+}
+
+#contact input[type=button] p, #contact button p {
+	background: transparent;
+	padding: 0;
+	margin: 0;
+}
+
+#contact input[type=button]:hover, #contact button:hover {
+	background-color: var(--text-colour);
+	color: var(--bg-colour);
+}
+
+#contact input[type=checkbox] {
+	accent-color: var(--light-colour);
+}
+
+#contact input[type=checkbox]+label {
+	display: inline;
+}
+
+#contact input:required+label::after,
+#contact textarea:required+label::after {
+	content: " *";
 }
 
 #contact>span {
@@ -46,4 +79,23 @@ textarea:required+label::after {
 	display: grid;
 	grid-template-columns: 1fr;
 	column-gap: 2vh;
+}
+
+.submit-confirm {
+	background-color: var(--light-colour);
+	color: var(--light-text);
+	transition: all var(--transition-duration-short) ease;
+	grid-template-columns: 3fr 2fr;
+}
+
+.submit-confirm-para {
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	background-image: var(--use-image);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 11;
+	scale: 3;
 }

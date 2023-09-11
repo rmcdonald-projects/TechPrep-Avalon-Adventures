@@ -1,6 +1,6 @@
-/*  -------------------------------------
-    Changes for mobile devices...
-	-------------------------------------
+/*  ------------------------------------------------
+    Changes for mobile devices, user prefs, etc....\
+	------------------------------------------------
 	Common device screen sizes:
     <=	480px:   mobile devices
     <=	768px:   tablets, iPads
@@ -10,6 +10,10 @@
     ------------------------------------- */
 
 @media screen and (max-width: 600px) {
+
+	/*	-----------
+	Elements...
+	----------- */
 
 	:root {
 		--font-size-large: 1rem;
@@ -29,11 +33,14 @@
 		background-color: rgba(var(--bg-colour-RGB), 0.3);
 		backdrop-filter: none;
 		-webkit-backdrop-filter: none;
+		transition: background-color var(--transition-duration-long);
 	}
 
 	h1 {
 		left: 0;
 		padding-left: 1rem;
+		font-size: var(--font-size-huge);
+		line-height: var(--line-height-huge);
 	}
 
 	h3 {
@@ -44,6 +51,112 @@
 	section {
 		margin-top: 3vh;
 	}
+
+	/*	------
+	IDs...
+	------ */
+
+	#addresses {
+		flex-flow: column;
+		align-items: center;
+		gap: 1vh;
+	}
+
+	#footer-fair-dealing {
+		text-align: center;
+	}
+
+	#hamburger-menu {
+		align-self: start;
+		transform: translate(0, 50%);
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	#header-logo {
+		align-self: start;
+		transform: translate(0, 0);
+		scale: 1;
+	}
+
+	#header-logo:hover {
+		scale: 1.5;
+		transform-origin: 0% 0%;
+	}
+
+	#main-nav {
+		display: none;
+		height: 100%;
+		top: calc(var(--header-height) * 1.5);
+		left: 0;
+		translate: none;
+		font-size: var(--font-size-large);
+		text-align: left;
+		margin-left: -5vw;
+	}
+
+	#main-nav li {
+		width: 100%;
+		margin-bottom: 2vh;
+	}
+
+	#main-nav a {
+		display: inline;
+	}
+
+	#main-nav>li {
+		text-decoration: none;
+	}
+
+	#main-nav li>a:not(:only-child):after {
+		content: "";
+	}
+
+	#main-nav ul {
+		display: block;
+		position: relative;
+		top: auto;
+		margin-top: 3vh;
+		list-style: circle inside;
+	}
+
+	#main-nav ul li {
+		background-color: transparent;
+		width: 100%;
+		display: list-item;
+		box-shadow: none;
+		margin-bottom: 3vh;
+	}
+
+	#main-nav>li>a>span,
+	#main-nav>li>a:hover>span {
+		text-decoration: none;
+	}
+
+	#scroll-buttons {
+		height: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 5vw;
+		justify-content: center;
+		place-items: center;
+	}
+
+	#social-media {
+		width: 94%;
+		margin-left: 2%;
+		background-color: rgba(var(--bg-colour-RGB), .9);
+		display: flex;
+		flex-flow: column wrap;
+	}
+
+	#social-media * {
+		margin: .75vh 0;
+	}
+
+	/*	----------
+	Classes...
+	---------- */
 
 	.album a {
 		width: 98%;
@@ -66,7 +179,6 @@
 
 	.citation-watermark {
 		font-size: var(--font-size-small);
-		bottom: 1vh;
 	}
 
 	.citation-watermark::before {
@@ -74,89 +186,10 @@
 		width: 1.5rem;
 	}
 
-	.flexy {
-		column-gap: 4vw;
+	.dangling {
+		animation: none;
+		transition: none;
 	}
-
-	.hero-novideo {
-		display: block;
-	}
-
-	.hero-static {
-		min-height: 60vh;
-		border-image: var(--use-border-image);
-		border-image-width: 2px 0;
-	}
-
-	.hero-video {
-		display: none;
-	}
-
-	.one-column {
-		width: 98%;
-		margin-left: 0;
-		padding: 0 1vh;
-	}
-
-	.newspaper-layout {
-		width: 100%;
-		display: flex;
-		flex-flow: column-reverse wrap;
-		border: none;
-		row-gap: 2vh;
-	}
-
-	.newspaper-big {
-		width: 100%;
-		border: 0;
-		padding: 0;
-	}
-
-	.newspaper-thin {
-		display: none;
-	}
-
-	.paused {
-		background: transparent;
-	}
-
-	.spacebr {
-		background: transparent;
-		content: "";
-		display: block;
-	}
-
-	.spacebr::before {
-		content: "";
-	}
-
-	.subheader {
-		font-size: var(--font-size-xlarge);
-	}
-
-	.two-column {
-		grid-template-columns: 1fr;
-		column-gap: 3vh;
-	}
-
-	.two-column-container {
-		min-width: 90vw;
-		width: 90vw;
-		max-width: 90vw;
-	}
-
-	#addresses {
-		flex-flow: column;
-		align-items: center;
-		gap: 1vh;
-	}
-
-	#contact {
-		gap: 1vh;
-	}
-
-
-
 
 	.detail-box,
 	.detail-box:nth-of-type(2n) {
@@ -164,7 +197,7 @@
 		width: 98%;
 		display: block;
 		padding: 1vh 0;
-		margin-bottom: 1vh;
+		margin-bottom: 5vh;
 	}
 
 	.detail-box p {
@@ -199,9 +232,73 @@
 		text-align: center;
 	}
 
+	.fixed-background {
+		background: none;
+	}
+
+	.flexy {
+		column-gap: 4vw;
+	}
+
+	.hero-novideo {
+		display: block;
+	}
+
+	.hero-static {
+		min-height: 60vh;
+		border-image: var(--use-border-image);
+		border-image-width: 2px 0;
+	}
+
+	.hero-video {
+		display: none;
+	}
+
+	.media-citation {
+		width: 90%;
+		min-width: 50vw;
+	}
+
+	.newspaper-big {
+		width: 100%;
+		border: 0;
+		padding: 0;
+	}
+
+	.newspaper-layout {
+		width: 100%;
+		display: flex;
+		flex-flow: column-reverse wrap;
+		border: none;
+		row-gap: 2vh;
+	}
+
+	.newspaper-thin {
+		display: none;
+	}
+
+	.one-column {
+		width: 98%;
+		margin-left: 0;
+		padding: 0 1vh;
+	}
+
+	.paused {
+		background: transparent;
+	}
+
 	.pic-plus-desc {
 		width: 100%;
 		display: block;
+	}
+
+	.pic-plus-desc-pic,
+	.slides-plus-desc-pic {
+		margin-bottom: .5rem;
+	}
+
+	.slide:not(.active) {
+		opacity: 0;
 	}
 
 	.slides-plus-desc,
@@ -212,19 +309,14 @@
 		grid-template-rows: auto;
 	}
 
-	.fixed-background {
-		background: none;
+	.spacebr {
+		background: transparent;
+		content: "";
+		display: block;
 	}
 
-
-	.slide:not(.active) {
-		opacity: 0;
-	}
-
-	.split-screen {
-		grid-template-columns: 1fr;
-		grid-template-rows: 9fr 1fr;
-		grid-template-areas: "split-left-top", "split-left-bottom";
+	.spacebr::before {
+		content: "";
 	}
 
 	.split-left,
@@ -243,102 +335,35 @@
 		place-self: center center;
 	}
 
-
-
-	#header-logo {
-		--large-header-logo-multiplier: var(--small-header-logo-multiplier);
-		top: calc(var(--header-height) * .5);
-		translate: 0% -50%;
+	.split-screen {
+		grid-template-columns: 1fr;
+		grid-template-rows: 9fr 1fr;
+		grid-template-areas: "split-left-top", "split-left-bottom";
 	}
 
-	#collapsed-nav {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-areas: "left-box center-box right-box";
+	.subheader {
+		font-size: var(--font-size-xlarge);
+		border-top: solid;
 	}
 
-	#site-nav {
-		top: calc(var(--header-height) * 1.5);
-		left: 0;
-		translate: none;
-		font-size: var(--font-size-large);
-		text-align: left;
+	.two-column {
+		grid-template-columns: 1fr;
+		column-gap: 3vh;
 	}
 
-	#site-nav a {
-		display: inline;
-	}
-
-	#site-nav li {
+	.two-column-container {
 		width: 100%;
-		overflow: hidden;
-		margin-bottom: 2vh;
-	}
-
-	#site-nav ul li {
-		margin-bottom: 3vh;
-	}
-
-	#site-nav>ul>li {
-		text-decoration: underline;
-	}
-
-	#xxxsite-nav ul li>a:not(:only-child) {
-		margin-bottom: 2vh;
-	}
-
-	#site-nav li>a:not(:only-child):after {
-		content: "";
-	}
-
-	#site-nav ul ul {
-		display: block;
-		position: relative;
-		top: auto;
-		margin-top: 3vh;
-		list-style: circle inside;
-	}
-
-	#site-nav ul ul li {
-		width: 100%;
-		display: list-item;
-		box-shadow: none;
-	}
-
-	#site-nav {
-		display: none;
-		height: 100%;
-	}
-
-	#site-nav * {
-		background-color: transparent;
-		float: none;
-		margin-left: 3vw;
-	}
-
-	#site-nav *:after {
-		content: "";
-	}
-
-	#social-media {
-		width: 94%;
-		margin-left: 2%;
-		background-color: rgba(var(--bg-colour-RGB), .9);
-		display: flex;
-		flex-flow: column wrap;
-	}
-
-	#social-media * {
-		margin: .75vh 0;
-	}
-
-	#footer-fair-dealing {
-		text-align: center;
+		padding: 2rem 2vw;
 	}
 
 }
 
 @media screen and (max-width: 900px) {
+
+	fieldset {
+		width: 90%;
+	}
+
 	.polaroid {
 		filter: none;
 	}
@@ -353,18 +378,10 @@
 
 }
 
-@media screen and (max-aspect-ratio: 4/5) {
 
-	.detail-box {
-		min-height: 8vh;
-		margin-bottom: 1vh;
-	}
-
-}
-
-/*  -------------------------
-    User-preferred changes...
-    ------------------------- */
+/*  -------------------
+    User-preferences...
+    ------------------- */
 
 @media (prefers-color-scheme: xxxdark) {
 	:root {
@@ -383,32 +400,131 @@
 		filter: invert(1);
 	}
 
-	.xxxcitation-watermark::before {
-		filter: invert(1);
+	/*	Images: change light/bright images to darker options... */
+
+	.aurora {
+		--use-image: url("../images/aurora.webp");
+		--citation-text: "Space.com, Adam Woodworth";
+		--citation-full-URL: "https://www.space.com/30175-viking-aurora-northern-lights-photo.html";
+	}
+
+	.beer-bg {
+		--use-image: url("../images/beer-bottles5.jpg");
+		--citation-text: "PxHere";
+		--citation-full-URL: "https://pxhere.com/en/photo/1115051";
+	}
+
+	.clink {
+		--use-image: url("../images/clink-dark.jpg");
+		--citation-text: "School of Booze";
+		--citation-full-URL: "https://www.school-of-booze.com/product/online-beer-course-foundation-level/";
+	}
+
+	.cod-interstitial {
+		--use-image: url("../images/night-fishing.jpg");
+		--citation-text: "YouTube, Fishing with Nuno Morão";
+		--citation-full-URL: "https://www.youtube.com/watch?v=ba7lIUkySH0";
+	}
+
+	.culture-package-bg {
+		--use-image: url("../images/culture-package-bg.jpg");
+		--citation-text: "Olympic Construction Ltd";
+		--citation-full-URL: "https://www.olympic-construction.nf.ca/project/the-rooms/";
+	}
+
+	.Elliston {
+		--use-image: url("../images/elliston-at-night-newfoundland-labrador.jpg");
+		--citation-text: "Canadian Sky";
+		--citation-full-URL: "https://www.canadiansky.ie/newfoundland-and-labrador-holidays/road-tripping-newfoundland-labrador-self-drive-st-johns-to-the-great-northern-peninsula";
+	}
+
+	.Ferryland-lighthouse {
+		--use-image: url("../images/Ferryland-lighthouse-dark.jpg");
+		--citation-text: "Instagram, NL Tourism";
+		--citation-full-URL: "https://www.instagram.com/p/CALXSA9lDeq/?igshid=3mmv2ppnpnic";
+	}
+
+	.Ferryland-picnic {
+		--use-image: url("../images/picnic-sunset.png");
+		--citation-text: "Pinterest, Flare Magazine";
+		--citation-full-URL: "https://www.pinterest.ca/pin/500814421034649789/";
+	}
+
+	.fishbg {
+		--use-image: url("../images/fishbg-dark.jpg");
+		--citation-text: "Hakai Magazine, Lisa Werner";
+		--citation-full-URL: "https://hakaimagazine.com/features/secret-history-bioluminescence/";
+	}
+
+	.fishhead {
+		--use-image: url("../images/fishhead-dark.jpg");
+		--citation-text: "Hakai Magazine, blickwinkel";
+		--citation-full-URL: "https://hakaimagazine.com/features/secret-history-bioluminescence/";
+	}
+
+	.hiking-boots {
+		--use-image: url("../images/hiking-boots-dark.jpg");
+		--citation-text: "Super Shoes";
+		--citation-full-URL: "https://www.supershoes.com/mens-hiking-boots-shoes?view_all";
+	}
+
+	.Johnson-Geo-Centre {
+		--use-image: url("../images/Johnson-Geo-Centre-dark.jpg");
+		--citation-text: "Trip Advisor, Johnson Geo Centre";
+		--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g154964-d278749-Reviews-Johnson_Geo_Centre-St_John_s_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/278749/37194082:p/?albumid=-160&type=0&category=-160";
+	}
+
+	.mailboxes {
+		--use-image: url("../images/mailboxes-dark.jpg");
+		--citation-text: "Flickr, Darron Birgenheier";
+		--citation-full-URL: "https://www.flickr.com/photos/darronb/8421272881/";
+	}
+	
+	.Placentia-Bay {
+		--use-image: url("../images/Placentia-Bay-night-sky.webp");
+		--citation-text: "Reddit, NerdMachine";
+		--citation-full-URL: "https://www.reddit.com/r/newfoundland/comments/ad70kb/placentia_bay_night_sky/";
+	}
+
+	.St-Johns-harbour {
+		--use-image: url("../images/St-Johns-harbour-dark.jpg");
+		--citation-text: "CBC News, Gene Herzberg";
+		--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/gallery-week-november-30-1.5819766";
+	}
+
+	.Signal-Hill {
+		--use-image: url("../images/Signal-Hill-dark.jpg");
+		--citation-text: "Flickr, Rex Montalban Photography";
+		--citation-full-URL: "https://flickr.com/photos/rexmontalban/7123724139";
+	}
+
+	.the-Battery {
+		--use-image: url("../images/the-Battery-dark.avif");
+		--citation-text: "CBC, Dan Arsenault";
+		--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/battery-lights-turned-off-1.6728439";
+	}
+
+	.the-Rooms {
+		--use-image: url("../images/the-Rooms-dark.jpg");
+		--citation-text: "The Rooms";
+		--citation-full-URL: "https://www.therooms.ca/about-us";
 	}
 
 }
 
-@media (prefers-reduced-motion),
-(max-width: 600px) {
+@media (prefers-reduced-motion) {
+
 	:root {
-		--short-transition-duration: 0s;
-		--long-transition-duration: 0s;
+		--transition-duration-short: 0s;
+		--transition-duration-medium: 0s;
 	}
 
-	.dangling {
-		animation: none;
-	}
-
-	.fade-in {
-		animation: none;
-	}
-
-	.scroll-in {
-		animation: none;
-	}
-
+	.dangling,
+	.fade-in,
+	.scroll-in,
 	.slide {
 		animation: none;
+		transition: none;
 	}
+
 }

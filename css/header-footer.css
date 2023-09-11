@@ -10,10 +10,19 @@ header {
   width: 100vw;
   height: var(--header-height);
   background-color: rgba(var(--bg-colour-RGB), 0.6);
-  transition: background-color var(--short-transition-duration);
+  transition: background-color var(--transition-duration-short);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  place-items: center;
+  min-height: 0;
+  min-width: 0;
+}
+
+header:hover {
+  background-color: rgba(var(--bg-colour-RGB), 1);
 }
 
 header a {
@@ -28,44 +37,96 @@ header a {
 }
 
 #header-logo {
-  --large-header-logo-multiplier: 2;
-  --small-header-logo-multiplier: .8;
-  --max-logo-height: 4rem;
-  --header-logo-multiplier: var(--large-header-logo-multiplier);
-  --logo-height: calc(min(var(--header-height), var(--max-logo-height)) * var(--header-logo-multiplier));
   background: url("../images/logos/Avalon-Adventures-Transparent.png"), var(--bg-colour);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: fixed;
-  top: .5vh;
-  left: 2vw;
-  /*calc(98vw - var(--logo-height)); */
-  height: var(--logo-height);
-  width: var(--logo-height);
-  text-align: center;
-  transition: all var(--short-transition-duration) linear;
-  /*var(--transition-timing-function);*/
+  height: var(--header-height);
+  width: var(--header-height);
+  scale: 2;
+  transform: translate(30%,calc(var(--header-height) * .3));
+  transition: all var(--transition-duration-short) ease;
   border-radius: 50%;
+  justify-self: start;
 }
 
 #header-logo:hover {
-  scale: 1.55;
-  top: .25vh;
-  left: 1vw;
-  transform-origin: 5% -10%;
+  scale: 3;
+  transform-origin: 40% 40%;
 }
 
-#collapsed-nav {
-  position: fixed;
-  top: calc(var(--header-height) * .5);
-  left: 50%;
-  width: 93vw;
-  translate: -50% -50%;
+#hamburger-menu {
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+}
+
+#main-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+}
+
+#main-nav > li {
+  position: relative;
+  display: inline-block;
+  width: 12vw;
+  min-width: 8rem;
+  line-height: var(--header-height);
+}
+
+#main-nav > li > a > span {
+  text-decoration: underline 3px currentColor;
+  text-decoration-color: rgba(var(--text-colour-RGB),0);
+  text-underline-offset: 2rem;
+  transition: text-underline-offset var(--transition-duration-short), text-decoration-color var(--transition-duration-short);
+}
+
+#main-nav > li > a:hover > span {
+  font-weight: normal;
+  text-decoration: underline 3px currentColor;
+  text-decoration-color: rgba(var(--text-colour-RGB),1);
+  text-underline-offset: .5rem;
+}
+
+#main-nav li a {
+  position: relative;
+  top: 0;
+}
+
+#main-nav li>a:not(:only-child):after {
+  display: inline;
+  content: " \25bc";
+}
+
+#main-nav ul {
   display: none;
+  position: absolute;
+  top: var(--header-height);
+  margin: 0;
+  padding: 0;
 }
 
-#hamburger-menu,
+#main-nav li:hover ul {
+  height: auto;
+  display: block;
+  transition: all var(--transition-duration-short) ease;
+}
+
+#main-nav ul li {
+  background-color: var(--bg-colour);
+  position: relative;
+  text-align: left;
+  height: auto;
+  width: 20rem;
+  padding: .5rem;
+  box-shadow: 1px 1px 3px var(--text-colour);
+  line-height: normal;
+
+}
+
 #scroll-to-top,
 #scroll-to-bottom {
   background-color: transparent;
@@ -77,69 +138,12 @@ header a {
   display: block;
 }
 
-#hamburger-menu {
-  grid-area: right-box;
-  justify-self: right;
-}
-
 #scroll-buttons {
-  width: 100%;
-  grid-area: center-box;
-  justify-self: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
+  display: none;
 }
 
 #site-nav {
-  position: fixed;
-  top: 50%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  translate: 0% -50%;
-  left: 20vw;
-  text-align: center;
-}
-
-#site-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-#site-nav li {
-  float: left;
-  width: 12vw;
-  min-width: 8rem;
-}
-
-#site-nav a {
-  display: block;
-}
-
-#site-nav li>a:not(:only-child):after {
-  display: inline;
-  content: " \25bc";
-}
-
-#site-nav ul li:hover ul {
-  display: block;
-  animation: scroll-in var(--short-transition-duration);
-}
-
-#site-nav ul ul {
-  display: none;
-  position: absolute;
-  top: calc(var(--header-height) / 2);
-}
-
-#site-nav ul ul li {
-  background-color: var(--bg-colour);
-  position: relative;
-  text-align: left;
-  width: 20rem;
-  padding: .5rem;
-  box-shadow: 1px 1px 3px var(--text-colour);
+  height: 100%;
 }
 
 body.home li.home,
@@ -151,6 +155,9 @@ body.culture-package li.culture-package,
 body.ferryland li.ferryland,
 body.hiking li.hiking,
 body.whale-watching li.whale-watching {
+  text-decoration: underline currentColor;
+  text-decoration-color: gray;
+  text-underline-offset: .5rem;
   pointer-events: none;
 }
 
@@ -185,12 +192,12 @@ footer {
   align-items: stretch;
   font-size: var(--font-size-small);
   margin-bottom: 1vh;
-	backdrop-filter: blur(50px);
-	-webkit-backdrop-filter: blur(50px);
-	border-style: solid;
-	border-top-width: 2px;
-	border-bottom-width: 2px;
-	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,.8) 50%, rgba(255,255,255,0)) 1;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-style: solid;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .8) 50%, rgba(255, 255, 255, 0)) 1;
 }
 
 #footer-fair-dealing {
@@ -210,7 +217,8 @@ footer {
 
 #social-media {
   width: 100%;
-  left: 0;;
+  left: 0;
+  ;
   background-color: rgba(var(--bg-colour-RGB), .9);
   padding: 1rem 0;
   display: grid;
