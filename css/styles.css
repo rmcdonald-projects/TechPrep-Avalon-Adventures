@@ -178,6 +178,10 @@ video {
 	JavaScript management classes:
 	These class names exists only to serve JavaScript functions; do not activate...
 	
+	.active {
+	}
+	.finished {
+	}
 	.is-fullscreen {
 	}
 	.modal-container {
@@ -210,6 +214,11 @@ video {
 	row-gap: 1vh;
 	align-items: center;
 	justify-content: space-evenly;
+}
+
+.big-box {
+	height: 80%;
+	width: 80%;
 }
 
 .big-text {
@@ -275,7 +284,7 @@ video {
 	width: 4%;
 	min-height: 1rem;
 	min-width: .75rem;
-	background-image: url("../images/camera.png");
+	background-image: url("../images/icons/camera.png");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -448,7 +457,7 @@ video {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(to right, rgba(var(--bg-colour-RGB), .5), rgba(var(--bg-colour-RGB), .5)), var(--use-image);
+	background: linear-gradient(to right, rgba(var(--bg-colour-RGB), .8), rgba(var(--bg-colour-RGB), .8)), var(--use-image);
 	background-position: center, center;
 	background-repeat: no-repeat, no-repeat;
 	background-size: cover, cover;
@@ -849,6 +858,54 @@ video {
 	background-color: var(--medium-colour);
 }
 
+.slideshow-hype h2 {
+	overflow: visible;
+}
+
+.slideshow-hype {
+	padding-top: 15vh;
+	display: flex;
+	flex-flow: column;
+	gap: 2vh;
+	place-items: center;
+	z-index: 3;
+}
+
+.slideshow-hype * {
+	opacity: 0;
+	transform: translate(-100%, 0);
+	transition: all var(--transition-duration-medium);
+	transition-delay: 0;
+	text-align: center;
+}
+
+.slideshow-hype p:nth-child(2n) {
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+}
+
+.slideshow-hype *:nth-child(2n) {
+	transition-delay: var(--transition-duration-short);
+}
+
+.slideshow-hype *:nth-child(3n) {
+	transition-delay: calc(2 * var(--transition-duration-short));
+}
+
+.slideshow-hype *:nth-child(4n) {
+	transition-delay: calc(3 * var(--transition-duration-short));
+}
+
+.slideshow-hype.active * {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.slideshow-hype.finished * {
+	opacity: 0;
+	transform: translate(100%, 0);
+}
+
 .slideshow-nav {
 	grid-area: split-left-bottom;
 	position: relative;
@@ -917,9 +974,9 @@ video {
 
 .split-left-top {
 	grid-area: split-left-top;
-	display: flex;
+	/*	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center;*/
 }
 
 .split-left-bottom {
@@ -961,7 +1018,7 @@ video {
 }
 
 .three-quarter-bg-colour {
-	background-color: rgba(var(--bg-colour-RGB),.75);
+	background-color: rgba(var(--bg-colour-RGB), .75);
 	border-radius: 2rem;
 }
 
@@ -1000,4 +1057,8 @@ video {
 	line-height: var(--line-height-small);
 	font-style: italic;
 	color: red;
+}
+
+.wide {
+	width: 80%;
 }

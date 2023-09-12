@@ -29,7 +29,7 @@
 :root {
     --light-text: #F8F6F3;
     --light-text-RGB: 248, 246, 243;
-    --slide-duration: 8;
+    --slide-duration: 10;
     --transition-duration-short: 300ms;
     --transition-duration-medium: calc(var(--transition-duration-short) * 2);
     --transition-duration-long: calc(var(--transition-duration-medium)* 2);

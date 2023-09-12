@@ -358,7 +358,7 @@
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
 
 	fieldset {
 		width: 90%;
@@ -368,12 +368,16 @@
 		filter: none;
 	}
 
-	.woodframe::before,
-	.baroqueframe::before {
-		background-image: var(--use-image);
-		background-size: cover;
-		background-repeat: no-repeat;
-		filter: none;
+	#contact .submit-confirm-para {
+		scale: 1.25;
+	}
+
+}
+
+@media screen and (orientation:landscape) and (max-width: 1000px) {
+
+	#contact .submit-confirm-para {
+		scale: 1;
 	}
 
 }
@@ -383,7 +387,7 @@
     User-preferences...
     ------------------- */
 
-@media (prefers-color-scheme: xxxdark) {
+@media (prefers-color-scheme: dark) {
 	:root {
 		--bg-colour: var(--dark-colour);
 		--bg-colour-RGB: var(--dark-colour-RGB);
@@ -401,12 +405,6 @@
 	}
 
 	/*	Images: change light/bright images to darker options... */
-
-	.aurora {
-		--use-image: url("../images/aurora.webp");
-		--citation-text: "Space.com, Adam Woodworth";
-		--citation-full-URL: "https://www.space.com/30175-viking-aurora-northern-lights-photo.html";
-	}
 
 	.beer-bg {
 		--use-image: url("../images/beer-bottles5.jpg");
@@ -430,12 +428,6 @@
 		--use-image: url("../images/culture-package-bg.jpg");
 		--citation-text: "Olympic Construction Ltd";
 		--citation-full-URL: "https://www.olympic-construction.nf.ca/project/the-rooms/";
-	}
-
-	.Elliston {
-		--use-image: url("../images/elliston-at-night-newfoundland-labrador.jpg");
-		--citation-text: "Canadian Sky";
-		--citation-full-URL: "https://www.canadiansky.ie/newfoundland-and-labrador-holidays/road-tripping-newfoundland-labrador-self-drive-st-johns-to-the-great-northern-peninsula";
 	}
 
 	.Ferryland-lighthouse {
@@ -479,23 +471,17 @@
 		--citation-text: "Flickr, Darron Birgenheier";
 		--citation-full-URL: "https://www.flickr.com/photos/darronb/8421272881/";
 	}
-	
-	.Placentia-Bay {
-		--use-image: url("../images/Placentia-Bay-night-sky.webp");
-		--citation-text: "Reddit, NerdMachine";
-		--citation-full-URL: "https://www.reddit.com/r/newfoundland/comments/ad70kb/placentia_bay_night_sky/";
+
+	.Signal-Hill {
+		--use-image: url("../images/Signal-Hill-dark.jpg");
+		--citation-text: "Flickr, Rex Montalban Photography";
+		--citation-full-URL: "https://flickr.com/photos/rexmontalban/7123724139";
 	}
 
 	.St-Johns-harbour {
 		--use-image: url("../images/St-Johns-harbour-dark.jpg");
 		--citation-text: "CBC News, Gene Herzberg";
 		--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/gallery-week-november-30-1.5819766";
-	}
-
-	.Signal-Hill {
-		--use-image: url("../images/Signal-Hill-dark.jpg");
-		--citation-text: "Flickr, Rex Montalban Photography";
-		--citation-full-URL: "https://flickr.com/photos/rexmontalban/7123724139";
 	}
 
 	.the-Battery {

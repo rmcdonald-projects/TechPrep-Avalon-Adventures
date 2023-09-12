@@ -72,7 +72,7 @@
 }
 
 .camera {
-	--use-image: url("../images/camera.png");
+	--use-image: url("../images/icons/camera.png");
 	--citation-text: "Flaticon.com, Flaticon/Good Ware";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/camera_685655?term=camera&page=1&position=2&origin=tag&related_id=685655";
 }
@@ -90,7 +90,7 @@
 }
 
 .closeX {
-	--use-image: url("../images/closeX.png");
+	--use-image: url("../images/icons/closeX.png");
 	--citation-text: "Flaticon.com, Flaticon/bsd";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/cross_8867444?term=close+button&page=1&position=22&origin=tag&related_id=8867444";
 }
@@ -99,12 +99,6 @@
 	--use-image: url("../images/day-fishing.jpg");
 	--citation-text: "YouTube, So Cal Jigging with Johnny";
 	--citation-full-URL: "https://www.youtube.com/watch?v=a54pw6_f2QU";
-}
-
-.cod-jigging7 {
-	--use-image: url("../images/codjigging07.webp");
-	--citation-text: "Margaree Outfitters, Margaree Outfitters";
-	--citation-full-URL: "https://www.margareeoutfitters.ca/cod-jigging-tours/";
 }
 
 .cod-jigging11 {
@@ -192,7 +186,7 @@
 }
 
 .facebook {
-	--use-image: url("../images/facebook.png");
+	--use-image: url("../images/icons/facebook.png");
 	--citation-text: "Flaticon.com, Flaticon/Pixel Perfect";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/facebook_733603";
 }
@@ -215,16 +209,16 @@
 	--citation-full-URL: "https://www.pinterest.com/pin/391039180119133763/";
 }
 
-.Ferryland-picnic1 {
-	--use-image: url("../images/Ferryland-picnic1.jpg");
-	--citation-text: "Trip Advisor, StormsEnd";
-	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d660622-Reviews-Lighthouse_Picnics-Ferryland_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/660622/631269001:p/?albumid=-160&type=0&category=-160";
-}
-
 .Ferryland-picnic {
 	--use-image: url("../images/Ferryland-picnic2.jpg");
 	--citation-text: "Lighthouse Picnics";
 	--citation-full-URL: "https://lighthousepicnics.ca/about-us/";
+}
+
+.Ferryland-picnic1 {
+	--use-image: url("../images/Ferryland-picnic1.jpg");
+	--citation-text: "Trip Advisor, StormsEnd";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g1453750-d660622-Reviews-Lighthouse_Picnics-Ferryland_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/660622/631269001:p/?albumid=-160&type=0&category=-160";
 }
 
 .Ferryland-picnic3 {
@@ -258,45 +252,34 @@
 }
 
 .hamburger {
-	--use-image: url("../images/hamburger.png");
+	--use-image: url("../images/icons/hamburger.png");
 	--citation-text: "Flaticon.com, Flaticon/See Icons";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/menus_10486773";
 }
 
 .happy-whale {
-	--use-image: url("../images/happy-whale.png");
+	--use-image: url("../images/icons/happy-whale.png");
 	--citation-text: "Vecteezy, Nawaz Sharif";
 	--citation-full-URL: "https://www.vecteezy.com/vector-art/12097626-cute-blue-whale-jumping-humpback-happy-isolated-cartoon-animal-illustration-flat-style-sticker-icon-design-premium-logo-vector-mascot-character";
 }
 
 .hiking {
 	--use-image: url("../images/hiking.jpg");
-}
-
-.hiking2 {
-	--use-image: url("../images/hiking2.jpg");
-	--citation-text: "East Coast Trail, Calvin Tong";
-}
+	--citation-text: "";
+	--citation-full-URL: "";
+	}
 
 .hiking3 {
 	--use-image: url("../images/hiking3.jpg");
 	--citation-text: "East Coast Trail, Greg Locke";
-}
-
-.hiking4 {
-	--use-image: url("../images/hiking4.jpg");
-	--citation-text: "East Coast Trail, Brandon Cooney";
-}
+	--citation-full-URL: "";
+	}
 
 .hiking5 {
 	--use-image: url("../images/hiking5.jpg");
 	--citation-text: "East Coast Trail, Calvin Tong";
-}
-
-.hiking6 {
-	--use-image: url("../images/hiking6.jpg");
-	--citation-text: "East Coast Trail, Brandon Cooney";
-}
+	--citation-full-URL: "";
+	}
 
 .hiking-bg2 {
 	--use-image: url("../images/hiking-bg2.jpg");
@@ -323,7 +306,7 @@
 }
 
 .instagram {
-	--use-image: url("../images/instagram.png");
+	--use-image: url("../images/icons/instagram.png");
 	--citation-text: "Flaticon.com, Flaticon/Freepik";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/instagram_1384015";
 }
@@ -478,13 +461,13 @@
 }
 
 .scroll-arrow {
-	--use-image: url("../images/scroll-arrow.png");
+	--use-image: url("../images/icons/scroll-arrow.png");
 	--citation-text: "Flaticon.com, Flaticon/Freepik";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/scroll-down-arrow_2117";
 }
 
 .scroll-arrow-up {
-	--use-image: url("../images/scroll-arrow.png");
+	--use-image: url("../images/icons/scroll-arrow.png");
 	transform: rotate(180deg);
 	--citation-text: "Flaticon.com, Flaticon/Freepik";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/scroll-down-arrow_2117";
@@ -516,7 +499,9 @@
 
 .the-Battery {
 	--use-image: url("../images/the-Battery.jpg");
-}
+	--citation-text: "";
+	--citation-full-URL: "";
+	}
 
 .the-Rooms {
 	--use-image: url("../images/the-Rooms.jpg");
@@ -599,12 +584,14 @@
 .whale-breaching {
 	--use-image: url("../images/whale-breaching.jpg");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
-}
+	--citation-full-URL: "";
+	}
 
 .whale-cod-poster {
 	--use-image: url("../images/video/whale-cod-poster.png");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
-}
+	--citation-full-URL: "";
+	}
 
 .whale-slide1 {
 	--use-image: url("../images/whale-slide1.jpg");
@@ -639,7 +626,8 @@
 .whale-watching-poster {
 	--use-image: url("../images/video/whale-watching-poster.png");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
-}
+	--citation-full-URL: "";
+	}
 
 .Yellowbelly-beer {
 	--use-image: url("../images/Yellowbelly-Brewery-beer.jpg");
@@ -648,7 +636,7 @@
 }
 
 .youtube {
-	--use-image: url("../images/youtube.png");
+	--use-image: url("../images/icons/youtube.png");
 	--citation-text: "Flaticon.com, Flaticon/riajulislam";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/youtube_4494467";
 }

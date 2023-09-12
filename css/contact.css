@@ -81,14 +81,14 @@
 	column-gap: 2vh;
 }
 
-.submit-confirm {
+#contact .submit-confirm {
 	background-color: var(--light-colour);
 	color: var(--light-text);
 	transition: all var(--transition-duration-short) ease;
 	grid-template-columns: 3fr 2fr;
 }
 
-.submit-confirm-para {
+#contact .submit-confirm-para {
 	height: 100%;
 	width: 100%;
 	background-color: transparent;
@@ -97,5 +97,5 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	z-index: 11;
-	scale: 3;
+	scale: 2.5;
 }
