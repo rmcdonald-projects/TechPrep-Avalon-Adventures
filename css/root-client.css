@@ -4,9 +4,10 @@
 
 /*  --------------------------------------------------
     A note on z-indices...
+    *   "modal-pop" elements have an index of 11;
     *   the header has an index of 10;
-    *   "modal-pop" elements have an index of 9;
-    *   No other elements should have indices above 8;
+    *   no other elements should have indices above 9;
+    *   other overlays range from 3-9;
     *   "polaroid" caption text has an index of 2;
     -------------------------------------------------- */
 

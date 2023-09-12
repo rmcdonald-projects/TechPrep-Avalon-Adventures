@@ -322,7 +322,7 @@
 	.split-left,
 	.split-left-top,
 	.split-left-bottom {
-		z-index: 2;
+		z-index: 7;
 	}
 
 	.split-right-top,

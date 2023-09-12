@@ -89,11 +89,11 @@
 
 @keyframes wipe-in-bottom-right {
 	from {
-		clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+		clip-path: polygon(0 0, 0 0, 0 0, 0 0%);
 	}
 
 	to {
-		clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+		clip-path: polygon(-0% 0%, 200% 0, 0 200%, 0 -0%);
 	}
 }
 
