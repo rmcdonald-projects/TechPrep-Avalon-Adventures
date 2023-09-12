@@ -21,18 +21,26 @@ const slides = document.querySelectorAll(`div.slide`);
 const slideshowDiv = document.querySelector(`.slideshow`);
 const slideshowHype = document.querySelectorAll(`.slideshow-hype`);
 const defaultSlideSpeed = parseInt(getComputedStyle(document.body).getPropertyValue('--slide-duration')) || 10;
+const slideRightPanel = document.querySelector(`.split-right`);
+let isSlideShowPaused = false;
 
 /*  ----------------
     Slideshow logic:
     ---------------- */
 let slideSpeed = defaultSlideSpeed, slideActive = 0, activeInterval = false;
 let sliderNav = function (activateSlide, userClick = false) {
+    if (isSlideShowPaused) { return; }
     if (activeInterval) { clearTimeout(activeInterval); }
     if (activateSlide >= slides.length) { activateSlide = 0; }
     if (!slideshowDiv.classList.contains(`paused`) || userClick == true) {
         sliderBtns.forEach((btn, i) => {
             if (i !== activateSlide) {
                 btn.classList.remove(`active`);
+                if (slides[i].classList.contains(`active`)) {
+                    slides[i].classList.add(`finished`);
+                } else {
+                    slides[i].classList.remove(`finished`);
+                }
                 slides[i].classList.remove(`active`);
                 if (userClick) {
                     slideshowHype[i].classList.remove(`finished`);
@@ -65,6 +73,8 @@ let sliderNav = function (activateSlide, userClick = false) {
 
 sliderBtns.forEach((btn, i) => {
     btn.addEventListener(`click`, () => {
+        isSlideShowPaused = false;
+        toggleSlideshowPause(true);
         sliderNav(i, true);
     })
 });
@@ -73,9 +83,32 @@ if (sliderBtns.length > 0) {
     sliderNav(0, false);
 }
 
+if (slideRightPanel) {
+    slideRightPanel.addEventListener(`click`, (event) => {
+        toggleSlideshowPause(isSlideShowPaused);
+        isSlideShowPaused = !isSlideShowPaused;
+    })
+}
+
 function toggleSlideshowPause(isVis = true) {
     if (isVis != false) { isVis = true; }
-    if (isVis) { slideshowDiv.classList.remove(`paused`); } else { slideshowDiv.classList.add(`paused`); }
+    if (isVis) {
+        let x = document.getElementById(`temp-pause`);
+        if(x) x.remove();
+    } else {
+        let x = document.createElement(`span`);
+        x.id = `temp-pause`;
+        x.classList.add(`paused`);
+        x.classList.add(`hero-overlay`);
+//        x.style.height = '100vh';
+//        x.style.width = '100vw';
+//        x.style.top
+//        slideshowDiv.classList.add(`paused`);
+        slideshowDiv.appendChild(x);
+        x.addEventListener(`click`, (event) => {
+            toggleSlideshowPause();
+        })
+    }
     return;
 }
 
