@@ -19,8 +19,8 @@ const accordians = document.querySelectorAll(`.citations-collapsible input[type=
 const sliderBtns = document.querySelectorAll(`.nav-dot`);
 const slides = document.querySelectorAll(`div.slide`);
 const slideshowDiv = document.querySelector(`.slideshow`);
-const defaultSlideSpeed = 8; //    seconds per slide...
-
+const slideshowHype = document.querySelectorAll(`.slideshow-hype`);
+const defaultSlideSpeed = parseInt(getComputedStyle(document.body).getPropertyValue('--slide-duration')) || 10;
 
 /*  ----------------
     Slideshow logic:
@@ -31,11 +31,28 @@ let sliderNav = function (activateSlide, userClick = false) {
     if (activateSlide >= slides.length) { activateSlide = 0; }
     if (!slideshowDiv.classList.contains(`paused`) || userClick == true) {
         sliderBtns.forEach((btn, i) => {
-            btn.classList.remove(`active`);
-            slides[i].classList.remove(`active`);
+            if (i !== activateSlide) {
+                btn.classList.remove(`active`);
+                slides[i].classList.remove(`active`);
+                if (userClick) {
+                    slideshowHype[i].classList.remove(`finished`);
+                    slideshowHype[i].classList.add(`disappear`);
+                } else {
+                    if (slideshowHype[i].classList.contains(`active`)) {
+                        slideshowHype[i].classList.add(`finished`);
+                    } else {
+                        slideshowHype[i].classList.remove(`finished`);
+                        slideshowHype[i].classList.add(`disappear`);
+                    }
+                }
+                slideshowHype[i].classList.remove(`active`);
+            }
         });
         sliderBtns[activateSlide].classList.add(`active`);
         slides[activateSlide].classList.add(`active`);
+        slideshowHype[activateSlide].classList.remove(`disappear`);
+        slideshowHype[activateSlide].classList.remove(`finished`);
+        slideshowHype[activateSlide].classList.add(`active`);
         slideActive = activateSlide;
         if (!slideshowDiv.classList.contains(`paused`)) {
             slideActive = activateSlide + 1;
@@ -523,7 +540,7 @@ function validateForm() {
             emailBody += `\r${niceName}: ${value}`;
         }
     }
-    //sendEmail(undefined, undefined, undefined, emailBody);
+    sendEmail(undefined, undefined, undefined, emailBody);
     //  Reset the form...
     let submitButton = document.querySelector(`#submit`);
     if (submitButton) {
