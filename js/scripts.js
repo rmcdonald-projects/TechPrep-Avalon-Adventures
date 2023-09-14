@@ -431,15 +431,15 @@ function toggleVideoPause(vid, params) {
     ---------------- */
 
 //  Set baseline contact email details...
-const defaultToAddress = `monsmord@gmail.com`;
-const defaultFromAddress = `rmcdonald.mailbox@gmail.com`;
+const defaultToAddress = `2d4be15a.murphycentre.ca@amer.teams.ms`;
+const defaultFromAddress = `info@AvalonAdventures.ca`;
 const contactEmailSubject = `Avalon Adventures Contact Request`;
 let contactEmailBody = `A question has been submitted on the Avalon Adventures website (${window.location.href}):\r`;
 
 //  Send email...
 function sendEmail(mailToAddress = defaultToAddress, mailFromAddress = defaultFromAddress, sendEmailSubj = contactEmailSubject, sendEmailBody = `Error - no email body`) {
     sendEmailBody = encodeURIComponent(sendEmailBody);
-    window.open(`mailto:monsmord@gmail.com?subject=${sendEmailSubj}&body=${sendEmailBody}`);
+    window.open(`mailto:2d4be15a.murphycentre.ca@amer.teams.ms?subject=${sendEmailSubj}&body=${sendEmailBody}`);
     return;
 }
 
