@@ -1,5 +1,16 @@
 `use strict`;
 
+/*  ----------------------------------------------------
+    Initial Coding and "production" release: 22 Sep 2023
+    ----------------------------------------------------
+    Change log:
+    ----------------------------------------------------
+
+
+
+
+    ---------------------------------------------------- */
+
 /*  ----------
     Globals...
     ---------- */
@@ -22,14 +33,20 @@ const slideshowDiv = document.querySelector(`.slideshow`);
 const slideshowHype = document.querySelectorAll(`.slideshow-hype`);
 const defaultSlideSpeed = parseInt(getComputedStyle(document.body).getPropertyValue('--slide-duration')) || 10;
 const slideRightPanel = document.querySelector(`.split-right`);
-let isSlideShowPaused = false;
+const darkModeToggle = document.getElementById(`dark-mode`);
 
 /*  ----------------
     Slideshow logic:
     ---------------- */
-let slideSpeed = defaultSlideSpeed, slideActive = 0, activeInterval = false;
+let slideSpeed = defaultSlideSpeed, slideActive = 0, activeInterval = false, isSlideShowPaused = false;
 let sliderNav = function (activateSlide, userClick = false) {
-    if (isSlideShowPaused) { return; }
+    if (isSlideShowPaused) {
+        let x = document.getElementById(`temp-pause`);
+        if (x) {
+            activeInterval = setTimeout(sliderNav, slideSpeed * 1000, slideActive, false);
+            return;
+        }
+    }
     if (activeInterval) { clearTimeout(activeInterval); }
     if (activateSlide >= slides.length) { activateSlide = 0; }
     if (!slideshowDiv.classList.contains(`paused`) || userClick == true) {
@@ -94,16 +111,12 @@ function toggleSlideshowPause(isVis = true) {
     if (isVis != false) { isVis = true; }
     if (isVis) {
         let x = document.getElementById(`temp-pause`);
-        if(x) x.remove();
+        if (x) x.remove();
     } else {
         let x = document.createElement(`span`);
         x.id = `temp-pause`;
         x.classList.add(`paused`);
         x.classList.add(`hero-overlay`);
-//        x.style.height = '100vh';
-//        x.style.width = '100vw';
-//        x.style.top
-//        slideshowDiv.classList.add(`paused`);
         slideshowDiv.appendChild(x);
         x.addEventListener(`click`, (event) => {
             toggleSlideshowPause();
@@ -117,6 +130,7 @@ function toggleSlideshowPause(isVis = true) {
     ----------------------- */
 
 window.onload = (event) => {
+    toggleDarkMode();
     toggleHeaderBG();
     updateMediaCaptions();
     pols.forEach(elem => polaroidSetSize(elem));
@@ -129,7 +143,6 @@ window.onload = (event) => {
 /*  Click events... */
 
 //  Modal popups...
-
 modalPics.forEach(elem => {
     elem.addEventListener(`click`, (event) => {
         let x = document.getElementById(`temp-span`);
@@ -212,6 +225,19 @@ videoOverlays.forEach(elem => {
         });
     })
 })
+
+//  Dark mode toggle...
+if (darkModeToggle) {
+    darkModeToggle.addEventListener(`click`, (event) => {
+        toggleDarkMode(true);
+    })
+}
+
+if (window.matchMedia) {
+    window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`, (event) => {
+        toggleDarkMode();
+    });
+}
 
 /*  Resize events...    */
 
@@ -306,7 +332,7 @@ animatedElements.forEach(element => {
     "keyup":    while the user is actively changing the values, remove any error messages...
     ---------------------------------------------------------------------------------------- */
 formInputs.forEach(elem => {
-    //    if (elem.type != `tel`) {
+    //if (elem.type != `tel`) {
     //elem.addEventListener(`blur`, (event) => validateFormInput(event.target, false));
     elem.addEventListener(`keyup`, (event) => validateFormInput(event.target, false));
     //    }
@@ -421,7 +447,7 @@ function sendEmail(mailToAddress = defaultToAddress, mailFromAddress = defaultFr
     Form functions...
     ----------------- */
 
-//  Add of remove an error message on a specified form input...
+//  Add or remove an error message on a specified form input...
 function toggleErrorMessage(errMsg = false, targElem = null, addRem = `remove`) {
     if (!targElem) { return; }
     if (addRem !== `add`) { addRem = `remove`; }
@@ -444,7 +470,7 @@ function toggleErrorMessage(errMsg = false, targElem = null, addRem = `remove`) 
     return;
 }
 
-//  Validate form inputs (except phone)...
+//  Validate Contact form inputs...
 function validateFormInput(inputElem = null, submitTF = false, clearError = false) {
     //  Make sure inputElem argument is a recognized input or textarea element...
     if (!(inputElem instanceof Element || inputElem instanceof HTMLElement)) {
@@ -511,7 +537,6 @@ function validateFormInput(inputElem = null, submitTF = false, clearError = fals
                 }
             }
         }
-        //        console.log(inputElem.name, inputVal, checkRegex.length);
         //  If the input value is blank, and is not required or the form is not being submitted,
         //  remove any existing error message from the DOM...
         if (inputVal.length < minLength && (!submitTF || !reqd)) {
@@ -527,6 +552,7 @@ function validateFormInput(inputElem = null, submitTF = false, clearError = fals
     return errMsg;
 }
 
+//  Validates the Contact form...
 function validateForm() {
     //  Validate all form fields...
     let errs = [];
@@ -592,6 +618,7 @@ function validateForm() {
     return;
 }
 
+//  Clears the form of data and resets any error messages...
 function clearForm(didSubmit = false) {
     if (didSubmit !== true) {
         let submitButton = document.querySelector(`#submit`);
@@ -617,9 +644,9 @@ function clearForm(didSubmit = false) {
     Miscellaneous functions...
     -------------------------- */
 
-/*  --------------------------------------------------------------------------
+/*  -----------------------------------------------------------------------------
 /*  Sets the proper size/aspect ratio of elements with the "polaroid" class...
-    --------------------------------------------------------------------------
+    -----------------------------------------------------------------------------
     Polaroid photo "frames" need to maintain an outer aspect ratio of 35/42
     (3.5 inches/4.2 inches), an image aspect ratio of 1/1, and margins of 2 units
     on the top, left, and right.
@@ -635,7 +662,7 @@ function clearForm(didSubmit = false) {
     is calculated to fit the entire message in the larger bottom border area.
 
     Called on initial page load and on window resizing...
-*/
+    ----------------------------------------------------------------------------- */
 function polaroidSetSize(pol = null) {
     if (!pol || !(pol instanceof HTMLElement) || !pol.classList.contains(`polaroid`)) { return; }
     let x = pol.offsetWidth;
@@ -645,7 +672,7 @@ function polaroidSetSize(pol = null) {
     pol.style.border = `${b}px solid white`;
     pol.style.borderBottom = `${botBord}px solid white`;
     //  Do any caption text...
-    let capText = pol.dataset.polaroidCaption || "";
+    let capText = pol.dataset.polaroidCaption || ``;
     if (!capText || capText.length < 1) { return; }
     let fontSize = textFitter(capText, pol.width, botBord - (b * 2), ``, pol) || 6;
     pol.style.setProperty(`--caption-font-size`, `${fontSize}px`);
@@ -653,7 +680,9 @@ function polaroidSetSize(pol = null) {
     return;
 }
 
-//  Return size of text that will fit an element or given space...
+/*  --------------------------------------------------------------
+    Return size of text that will fit an element or given space...
+    -------------------------------------------------------------- */
 function textFitter(txt = ``, wide = 0, high = 0, fontFam = ``, elemCheck = null) {
     txt = txt.toString(), elemUse = null, wh = null;
     if (txt.length < 1) { return 0; }
@@ -665,7 +694,7 @@ function textFitter(txt = ``, wide = 0, high = 0, fontFam = ``, elemCheck = null
     //  If an element is passed and wide or high are < 1, or fontFam is not provided,
     //  get the missing parameter(s) from the element's content area...
     if ((w == 0 || h == 0 || !fontFam) && elemUse) {
-        wh = getElemSize(elemUse, { "type": "content" });
+        wh = getElemSize(elemUse, { "type": `content` });
         if (w < 1) { w = wh[0] || 0; }
         if (h < 1) { h = wh[1] || 0; }
         if (fontFam.length < 1) { fontFam = wh[2].fontFamily; }
@@ -695,6 +724,12 @@ function textFitter(txt = ``, wide = 0, high = 0, fontFam = ``, elemCheck = null
     return Math.max(fs, 4);
 }
 
+/*  --------------------------
+    Toggle the "hamburger" menu:
+
+    (1) opens the main nav as a vertical full-screen modal list;
+    (2) replaces the hamburger with an "x" icon...
+    ------------------------------------------------------------ */
 function toggleHamburgerMenu() {
     const menuButton = document.getElementById(`hamburger-menu`);
     const navMenu = document.getElementById(`main-nav`);
@@ -746,7 +781,8 @@ function updateMediaCaptions() {
 }
 
 /*  ------------------------------------------------------------
-    Create a downloadable text file of information in the DOM...
+    Create a downloadable text file of information in the DOM,
+    used to track info during development...
 
     When the text file is completed, a download link is added
     just before the footer of the page...
@@ -809,7 +845,13 @@ function collectDocumentData(infoType = `image`) {
 }
 //collectDocumentData();
 
-//  Scrolling shortcut buttons...
+/*  --------------------------------------------------------------------------
+    Scrolling shortcut buttons...
+
+    On mobile screens, arrows are provided to go quickly to the bottom and top
+    of pages. The opacity and click-ability of the arrows is determined by
+    the relative position of the viewport compare to the total page height...
+    -------------------------------------------------------------------------- */
 function greyScrollButtons() {
     let bodHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight
@@ -846,14 +888,16 @@ function scrollToTop() {
     return;
 }
 
-/*  Get an element or pseudo-element's width & height...
+/*  -----------------------------------------------------------------------------------
+    Get an element or pseudo-element's width & height...
     "args" is an associative array:
         "type":     string of what size to return:
                     "content":  the content w/o padding or border;
                     "padding":  content and padding;
                     "all":      content, padding, and border (offsetWidth/Height)
         "pseudo":   a pseudo-element passed as a string (optional);
-    The function returns an array of [width, height, computedStyle], or false on error; */
+    The function returns an array of [width, height, computedStyle], or false on error;
+    ----------------------------------------------------------------------------------- */
 function getElemSize(elem, args) {
     let comped = getComputedStyle(elem);
     if (!comped) { return false; }
@@ -871,6 +915,9 @@ function getElemSize(elem, args) {
     return retArr;
 }
 
+/*  ------------------------------
+    Handle full screen requests...
+    ------------------------------ */
 function toggleFullscreen(elem) {
     if (!document.fullscreenElement) {
         elem.requestFullscreen().catch((err) => {
@@ -881,4 +928,57 @@ function toggleFullscreen(elem) {
         document.exitFullscreen();
     }
     return false;
+}
+
+/*  ------------------------------------------------------------------
+    Dark mode toggle. The hierarchy is:
+    (1) User choice via the range toggle;
+    (2) Mode retrieved from cookie/local storage;
+    (3) User system preference;
+    Defaults to light theme in the absence of a dark mode indicator...
+    ------------------------------------------------------------------ */
+function toggleDarkMode(wasClick = false) {
+    if (wasClick !== true) { wasClick = false; }
+    let useDark = false;
+    //  User system preference...
+    if (window.matchMedia && window.matchMedia(`(prefers-color-scheme: dark)`).matches) {
+        useDark = true;
+    }
+    //  Previously stored user preference...
+    let storedDark = localStorage.getItem(`dark-mode`);
+    if (storedDark !== undefined && storedDark !== null) {
+        if (storedDark == `true`) { useDark = true; }
+        if (storedDark == `false`) { useDark = false; }
+        //  Currently, localstorage is all strings. In case true Booleans are ever captured...
+        if (typeof (storedDark) == Boolean) { useDark = storedDark; }
+    }
+    //  User set preference via toggle - note, logic includes options for both "checkbox" and "range" types...
+    const toggleType = darkModeToggle.type;
+    if (wasClick) {
+        switch (toggleType) {
+            case `range`:
+                useDark = darkModeToggle.value == 0 ? true : false;
+                break;
+            case `checkbox`:
+                useDark = darkModeToggle.checked;
+                break;
+            default:
+        }
+        localStorage.setItem(`dark-mode`, useDark);
+    }
+    if (useDark) {
+        document.documentElement.classList.add(`dark-mode-selected`);
+    } else {
+        document.documentElement.classList.remove(`dark-mode-selected`);
+    }
+    switch (toggleType) {
+        case `range`:
+            darkModeToggle.value = useDark == true ? 0 : 1;
+            break;
+        case `checkbox`:
+            darkModeToggle.checked = useDark;
+            break;
+        default:
+    }
+    return;
 }
