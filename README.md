@@ -7,3 +7,5 @@ My expression of the project contains images and video excerpts independently ac
   section 107 of the U.S. Copyright Act of 1976 (https://www.copyright.gov/fair-use/)
 
 As I don't own the media or the bulk of the descriptive text, I cannot offer a license, and I ask that none of the media/text be shared/disseminated or used for licensed purposes.
+
+This version of "Avalon Adventures" will become static after the TechPrep program wraps up, as a sort of "before" picture.
