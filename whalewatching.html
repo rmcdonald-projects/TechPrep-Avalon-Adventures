@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="author" content="Rob McDonald">
-    <meta name="description"
-        content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
+    <meta name="description" content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
     <title>Avalon Adventures - family-friendly outings on Newfoundland's Avalon Peninsula</title>
     <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
     <!-- General site-wide CSS files... -->
@@ -30,13 +29,10 @@
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
                         <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture
-                                    Package</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
                         <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a>
-                        </li>
-                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod
-                                    Jigging</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
@@ -48,7 +44,13 @@
                 <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
             </div>
         </nav>
-        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        <div id="hamburger-plus-toggle">
+            <span id="dark-mode-toggle-container" class="centered">
+                <input id="dark-mode" type="checkbox" style="display: none" />
+                <label for="dark-mode"><span class="dark-mode-thumb"></span><span class="dark-mode-clouds"></span><span class="dark-mode-stars"></span></label>
+            </span>
+            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        </div>
     </header>
     <div class="true-hero">
         <div class="hero-novideo whale-cod-poster"></div>
@@ -58,75 +60,48 @@
         </video>
         <div class="hero-overlay">
             <div class="hero-splash">
-                <span class="big-text mixed-caps standout-text centered">Need text;<br>
-                Need image for mobile</span>
+                <span class="big-text mixed-caps standout-text centered">Need text;<br>Need image for mobile</span>
             </div>
         </div>
     </div>
     <main>
         <div class="fixed-background whale-breaching"></div>
-        <!--        <div class="hero-static the-Rooms">
-            <span class="big-text mixed-caps standout-text centered">NEED TITLE</span>
-            <span class="citation-watermark"></span>
-        </div>-->
         <div class="one-column">
-            <p>Join us for a thrilling family/group activity that combines the excitement of whale watching with the
-                traditional Newfoundland pastime of cod jigging!</p>
+            <p>Join us for a thrilling family/group activity that combines the excitement of whale watching with the traditional Newfoundland pastime of cod jigging!</p>
         </div>
         <div class="detail-box one-column">
             <span class="subheader mixed-caps">Whale-watching!</span>
             <div class="slides-plus-desc" data-add-animation="scroll-in">
-                <div class="slides-plus-desc-pic"><span class="in-frame polaroid whale-slide4 is-modal-pic"
-                        data-polaroid-caption="Meditation and water are wedded forever..."
-                        data-add-animation="dangling"></span></div>
+                <div class="slides-plus-desc-pic"><span class="in-frame polaroid whale-slide4 is-modal-pic" data-polaroid-caption="Meditation and water are wedded forever..." data-add-animation="dangling"></span></div>
                 <div class="slides-plus-desc-slide1 no-frame whale-slide1 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide2 no-frame whale-slide2 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame whale-slide3 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
-                    <p>We'll start our adventure with a scenic boat ride along the beautiful coastline of Conception
-                        Bay, where
-                        we'll have the chance to spot majestic whales breaching and blowing. Our experienced guide
-                        will
-                        provide
-                        interesting facts about these incredible creatures and their behaviour in the wild.
-                    </p>
+                    <p>We'll start our adventure with a scenic boat ride along the beautiful coastline of Conception Bay, where we'll have the chance to spot majestic whales breaching and blowing. Our experienced guide will provide interesting facts about these incredible creatures and their behaviour in the wild.</p>
                 </div>
             </div>
         </div>
         <div class="detail-box one-column">
             <span class="subheader mixed-caps">Cod Jigging!</span>
             <div class="slides-plus-desc" data-add-animation="scroll-in">
-                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-jigging11 is-modal-pic"
-                        data-polaroid-caption="I caught this many!" data-add-animation="dangling"></span></div>
+                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-jigging07 is-modal-pic" data-polaroid-caption="I caught this many!" data-add-animation="dangling"></span></div>
                 <div class="slides-plus-desc-slide1 no-frame cod-slide1 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide2 no-frame cod-slide2 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame cod-slide3 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
-                    <p>Once we've had our fill of whale watching, we'll head to a prime fishing spot where we'll try
-                        our hand at
-                        cod jigging. Our guide will provide all the necessary equipment and teach us the techniques
-                        needed to
-                        catch our own fresh cod. It's a hands-on experience that's sure to create lasting memories.
-                    </p>
+                    <p>Once we've had our fill of whale watching, we'll head to a prime fishing spot where we'll try our hand at cod jigging. Our guide will provide all the necessary equipment and teach us the techniques needed to catch our own fresh cod. It's a hands-on experience that's sure to create lasting memories.</p>
                 </div>
             </div>
         </div>
         <div class="detail-box one-column">
             <span class="subheader mixed-caps">Bon Appétit!</span>
             <div class="slides-plus-desc" data-add-animation="scroll-in">
-                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-kissing is-modal-pic"
-                        data-polaroid-caption="cod-smacked" data-add-animation="dangling"></span></div>
+                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-kissing is-modal-pic" data-polaroid-caption="cod-smacked" data-add-animation="dangling"></span></div>
                 <div class="slides-plus-desc-slide1 no-frame cod-meal-slide1 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide2 no-frame cod-meal-slide2 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame cod-meal-slide3 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc ">
-                    <p>After a successful day on the water, we'll bring our catch back to shore and enjoy a
-                        delicious seafood
-                        feast, cooked to perfection by <a href="about.html#chef">Chef Asano</a>. It's the perfect
-                        way to cap off an
-                        unforgettable day spent
-                        exploring the natural wonders of Newfoundland.
-                    </p>
+                    <p>After a successful day on the water, we'll bring our catch back to shore and enjoy a delicious seafood feast, cooked to perfection by <a href="about.html#chef">Chef Asano</a>. It's the perfect way to cap off an unforgettable day spent exploring the natural wonders of Newfoundland.</p>
                 </div>
             </div>
         </div>
@@ -135,8 +110,7 @@
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
-            <p class="price">$125+tax per adult, $60 per child 12 and under.<span class="spacebr"></span>For group rates, contact our <a href="about.html#wavewhisperer">Wave Whisperer, Neil
-                    Davone</a>.</p>
+            <p class="price">$125+tax per adult, $60 per child 12 and under.<span class="spacebr"></span>For group rates, contact our <a href="about.html#wavewhisperer">Wave Whisperer, Neil  Davone</a>.</p>
             <h2>Need outro and image;<br>Re-edit video to cut 4+ seconds</h2>
         </div>
     </main>
@@ -145,63 +119,38 @@
             <div id="footer-land-acknowledgement" class="modal-container">
                 <span>Land Acknowledgement</span>
                 <div class="disappear modal-pop">
-                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as
-                        the ancestral homelands of the
-                        Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island
-                        of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the
-                        Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us,
-                        those who live with us now, and the seven generations to come. As First Peoples have done since
-                        time immemorial, we strive to be responsible stewards of the land and to respect the cultures,
-                        ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past,
-                        we commit ourselves to working in a spirit of truth and reconciliation to make a better future
-                        for all.</p>
-                    <p>Land acknowledgement is just a first step. Visit <a
-                            href="https://nativegov.org/news/beyond-land-acknowledgment-guide/"
-                            aria-label="A link to NativeGov.org. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">NativeGov.org</a> for information on action that
-                        directly supports indigenous nations.</p>
+                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as the ancestral homelands of the Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us, those who live with us now, and the seven generations to come. As First Peoples have done since time immemorial, we strive to be responsible stewards of the land and to respect the cultures, ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past, we commit ourselves to working in a spirit of truth and reconciliation to make a better future for all.</p>
+                    <p>Land acknowledgement is just a first step. Visit <a href="https://nativegov.org/news/beyond-land-acknowledgment-guide/" aria-label="A link to NativeGov.org. Opens in a new window." target="_blank" rel="noopener noreferrer external">NativeGov.org</a> for information on action that directly supports indigenous nations.</p>
                     <p class="user-directions">(click anywhere to close)</p>
                 </div>
             </div>
             <div id="footer-media-links">
                 <ul class="flexy">
                     <li>
-                        <a href="https://www.facebook.com/MurphyCentre/"
-                            aria-label="Our Facebook page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.facebook.com/MurphyCentre/" aria-label="Our Facebook page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link facebook"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/TheMurphyCentre/"
-                            aria-label="Our Instagram page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.instagram.com/TheMurphyCentre/" aria-label="Our Instagram page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link instagram"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw"
-                            aria-label="Our YouTube page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw" aria-label="Our YouTube page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link youtube"></div>
                         </a>
                     </li>
                 </ul>
             </div>
             <div id="footer-fair-dealing">
-                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank"
-                    rel="noopener noreferrer external">
-                    Fair Dealing/Use Statement
-                </a>
+                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank" rel="noopener noreferrer external">Fair Dealing/Use Statement</a>
             </div>
         </div>
-
         <div id="copyright">
             <span>Copyright © 2023 Avalon Adventures.</span>
             <span>All rights reserved.</span>
-            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn"
-                    aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank"
-                    rel="noopener noreferrer external">Jawn</a>.</span>
+            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn" aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank" rel="noopener noreferrer external">Jawn</a>.</span>
         </div>
     </footer>
     <!-- loading javascript at the end assures complete page load before any execution -->

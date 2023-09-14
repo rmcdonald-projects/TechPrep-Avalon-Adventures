@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="author" content="Rob McDonald">
-    <meta name="description"
-        content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
+    <meta name="description" content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
     <title>Avalon Adventures - family-friendly outings on Newfoundland's Avalon Peninsula</title>
     <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
     <!-- General site-wide CSS files... -->
@@ -45,7 +44,13 @@
                 <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
             </div>
         </nav>
-        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        <div id="hamburger-plus-toggle">
+            <span id="dark-mode-toggle-container" class="centered">
+                <input id="dark-mode" type="checkbox" style="display: none" />
+                <label for="dark-mode"><span class="dark-mode-thumb"></span><span class="dark-mode-clouds"></span><span class="dark-mode-stars"></span></label>
+            </span>
+            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        </div>
     </header>
     <main>
         <div class="fixed-background beer-and-wood"></div>
@@ -54,12 +59,8 @@
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
-            <p>Avalon Adventures invites you to experience the thriving craft beer scene on the Avalon Peninsula of
-                Newfoundland and Labrador with our exclusive group adult package.</p>
-            <p>Join us on a guided tour of the region's best breweries and discover the art and science of craft
-                brewing. Our expert guides will take you behind the scenes of each brewery, where you'll learn about the
-                brewing process, the history of craft brewing on the Avalon Peninsula, and the stories behind each beer.
-            </p>
+            <p>Avalon Adventures invites you to experience the thriving craft beer scene on the Avalon Peninsula of Newfoundland and Labrador with our exclusive group adult package.</p>
+            <p>Join us on a guided tour of the region's best breweries and discover the art and science of craft brewing. Our expert guides will take you behind the scenes of each brewery, where you'll learn about the brewing process, the history of craft brewing on the Avalon Peninsula, and the stories behind each beer.</p>
             <p>Our tour includes visits to some of the most renowned breweries in the area, including:</p>
         </div>
         <div class="detail-box one-column">
@@ -67,14 +68,8 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Yellowbelly-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://www.yellowbellybrewery.com/"
-                            aria-label="A link to the Yellowbelly Brewery website. Opens in a new window."
-                            target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
-                    <p>Sitting where George Street intercepts Water Street in downtown St. John's, Newfoundland,
-                        YellowBelly Corner is a testament in stone and masonry to a time long gone. A survivor of
-                        the Great St. John's Fire of 1892, the building's walls resonate with the history of Irish
-                        immigrants who duked it out in the streets that run by its sides. Now this remarkable piece
-                        of St. John's heritage is home to YellowBelly Brewery & Public House.</p>
+                    <p>(From <a href="https://www.yellowbellybrewery.com/" aria-label="A link to the Yellowbelly Brewery website. Opens in a new window." target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
+                    <p>Sitting where George Street intercepts Water Street in downtown St. John's, Newfoundland, YellowBelly Corner is a testament in stone and masonry to a time long gone. A survivor of the Great St. John's Fire of 1892, the building's walls resonate with the history of Irish immigrants who duked it out in the streets that run by its sides. Now this remarkable piece of St. John's heritage is home to YellowBelly Brewery & Public House.</p>
                 </div>
             </div>
         </div>
@@ -83,11 +78,8 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Quidi-Vidi-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://www.facebook.com/quidividibrewery/"
-                            aria-label="A link to the Quidi Vidi Brewing Company Facebook page. Opens in a new window."
-                            target="_blank" rel="noopener noreferrer external">their Facebook page</a>...)</p>
-                    <p>A former fish plant turned brewery nestled in historic Quidi Vidi Village. On the go since
-                        1996.</p>
+                    <p>(From <a href="https://www.facebook.com/quidividibrewery/" aria-label="A link to the Quidi Vidi Brewing Company Facebook page. Opens in a new window." target="_blank" rel="noopener noreferrer external">their Facebook page</a>...)</p>
+                    <p>A former fish plant turned brewery nestled in historic Quidi Vidi Village. On the go since 1996.</p>
                 </div>
             </div>
         </div>
@@ -96,13 +88,8 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Landwash-Brewery-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://www.landwashbrewery.com/"
-                            aria-label="A link to the Landwash Brewery website. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">their website</a>...)</p>
-                    <p>Our taproom is a bright, beerhall style, place for family and friends! We have food from
-                        Johnny and Mae’s Food Truck... 18 taps of our beer, as well as cider from the Newfoundland
-                        Cider Company and wine from Benjamin Bridge and/or Rosewood, spirits from The Newfoundland
-                        Distillery, and non-alcoholic beverages.</p>
+                    <p>(From <a href="https://www.landwashbrewery.com/" aria-label="A link to the Landwash Brewery website. Opens in a new window." target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
+                    <p>Our taproom is a bright, beerhall style, place for family and friends! We have food from Johnny and Mae’s Food Truck... 18 taps of our beer, as well as cider from the Newfoundland Cider Company and wine from Benjamin Bridge and/or Rosewood, spirits from The Newfoundland Distillery, and non-alcoholic beverages.</p>
                 </div>
             </div>
         </div>
@@ -111,16 +98,9 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Bannerman-Brewing-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://www.bannermanbrewing.com/"
-                            aria-label="A link to the Bannerman Brewing Company website. Opens in a new window."
-                            target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
-                    <p>Found in the east end of downtown of St. John’s, BANNERMAN BREWING CO. is a locally owned and
-                        operated brewery, tasting room, cafe and event space. Home to a lighthearted crew, we have a
-                        passion for crafting artisanal beer and sharing it with our community.</p>
-                    <p>To know the story of our brewery is to know the history of our neighbourhood. Long before we
-                        poured our first beer, BANNERMAN BREWING CO. was the location of the city’s historic East
-                        Fire Station. Originally constructed after the Great Fire of 1892, it was rebuilt in the
-                        1950s and still stands today at the corner of Duckworth and Ordnance Street.</p>
+                    <p>(From <a href="https://www.bannermanbrewing.com/" aria-label="A link to the Bannerman Brewing Company website. Opens in a new window." target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
+                    <p>Found in the east end of downtown of St. John’s, BANNERMAN BREWING CO. is a locally owned and operated brewery, tasting room, cafe and event space. Home to a lighthearted crew, we have a passion for crafting artisanal beer and sharing it with our community.</p>
+                    <p>To know the story of our brewery is to know the history of our neighbourhood. Long before we poured our first beer, BANNERMAN BREWING CO. was the location of the city’s historic East Fire Station. Originally constructed after the Great Fire of 1892, it was rebuilt in the 1950s and still stands today at the corner of Duckworth and Ordnance Street.</p>
                 </div>
             </div>
         </div>
@@ -129,14 +109,8 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Ninepenny-Brewing-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://ninepennybrewing.ca/"
-                            aria-label="A link to the Ninepenny Brewing website. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">their website</a>...)</p>
-                    <p>Ninepenny Brewing is a premium craft brewery from Conception Bay South, NL that is created by
-                        friends, perfected by science, and enjoyed by all. The name is born from our ancestors’ love
-                        of beer and pays homage to the old English pubs where stories were told, beers were shared,
-                        and journeys began. It also makes a subtle nod to the nine communities that came together to
-                        create Conception Bay South.</p>
+                    <p>(From <a href="https://ninepennybrewing.ca/" aria-label="A link to the Ninepenny Brewing website. Opens in a new window." target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
+                    <p>Ninepenny Brewing is a premium craft brewery from Conception Bay South, NL that is created by friends, perfected by science, and enjoyed by all. The name is born from our ancestors’ love of beer and pays homage to the old English pubs where stories were told, beers were shared, and journeys began. It also makes a subtle nod to the nine communities that came together to create Conception Bay South.</p>
                 </div>
             </div>
         </div>
@@ -145,13 +119,8 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Dildo-Brewing-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://dildobrewingco.ca/"
-                            aria-label="A link to the Dildo Brewing Company website. Opens in a new window."
-                            target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
-                    <p>The story of Dildo Brewing Company & Museum started back in 2016 with local brother and
-                        sister Angie Reid and Roger George. Together with their spouses Rob Reid and Debbie George,
-                        they set out to bring craft beer and a much needed hub of the community to Dildo,
-                        Newfoundland.</p>
+                    <p>(From <a href="https://dildobrewingco.ca/" aria-label="A link to the Dildo Brewing Company website. Opens in a new window." target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
+                    <p>The story of Dildo Brewing Company & Museum started back in 2016 with local brother and sister Angie Reid and Roger George. Together with their spouses Rob Reid and Debbie George, they set out to bring craft beer and a much needed hub of the community to Dildo, Newfoundland.</p>
                 </div>
             </div>
         </div>
@@ -160,15 +129,9 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Baccalieu-Trail-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://baccalieutrailbrewingco.square.site/"
-                            aria-label="A link to the Baccalieu Trail Brewing Company website. Opens in a new window."
-                            target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
-                    <p>Baccalieu Trail Brewing Co. opened in November 2018 with the mission of providing fresh,
-                        modern craft beer to Conception Bay North - a bay surrounded by the some of the
-                        first-settled communities in North America.</p>
-                    <p>Our lineup is ever-changing (much like the Newfoundland weather), but you're sure to find
-                        something innovative and new when you visit our Taproom in Bay Roberts, or go on the hunt
-                        for cans, wherever you buy your beer. </p>
+                    <p>(From <a href="https://baccalieutrailbrewingco.square.site/" aria-label="A link to the Baccalieu Trail Brewing Company website. Opens in a new window." target="_blank" rel="noopener noreferrer external">their website</a>...)</p>
+                    <p>Baccalieu Trail Brewing Co. opened in November 2018 with the mission of providing fresh, modern craft beer to Conception Bay North - a bay surrounded by the some of the first-settled communities in North America.</p>
+                    <p>Our lineup is ever-changing (much like the Newfoundland weather), but you're sure to find something innovative and new when you visit our Taproom in Bay Roberts, or go on the hunt for cans, wherever you buy your beer. </p>
                 </div>
             </div>
         </div>
@@ -177,15 +140,8 @@
             <div class="pic-plus-desc" data-add-animation="scroll-in">
                 <div class="pic-plus-desc-pic"><span class="no-frame Bay-de-Verde-Brewing-beer is-modal-pic"></span></div>
                 <div class="pic-plus-desc-desc ">
-                    <p>(From <a href="https://www.newfoundlandlabrador.com/plan-and-book/attractions/36376363"
-                            aria-label="A link to the Newfoundland and Labrador Tourism entry on Bay de Verde Brewing Company. Opens in a new window."
-                            target="_blank" rel="noopener noreferrer external">Newfoundland and Labrador
-                            Tourism</a>...)</p>
-                    <p>Just one more reason to visit the picturesque town of Bay de Verde, two hours from St. John's
-                        at the tip of the Bay de Verde Peninsula. Stop and enjoy a pint in the taproom or pick up a
-                        can or two to go. The brewery and taproom are in a converted Newfoundland saltbox house
-                        overlooking the busy historic harbour. There are many attractions near the brewery including
-                        restaurants, a heritage house and many walking and hiking trails.</p>
+                    <p>(From <a href="https://www.newfoundlandlabrador.com/plan-and-book/attractions/36376363" aria-label="A link to the Newfoundland and Labrador Tourism entry on Bay de Verde Brewing Company. Opens in a new window." target="_blank" rel="noopener noreferrer external">Newfoundland and Labrador Tourism</a>...)</p>
+                    <p>Just one more reason to visit the picturesque town of Bay de Verde, two hours from St. John's at the tip of the Bay de Verde Peninsula. Stop and enjoy a pint in the taproom or pick up a can or two to go. The brewery and taproom are in a converted Newfoundland saltbox house overlooking the busy historic harbour. There are many attractions near the brewery including restaurants, a heritage house and many walking and hiking trails.</p>
                 </div>
             </div>
         </div>
@@ -194,14 +150,9 @@
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
-            <p>At each brewery, you'll have the opportunity to taste a variety of beers and ales, including seasonal and
-                limited edition brews. Meet the brewers and chat with fellow beer enthusiasts as you sample unique
-                flavors and learn about the brewing process.</p>
-            <p>As part of this package, we provide transportation to and from each brewery, light refreshments, and a
-                knowledgeable guide to enhance your experience. Our tours are perfect for groups of friends, couples,
-                and solo travelers looking to experience the best of Newfoundland and Labrador's craft beer scene.</p>
-            <p>Come discover the vibrant and growing craft beer culture on the Avalon Peninsula with Avalon Adventures.
-            </p>
+            <p>At each brewery, you'll have the opportunity to taste a variety of beers and ales, including seasonal and limited edition brews. Meet the brewers and chat with fellow beer enthusiasts as you sample unique flavors and learn about the brewing process.</p>
+            <p>As part of this package, we provide transportation to and from each brewery, light refreshments, and a knowledgeable guide to enhance your experience. Our tours are perfect for groups of friends, couples, and solo travelers looking to experience the best of Newfoundland and Labrador's craft beer scene.</p>
+            <p>Come discover the vibrant and growing craft beer culture on the Avalon Peninsula with Avalon Adventures.</p>
             <hr>
             <p class="price">$175+tax per person (price includes one sampler beer at each brewery). Adults (19+) only.</p>
             <p>For group rates contact our Beer Safari Guide <a href="about.html#beersafariguide">Gary Xandier</a>.</p>
@@ -213,63 +164,38 @@
             <div id="footer-land-acknowledgement" class="modal-container">
                 <span>Land Acknowledgement</span>
                 <div class="disappear modal-pop">
-                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as
-                        the ancestral homelands of the
-                        Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island
-                        of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the
-                        Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us,
-                        those who live with us now, and the seven generations to come. As First Peoples have done since
-                        time immemorial, we strive to be responsible stewards of the land and to respect the cultures,
-                        ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past,
-                        we commit ourselves to working in a spirit of truth and reconciliation to make a better future
-                        for all.</p>
-                    <p>Land acknowledgement is just a first step. Visit <a
-                            href="https://nativegov.org/news/beyond-land-acknowledgment-guide/"
-                            aria-label="A link to NativeGov.org. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">NativeGov.org</a> for information on action that
-                        directly supports indigenous nations.</p>
+                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as the ancestral homelands of the Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us, those who live with us now, and the seven generations to come. As First Peoples have done since time immemorial, we strive to be responsible stewards of the land and to respect the cultures, ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past, we commit ourselves to working in a spirit of truth and reconciliation to make a better future for all.</p>
+                    <p>Land acknowledgement is just a first step. Visit <a href="https://nativegov.org/news/beyond-land-acknowledgment-guide/" aria-label="A link to NativeGov.org. Opens in a new window." target="_blank" rel="noopener noreferrer external">NativeGov.org</a> for information on action that directly supports indigenous nations.</p>
                     <p class="user-directions">(click anywhere to close)</p>
                 </div>
             </div>
             <div id="footer-media-links">
                 <ul class="flexy">
                     <li>
-                        <a href="https://www.facebook.com/MurphyCentre/"
-                            aria-label="Our Facebook page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.facebook.com/MurphyCentre/" aria-label="Our Facebook page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link facebook"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/TheMurphyCentre/"
-                            aria-label="Our Instagram page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.instagram.com/TheMurphyCentre/" aria-label="Our Instagram page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link instagram"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw"
-                            aria-label="Our YouTube page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw" aria-label="Our YouTube page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link youtube"></div>
                         </a>
                     </li>
                 </ul>
             </div>
             <div id="footer-fair-dealing">
-                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank"
-                    rel="noopener noreferrer external">
-                    Fair Dealing/Use Statement
-                </a>
+                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank" rel="noopener noreferrer external">Fair Dealing/Use Statement</a>
             </div>
         </div>
-        
         <div id="copyright">
             <span>Copyright © 2023 Avalon Adventures.</span>
             <span>All rights reserved.</span>
-            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn"
-                    aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank"
-                    rel="noopener noreferrer external">Jawn</a>.</span>
+            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn" aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank" rel="noopener noreferrer external">Jawn</a>.</span>
         </div>
     </footer>
     <!-- loading javascript at the end assures complete page load before any execution -->

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="author" content="Rob McDonald">
-    <meta name="description"
-        content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
+    <meta name="description" content="A student web development project for TechPrep (https://murphycentre.ca/career-services/techprep/), a site for the fictional tourism company `Avalon Adventures.`">
     <title>Avalon Adventures - family-friendly outings on Newfoundland's Avalon Peninsula</title>
     <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
     <!-- General site-wide CSS files... -->
@@ -46,7 +45,13 @@
                 <button id="scroll-to-top" class="scroll-arrow-up media-link" onclick="scrollToTop()"></button>
             </div>
         </nav>
-        <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        <div id="hamburger-plus-toggle">
+            <span id="dark-mode-toggle-container" class="centered">
+                <input id="dark-mode" type="checkbox" style="display: none" />
+                <label for="dark-mode"><span class="dark-mode-thumb"></span><span class="dark-mode-clouds"></span><span class="dark-mode-stars"></span></label>
+            </span>
+            <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+        </div>
     </header>
     <div class="fixed-background hiking3"></div>
     <div class="hero-static hiking-bg2">
@@ -55,8 +60,7 @@
     </div>
     <main>
         <div class="one-column">
-            <p>Experience the natural beauty of Newfoundland's rugged coastline with our family two-day hiking
-                package.</p>
+            <p>Experience the natural beauty of Newfoundland's rugged coastline with our family two-day hiking package.</p>
         </div>
         <div class="detail-box one-column">
             <span class="subheader mixed-caps">Day One...</span>
@@ -66,8 +70,7 @@
                 <div class="slides-plus-desc-slide2 no-frame Tinkers-Point5 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame Tinkers-Point1 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
-                    <p>On day one, you'll start your adventure on the Tinkers Point Path route, which takes
-                        you from the charming community of Mobile to the scenic Tors Cove.</p>
+                    <p>On day one, you'll start your adventure on the Tinkers Point Path route, which takes you from the charming community of Mobile to the scenic Tors Cove.</p>
                 </div>
             </div>
         </div>
@@ -78,10 +81,7 @@
                 <div class="slides-plus-desc-slide2 no-frame Tinkers-Point4 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame Tinkers-Point6 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
-                    <p>Along the way, you'll be
-                        treated to stunning views of the Atlantic Ocean and the surrounding coastline, as well as the
-                        chance to spot wildlife such as whales and seabirds. This hike is perfect for novice hikers,
-                        with a total distance of approximately 5 km.</p>
+                    <p>Along the way, you'll be treated to stunning views of the Atlantic Ocean and the surrounding coastline, as well as the chance to spot wildlife such as whales and seabirds. This hike is perfect for novice hikers, with a total distance of approximately 5 km.</p>
                 </div>
             </div>
         </div>
@@ -93,9 +93,7 @@
                 <div class="slides-plus-desc-slide2 no-frame La-Manche4 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame La-Manche8 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
-                    <p>On day two, you'll tackle the La Manche Village Path route, which takes you from Tors Cove to the
-                        historic La Manche Village. This hike is slightly longer than the previous day, at approximately
-                        6.4 km, but still suitable for novice hikers.</p>
+                    <p>On day two, you'll tackle the La Manche Village Path route, which takes you from Tors Cove to the historic La Manche Village. This hike is slightly longer than the previous day, at approximately 6.4 km, but still suitable for novice hikers.</p>
                 </div>
             </div>
         </div>
@@ -106,8 +104,7 @@
                 <div class="slides-plus-desc-slide2 no-frame La-Manche3 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame La-Manche5 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
-                    <p>Along the way, you'll cross over beautiful suspension bridges and pass by crystal-clear streams
-                        and waterfalls.</p>
+                    <p>Along the way, you'll cross over beautiful suspension bridges and pass by crystal-clear streams and waterfalls.</p>
                 </div>
             </div>
         </div>
@@ -118,9 +115,7 @@
                 <div class="slides-plus-desc-slide2 no-frame La-Manche11 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame La-Manche1 is-modal-pic"></div>
                 <div class="slides-plus-desc-desc">
-                    <p>At the end of the trail,
-                        you'll have the opportunity to explore the remains of the abandoned La Manche Village, which was
-                        destroyed by a tsunami in 1929.</p>
+                    <p>At the end of the trail, you'll have the opportunity to explore the remains of the abandoned La Manche Village, which was destroyed by a tsunami in 1929.</p>
                 </div>
             </div>
         </div>
@@ -129,10 +124,7 @@
             <span class="citation-watermark"></span>
         </div>
         <div class="one-column">
-            <p>This family hiking package includes experienced guides who will accompany you on your journey and
-                provide you with interesting facts and stories about the area's history and geography. Lunch and
-                snacks will also be provided, so you can refuel and recharge while taking in the breathtaking
-                views of Newfoundland's stunning landscape.</p>
+            <p>This family hiking package includes experienced guides who will accompany you on your journey and  provide you with interesting facts and stories about the area's history and geography. Lunch and snacks will also be provided, so you can refuel and recharge while taking in the breathtaking views of Newfoundland's stunning landscape.</p>
             <hr>
             <p class="price">$250, taxes included.<span class="spacebr"></span>Price can be adjusted to add additional party members.</p>
             <h2>Need outro and image</h2>
@@ -143,63 +135,38 @@
             <div id="footer-land-acknowledgement" class="modal-container">
                 <span>Land Acknowledgement</span>
                 <div class="disappear modal-pop">
-                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as
-                        the ancestral homelands of the
-                        Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island
-                        of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the
-                        Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us,
-                        those who live with us now, and the seven generations to come. As First Peoples have done since
-                        time immemorial, we strive to be responsible stewards of the land and to respect the cultures,
-                        ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past,
-                        we commit ourselves to working in a spirit of truth and reconciliation to make a better future
-                        for all.</p>
-                    <p>Land acknowledgement is just a first step. Visit <a
-                            href="https://nativegov.org/news/beyond-land-acknowledgment-guide/"
-                            aria-label="A link to NativeGov.org. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">NativeGov.org</a> for information on action that
-                        directly supports indigenous nations.</p>
+                    <p aria-label="Our Land Acknowledgment.">Avalon Adventures recognizes the land on which we gather as the ancestral homelands of the Beothuk [bee-oth-uck], whose culture has now been erased forever. We also recognize the island of Ktaqmkuk [uk-dah-hum-gook] (Newfoundland) as the unceded, traditional territory of the Beothuk and the Mi'kmaq [mee-gum-maq]. We recognize all First Peoples who were here before us, those who live with us now, and the seven generations to come. As First Peoples have done since time immemorial, we strive to be responsible stewards of the land and to respect the cultures, ceremonies, and traditions of all who call it home. As we open our hearts and minds to the past, we commit ourselves to working in a spirit of truth and reconciliation to make a better future for all.</p>
+                    <p>Land acknowledgement is just a first step. Visit <a href="https://nativegov.org/news/beyond-land-acknowledgment-guide/" aria-label="A link to NativeGov.org. Opens in a new window." target="_blank" rel="noopener noreferrer external">NativeGov.org</a> for information on action that directly supports indigenous nations.</p>
                     <p class="user-directions">(click anywhere to close)</p>
                 </div>
             </div>
             <div id="footer-media-links">
                 <ul class="flexy">
                     <li>
-                        <a href="https://www.facebook.com/MurphyCentre/"
-                            aria-label="Our Facebook page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.facebook.com/MurphyCentre/" aria-label="Our Facebook page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link facebook"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/TheMurphyCentre/"
-                            aria-label="Our Instagram page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.instagram.com/TheMurphyCentre/" aria-label="Our Instagram page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link instagram"></div>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw"
-                            aria-label="Our YouTube page. Opens in a new window." target="_blank"
-                            rel="noopener noreferrer external">
+                        <a href="https://www.youtube.com/channel/UCe6_KHRXG946ZG4UYZHzXuw" aria-label="Our YouTube page. Opens in a new window." target="_blank" rel="noopener noreferrer external">
                             <div class="media-link youtube"></div>
                         </a>
                     </li>
                 </ul>
             </div>
             <div id="footer-fair-dealing">
-                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank"
-                    rel="noopener noreferrer external">
-                    Fair Dealing/Use Statement
-                </a>
+                <a href="notes.html#fairdealing" aria-label="My Fair Dealing/Use copyright statement." target="_blank" rel="noopener noreferrer external">Fair Dealing/Use Statement</a>
             </div>
         </div>
-
         <div id="copyright">
             <span>Copyright © 2023 Avalon Adventures.</span>
             <span>All rights reserved.</span>
-            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn"
-                    aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank"
-                    rel="noopener noreferrer external">Jawn</a>.</span>
+            <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn" aria-label="The wikipedia entry on the slang word 'jawn.'" target="_blank" rel="noopener noreferrer external">Jawn</a>.</span>
         </div>
     </footer>
     <!-- loading javascript at the end assures complete page load before any execution -->
