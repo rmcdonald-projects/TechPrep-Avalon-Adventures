@@ -83,9 +83,9 @@
 	}
 }
 
-/*	-------------------------------------------------------
-	"Wipe" transitions from https://www.transition.style...
-	------------------------------------------------------- */
+/*	------------------------------------------------------
+	"Wipe" transition from https://www.transition.style...
+	------------------------------------------------------ */
 
 @keyframes wipe-in-bottom-right {
 	from {
@@ -94,35 +94,5 @@
 
 	to {
 		clip-path: polygon(-0% 0%, 200% 0, 0 200%, 0 -0%);
-	}
-}
-
-@keyframes wipe-out-top-left {
-	from {
-		clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
-	}
-
-	to {
-		clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
-	}
-}
-
-@keyframes wipe-out-bottom-left {
-	from {
-		clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
-	}
-
-	to {
-		clip-path: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
-	}
-}
-
-@keyframes wipe-out-top-right {
-	from {
-		clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
-	}
-
-	to {
-		clip-path: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
 	}
 }

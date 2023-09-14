@@ -39,7 +39,6 @@
     --line-height-normal: calc(3ex + 4px);
     --font-size-tiny: calc(var(--font-size-normal) * .5);
     --font-size-small: calc(var(--font-size-normal) * .875);
-    --line-height-normal: calc(2ex + 3px);
     --font-size-large: 1.5rem;
     --line-height-large: calc(1ex / 0.37);
     --font-margin-large: calc(.5ex / 0.37) 0;
@@ -52,7 +51,7 @@
     --font-size-titanic: calc(var(--font-size-huge) * 1.5);
     --line-height-titanic: calc(1ex / 0.42);
     --font-margin-titanic: calc(.5ex / 0.42) 0;
-
+    color-scheme: light dark;
 }
 
 /*  -------------------------------------
@@ -103,7 +102,8 @@
     --show-videos: 1;
 
 /*  NOTE: variables for @media queries are not currently
-    supported. These are for future consideration... */ 
+    supported. These are for future consideration... */
+    --color-scheme-selected: light;
     --mobile-width-breakpoint: 600px;
     --tablet-width-breakpoint: 900px;
 }

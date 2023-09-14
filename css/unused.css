@@ -1,0 +1,373 @@
+/*  ----------------------------
+    Frame options to Polaroid...
+    ---------------------------- */
+
+.baroqueframe {
+    display: inline-block;
+    position: relative;
+    background-color: darkolivegreen;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    padding: 0;
+    margin: 1rem 0;
+    border-width: .5px;
+    border-image-source: url("../images/baroque-frame.svg");
+    border-image-slice: 10% 10%;
+    border-image-width: 1rem;
+    border-image-outset: 1rem;
+    border-image-repeat: round;
+}
+
+.baroqueframe::before {
+    display: inline-block;
+    content: "";
+    aspect-ratio: 4 / 3;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /*	Vintage effect... */
+    background-image:
+        radial-gradient(ellipse, #0000, #0007),
+        linear-gradient(0deg, #9725, #9725),
+        url("../images/noise.png"),
+        var(--use-image);
+    background-size: auto, auto, auto, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(0.03em) saturate(0.9) contrast(1.5) brightness(1.2);
+}
+
+.baroqueframe:hover::before,
+.baroqueframe:focus-within::before {
+    background-image: var(--use-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: none;
+}
+
+.baroqueframe1 {
+    --use-frame-image: url("../images/baroque-frame.svg");
+    --citation-text: "Freepik, liligraphie";
+    --citation-full-URL: "https://www.freepik.com/premium-photo/baroque-style-golden-picture-frame_8511515.htm";
+    --use-border-image-slice: 70 90;
+    --use-border-image-width: auto;
+    --use-border-image-outset: 30px;
+    --use-border-image-repeat: round;
+}
+
+.woodframe {
+    display: inline-block;
+    position: relative;
+    background-color: darkolivegreen;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    padding: 0;
+    margin: 1rem 0;
+    border-width: .5px;
+    border-image-source: url("../images/wooden-rectangular-3d-photo-frame.svg");
+    border-image-slice: 10% 10%;
+    border-image-width: 1rem;
+    border-image-outset: 1rem;
+    border-image-repeat: round;
+}
+
+.woodframe::before {
+    display: inline-block;
+    content: "";
+    aspect-ratio: 1 / 1;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /*	Vintage effect... */
+    background-image:
+        radial-gradient(ellipse, #0000, #0007),
+        linear-gradient(0deg, #9725, #9725),
+        url("../images/noise.png"),
+        var(--use-image);
+    background-size: auto, auto, auto, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(0.03em) saturate(0.9) contrast(1.5) brightness(1.2);
+}
+
+.woodframe:hover::before,
+.woodframe:focus-within::before {
+    background-image: var(--use-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: none;
+}
+
+.woodframe2 {
+    --use-frame-image: url("../images/woodframe2.png");
+    --citation-text: "Pngtree, 699pic";
+    --citation-full-URL: "https://pngtree.com/freepng/wooden-frame-wood-grain-material_5609881.html";
+    --use-border-image-slice: 70 90;
+    --use-border-image-width: auto;
+    --use-border-image-outset: 30px;
+    --use-border-image-repeat: round;
+}
+
+@media screen and (max-width: 900px) {
+
+    .baroqueframe::before,
+    .woodframe::before {
+        background-image: var(--use-image);
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: none;
+    }
+
+}
+
+
+/*	-------------------------------
+	Unused experiments:
+	save for possible future use...
+	------------------------------- */
+
+.experiment-slideshow {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    object-fit: cover;
+}
+
+.experiment-slideshow input {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+.experiment-slide-arrow-left,
+.experiment-slide-arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 15vh;
+    width: 4vw;
+    backdrop-filter: blur(20px);
+    color: rgba(var(--light-text-RGB), .5);
+    font-size: var(--font-size-titanic);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experiment-slide-arrow-left {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    left: 0;
+}
+
+.experiment-slide-arrow-right {
+    width: 5vw;
+    padding-right: .5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    right: 0;
+}
+
+.experiment-slideshow-nav {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    z-index: 2;
+}
+
+.experiment-slide-chooser label {
+    width: max(.5rem, 1vw);
+    height: max(.5rem, 1vw);
+    background-color: rgba(var(--light-text-RGB), .4);
+    border: solid 1px var(--dark-colour);
+    border-radius: 50%;
+}
+
+.experiment-slideshow input[type=radio]:checked+span {
+    display: block;
+    left: 0;
+    opacity: 1;
+}
+
+.experiment-slide-chooser label:hover,
+.experiment-slideshow #slide1:checked~.slide-chooser .slide1,
+.experiment-slideshow #slide2:checked~.slide-chooser .slide2,
+.experiment-slideshow #slide3:checked~.slide-chooser .slide3,
+.experiment-slideshow #slide4:checked~.slide-chooser .slide4,
+.experiment-slideshow #slide5:checked~.slide-chooser .slide5 {
+    background-color: var(--light-text);
+}
+
+.experiment-slide-content {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.experiment-slide-content div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.experiment-slide-content div:nth-child(2) {
+    animation-delay: calc(1s * var(--slide-duration));
+}
+
+.experiment-slide-content div:nth-child(3) {
+    animation-delay: calc(2s * var(--slide-duration));
+}
+
+/*  ------------------
+    Possibly usable...
+    ------------------ */
+
+.one-two {
+    grid-template-columns: 1fr 2fr;
+}
+
+/*  ---------------
+    Unused media...
+    --------------- */
+
+.cod-jigging7 {
+    --use-image: url("../images/codjigging07.webp");
+    --citation-text: "Margaree Outfitters, Margaree Outfitters";
+    --citation-full-URL: "https://www.margareeoutfitters.ca/cod-jigging-tours/";
+}
+
+.hiking2 {
+    --use-image: url("../images/hiking2.jpg");
+    --citation-text: "East Coast Trail, Calvin Tong";
+    --citation-full-URL: "";
+}
+
+.hiking4 {
+    --use-image: url("../images/hiking4.jpg");
+    --citation-text: "East Coast Trail, Brandon Cooney";
+    --citation-full-URL: "";
+}
+
+.hiking6 {
+    --use-image: url("../images/hiking6.jpg");
+    --citation-text: "East Coast Trail, Brandon Cooney";
+    --citation-full-URL: "";
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .aurora {
+        --use-image: url("../images/aurora.webp");
+        --citation-text: "Space.com, Adam Woodworth";
+        --citation-full-URL: "https://www.space.com/30175-viking-aurora-northern-lights-photo.html";
+    }
+
+    .Elliston {
+        --use-image: url("../images/elliston-at-night-newfoundland-labrador.jpg");
+        --citation-text: "Canadian Sky";
+        --citation-full-URL: "https://www.canadiansky.ie/newfoundland-and-labrador-holidays/road-tripping-newfoundland-labrador-self-drive-st-johns-to-the-great-northern-peninsula";
+    }
+
+    .Placentia-Bay {
+        --use-image: url("../images/Placentia-Bay-night-sky.webp");
+        --citation-text: "Reddit, NerdMachine";
+        --citation-full-URL: "https://www.reddit.com/r/newfoundland/comments/ad70kb/placentia_bay_night_sky/";
+    }
+
+}
+
+/*  -------------------------------------------------------
+    EXPERIMENTAL: Dark mode toggle via input[type=range]...
+    -------------------------------------------------------
+    This version uses the input[type=range] with a min value of 0, max value of 1, and step of 1, rather
+    than a 'checkbox hack". Unfortunately, this complicated and limited styling options.
+
+    The HTML was in the header with the "hamburger," as follows:
+
+    <div id="hamburger-plus-toggle">
+      <span id="dark-mode-toggle-container" class="centered">
+          <input id="dark-mode" type="range" min="0" max="1" step="1" />
+      </span>
+      <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
+    </div>
+
+
+/*  NOTE:
+    As of Sep 2023, the HTML "range" input remains a styling nightmare due to proprietary browser handling.
+    Combining class selectors like ".range:-webkit-blah-blah, .range:-moz-blah-blah" doesn't work, forcing
+    each into its own selector. Short of using a preprocessor like SASS, this means repetetive declarations.
+    Changing one requires changing the matching selectors as necessary. Where this is the case, the -moz
+    types are immediately followed by the -webkit versions... */
+
+#dark-mode {
+    position: relative;
+    display: block;
+    height: 2rem;
+    width: 4rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 2rem;
+    border: none;
+    background-color: deepskyblue;
+    outline: none;
+    transition: all var(--transition-duration-short) ease;
+}
+
+/*  It's necessary to separate the identical -webkit and -moz class thumb layouts; when
+          strung together with commas, one breaks. When updating one, update both... */
+
+#dark-mode::-moz-range-thumb {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: lemonchiffon;
+    box-shadow: 0 0 4px white;
+}
+
+#dark-mode::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: lemonchiffon;
+    box-shadow: 0 0 6px white;
+}
+
+/*  The "dark-mode-selected" class is added by JS when dark mode preference is indicated... */
+
+#dark-mode.dark-mode-selected {
+    background-color: midnightblue;
+}
+
+#dark-mode.dark-mode-selected::-moz-range-thumb {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: silver;
+    box-shadow: 0 0 2px white;
+}
+
+#dark-mode.dark-mode-selected::-webkit-slider-thumb {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: silver;
+    box-shadow: 0 0 2px white;
+}

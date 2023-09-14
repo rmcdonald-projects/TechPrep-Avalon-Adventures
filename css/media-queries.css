@@ -53,8 +53,8 @@
 	}
 
 	/*	------
-	IDs...
-	------ */
+		IDs...
+		------ */
 
 	#addresses {
 		flex-flow: column;
@@ -64,6 +64,10 @@
 
 	#footer-fair-dealing {
 		text-align: center;
+	}
+
+	#dark-mode-toggle-container {
+		display: none;
 	}
 
 	#hamburger-menu {
@@ -387,116 +391,128 @@
     User-preferences...
     ------------------- */
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg-colour: var(--dark-colour);
-		--bg-colour-RGB: var(--dark-colour-RGB);
-		--text-colour: var(--light-text);
-		--text-colour-RGB: var(--light-text-RGB);
-		--use-text-shadow: var(--light-text-shadow);
-	}
+/*	--
+	Dark mode:
+	The hierarchy for when to go into "dark" mode is:
+	(1)	User selected via the "dark-mode" input in the header (and stored for later via localstorage);
+	(2)	System choice from the user's device;
 
-	blockquote {
-		border-left: .25rem solid var(--light-colour);
-	}
+	JS adds a "dark-mode-selected" class to :root when dark mode is preferred.
 
-	.media-link {
-		filter: invert(1);
-	}
+	Note that the dark-mode toggle is hidden on mobile devices; there, the site uses system settings only.
+*/
 
-	/*	Images: change light/bright images to darker options... */
+/*	HTML elements, classes, etc. */
 
-	.beer-bg {
-		--use-image: url("../images/beer-bottles5.jpg");
-		--citation-text: "PxHere";
-		--citation-full-URL: "https://pxhere.com/en/photo/1115051";
-	}
-
-	.clink {
-		--use-image: url("../images/clink-dark.jpg");
-		--citation-text: "School of Booze";
-		--citation-full-URL: "https://www.school-of-booze.com/product/online-beer-course-foundation-level/";
-	}
-
-	.cod-interstitial {
-		--use-image: url("../images/night-fishing.jpg");
-		--citation-text: "YouTube, Fishing with Nuno Morão";
-		--citation-full-URL: "https://www.youtube.com/watch?v=ba7lIUkySH0";
-	}
-
-	.culture-package-bg {
-		--use-image: url("../images/culture-package-bg.jpg");
-		--citation-text: "Olympic Construction Ltd";
-		--citation-full-URL: "https://www.olympic-construction.nf.ca/project/the-rooms/";
-	}
-
-	.Ferryland-lighthouse {
-		--use-image: url("../images/Ferryland-lighthouse-dark.jpg");
-		--citation-text: "Instagram, NL Tourism";
-		--citation-full-URL: "https://www.instagram.com/p/CALXSA9lDeq/?igshid=3mmv2ppnpnic";
-	}
-
-	.Ferryland-picnic {
-		--use-image: url("../images/picnic-sunset.png");
-		--citation-text: "Pinterest, Flare Magazine";
-		--citation-full-URL: "https://www.pinterest.ca/pin/500814421034649789/";
-	}
-
-	.fishbg {
-		--use-image: url("../images/fishbg-dark.jpg");
-		--citation-text: "Hakai Magazine, Lisa Werner";
-		--citation-full-URL: "https://hakaimagazine.com/features/secret-history-bioluminescence/";
-	}
-
-	.fishhead {
-		--use-image: url("../images/fishhead-dark.jpg");
-		--citation-text: "Hakai Magazine, blickwinkel";
-		--citation-full-URL: "https://hakaimagazine.com/features/secret-history-bioluminescence/";
-	}
-
-	.hiking-boots {
-		--use-image: url("../images/hiking-boots-dark.jpg");
-		--citation-text: "Super Shoes";
-		--citation-full-URL: "https://www.supershoes.com/mens-hiking-boots-shoes?view_all";
-	}
-
-	.Johnson-Geo-Centre {
-		--use-image: url("../images/Johnson-Geo-Centre-dark.jpg");
-		--citation-text: "Trip Advisor, Johnson Geo Centre";
-		--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g154964-d278749-Reviews-Johnson_Geo_Centre-St_John_s_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/278749/37194082:p/?albumid=-160&type=0&category=-160";
-	}
-
-	.mailboxes {
-		--use-image: url("../images/mailboxes-dark.jpg");
-		--citation-text: "Flickr, Darron Birgenheier";
-		--citation-full-URL: "https://www.flickr.com/photos/darronb/8421272881/";
-	}
-
-	.Signal-Hill {
-		--use-image: url("../images/Signal-Hill-dark.jpg");
-		--citation-text: "Flickr, Rex Montalban Photography";
-		--citation-full-URL: "https://flickr.com/photos/rexmontalban/7123724139";
-	}
-
-	.St-Johns-harbour {
-		--use-image: url("../images/St-Johns-harbour-dark.jpg");
-		--citation-text: "CBC News, Gene Herzberg";
-		--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/gallery-week-november-30-1.5819766";
-	}
-
-	.the-Battery {
-		--use-image: url("../images/the-Battery-dark.avif");
-		--citation-text: "CBC, Dan Arsenault";
-		--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/battery-lights-turned-off-1.6728439";
-	}
-
-	.the-Rooms {
-		--use-image: url("../images/the-Rooms-dark.jpg");
-		--citation-text: "The Rooms";
-		--citation-full-URL: "https://www.therooms.ca/about-us";
-	}
-
+:root.dark-mode-selected {
+	--bg-colour: var(--dark-colour);
+	--bg-colour-RGB: var(--dark-colour-RGB);
+	--text-colour: var(--light-text);
+	--text-colour-RGB: var(--light-text-RGB);
+	--use-text-shadow: none;
 }
+
+:root.dark-mode-selected blockquote {
+	border-left: .25rem solid var(--light-colour);
+}
+
+:root.dark-mode-selected .media-link {
+	filter: invert(1);
+}
+
+/*	Images: change light/bright images to darker options... */
+
+:root.dark-mode-selected .beer-bg {
+	--use-image: url("../images/beer-bottles5.jpg");
+	--citation-text: "PxHere";
+	--citation-full-URL: "https://pxhere.com/en/photo/1115051";
+}
+
+:root.dark-mode-selected .clink {
+	--use-image: url("../images/clink-dark.jpg");
+	--citation-text: "School of Booze";
+	--citation-full-URL: "https://www.school-of-booze.com/product/online-beer-course-foundation-level/";
+}
+
+:root.dark-mode-selected .cod-interstitial {
+	--use-image: url("../images/night-fishing.jpg");
+	--citation-text: "YouTube, Fishing with Nuno Morão";
+	--citation-full-URL: "https://www.youtube.com/watch?v=ba7lIUkySH0";
+}
+
+:root.dark-mode-selected .culture-package-bg {
+	--use-image: url("../images/culture-package-bg.jpg");
+	--citation-text: "Olympic Construction Ltd";
+	--citation-full-URL: "https://www.olympic-construction.nf.ca/project/the-rooms/";
+}
+
+:root.dark-mode-selected .Ferryland-lighthouse {
+	--use-image: url("../images/Ferryland-lighthouse-dark.jpg");
+	--citation-text: "Instagram, NL Tourism";
+	--citation-full-URL: "https://www.instagram.com/p/CALXSA9lDeq/?igshid=3mmv2ppnpnic";
+}
+
+:root.dark-mode-selected .Ferryland-picnic {
+	--use-image: url("../images/picnic-sunset.png");
+	--citation-text: "Pinterest, Flare Magazine";
+	--citation-full-URL: "https://www.pinterest.ca/pin/500814421034649789/";
+}
+
+:root.dark-mode-selected .fishbg {
+	--use-image: url("../images/fishbg-dark.jpg");
+	--citation-text: "Hakai Magazine, Lisa Werner";
+	--citation-full-URL: "https://hakaimagazine.com/features/secret-history-bioluminescence/";
+}
+
+:root.dark-mode-selected .fishhead {
+	--use-image: url("../images/fishhead-dark.jpg");
+	--citation-text: "Hakai Magazine, blickwinkel";
+	--citation-full-URL: "https://hakaimagazine.com/features/secret-history-bioluminescence/";
+}
+
+:root.dark-mode-selected .hiking-boots {
+	--use-image: url("../images/hiking-boots-dark.jpg");
+	--citation-text: "Super Shoes";
+	--citation-full-URL: "https://www.supershoes.com/mens-hiking-boots-shoes?view_all";
+}
+
+:root.dark-mode-selected .Johnson-Geo-Centre {
+	--use-image: url("../images/Johnson-Geo-Centre-dark.jpg");
+	--citation-text: "Trip Advisor, Johnson Geo Centre";
+	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g154964-d278749-Reviews-Johnson_Geo_Centre-St_John_s_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/278749/37194082:p/?albumid=-160&type=0&category=-160";
+}
+
+:root.dark-mode-selected .mailboxes {
+	--use-image: url("../images/mailboxes-dark.jpg");
+	--citation-text: "Flickr, Darron Birgenheier";
+	--citation-full-URL: "https://www.flickr.com/photos/darronb/8421272881/";
+}
+
+:root.dark-mode-selected .Signal-Hill {
+	--use-image: url("../images/Signal-Hill-dark.jpg");
+	--citation-text: "Flickr, Rex Montalban Photography";
+	--citation-full-URL: "https://flickr.com/photos/rexmontalban/7123724139";
+}
+
+:root.dark-mode-selected .St-Johns-harbour {
+	--use-image: url("../images/St-Johns-harbour-dark.jpg");
+	--citation-text: "CBC News, Gene Herzberg";
+	--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/gallery-week-november-30-1.5819766";
+}
+
+:root.dark-mode-selected .the-Battery {
+	--use-image: url("../images/the-Battery-dark.avif");
+	--citation-text: "CBC, Dan Arsenault";
+	--citation-full-URL: "https://www.cbc.ca/news/canada/newfoundland-labrador/battery-lights-turned-off-1.6728439";
+}
+
+:root.dark-mode-selected .the-Rooms {
+	--use-image: url("../images/the-Rooms-dark.jpg");
+	--citation-text: "The Rooms";
+	--citation-full-URL: "https://www.therooms.ca/about-us";
+}
+
+
 
 @media (prefers-reduced-motion) {
 
@@ -506,9 +522,9 @@
 	}
 
 	.dangling,
-	.fade-in,
+	.fade-in-up,
 	.scroll-in,
-	.slide {
+	.wipe-in-bottom-right {
 		animation: none;
 		transition: none;
 	}

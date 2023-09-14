@@ -101,8 +101,8 @@
 	--citation-full-URL: "https://www.youtube.com/watch?v=a54pw6_f2QU";
 }
 
-.cod-jigging11 {
-	--use-image: url("../images/codjigging11.webp");
+.cod-jigging07 {
+	--use-image: url("../images/codjigging07.webp");
 	--citation-text: "Margaree Outfitters, Margaree Outfitters";
 	--citation-full-URL: "https://www.margareeoutfitters.ca/cod-jigging-tours/";
 }
@@ -177,6 +177,18 @@
 	--use-image: url("../images/culture-picnic-slide4.png");
 	--citation-text: "Gone with the Family, Lisa Goodmurphy";
 	--citation-full-URL: "https://www.gonewiththefamily.com/2012/09/picnic-at-ferryland-newfoundland-lighthouse.html";
+}
+
+.dark-mode-blue-sky {
+	--use-image: url("../images/dark-mode-blue-sky.jpg");
+	--citation-text: "Vecteezy, Tayyab Abbas";
+	--citation-full-URL: "https://www.vecteezy.com/vector-art/8156936-blue-paper-cut-style-business-background-clouds";
+}
+
+.dark-mode-night-sky {
+	--use-image: url("../images/dark-mode-night-sky.jpg");
+	--citation-text: "Vecteezy, Oleg Gapeenko";
+	--citation-full-URL: "https://www.vecteezy.com/vector-art/4491282-realistic-starry-sky-with-bright-stars-in-the-night-sky-vector-illustration";
 }
 
 .Dildo-Brewing-beer {
