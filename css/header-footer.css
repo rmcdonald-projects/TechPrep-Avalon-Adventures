@@ -267,7 +267,7 @@ label[for="dark-mode"] {
   background: transparent;
   outline: none;
   transition: all var(--transition-duration-short) ease;
-  border: solid 1px var(--medium-colour1);
+  border: solid 1px var(--medium-colour2);
 }
 
 .dark-mode-thumb {
@@ -322,6 +322,7 @@ label[for="dark-mode"] {
 /*  "True" or "night-time" changes... */
 #dark-mode:checked~label {
   background-color: midnightblue;
+  border: solid 1px var(--medium-colour1);
 }
 
 #dark-mode:checked~label .dark-mode-thumb {

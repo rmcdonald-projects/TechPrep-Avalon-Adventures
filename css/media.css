@@ -138,9 +138,9 @@
 }
 
 .cod-slide2 {
-	--use-image: url("../images/cod-slide2.jpg");
-	--citation-text: "yourthunderbuddy.com";
-	--citation-full-URL: "https://yourthunderbuddy.com/recreational-fishing-newfoundland-2020/";
+	--use-image: url("../images/cod-slide2.webp");
+	--citation-text: "sywolfhound.com, Steven and Louise";
+	--citation-full-URL: "https://www.sywolfhound.com/single-post/2017/09/14/discovering-lunenburg-cod-jigging";
 }
 
 .cod-slide3 {
@@ -174,9 +174,9 @@
 }
 
 .culture-picnic-slide4 {
-	--use-image: url("../images/culture-picnic-slide4.png");
-	--citation-text: "Gone with the Family, Lisa Goodmurphy";
-	--citation-full-URL: "https://www.gonewiththefamily.com/2012/09/picnic-at-ferryland-newfoundland-lighthouse.html";
+	--use-image: url("../images/culture-picnic-slide4.jpg");
+	--citation-text: "Pinterest, Patrick Derksen";
+	--citation-full-URL: "https://www.pinterest.ca/pin/434456695296629753/";
 }
 
 .dark-mode-blue-sky {
@@ -279,19 +279,19 @@
 	--use-image: url("../images/hiking.jpg");
 	--citation-text: "";
 	--citation-full-URL: "";
-	}
+}
 
 .hiking3 {
 	--use-image: url("../images/hiking3.jpg");
 	--citation-text: "East Coast Trail, Greg Locke";
 	--citation-full-URL: "";
-	}
+}
 
 .hiking5 {
 	--use-image: url("../images/hiking5.jpg");
 	--citation-text: "East Coast Trail, Calvin Tong";
 	--citation-full-URL: "";
-	}
+}
 
 .hiking-bg2 {
 	--use-image: url("../images/hiking-bg2.jpg");
@@ -336,9 +336,9 @@
 }
 
 .Johnson-Geo-Centre-slide1 {
-	--use-image: url("../images/Johnson-Geo-Centre-slide1.jpg");
-	--citation-text: "Trip Advisor, Johnson Geo Centre";
-	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g154964-d278749-Reviews-Johnson_Geo_Centre-St_John_s_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/278749/37194082:p/?albumid=-160&type=0&category=-160";
+	--use-image: url("../images/Johnson-Geo-Centre-slide1.avif");
+	--citation-text: "CBC, Mark Quinn";
+	--citation-full-URL: "https://www.cbc.ca/nl/blogs/seen/IMG00205.jpg";
 }
 
 .Johnson-Geo-Centre-slide2 {
@@ -355,8 +355,8 @@
 
 .Johnson-Geo-Centre-slide4 {
 	--use-image: url("../images/Johnson-Geo-Centre-slide4.jpg");
-	--citation-text: "Trip Advisor, Johnson Geo Centre";
-	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g154964-d278749-Reviews-Johnson_Geo_Centre-St_John_s_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/278749/37194082:p/?albumid=-160&type=0&category=-160";
+	--citation-text: "Johnson Geo Centre";
+	--citation-full-URL: "https://www.thecrazytourist.com/15-best-things-to-do-in-st-johns-newfoundland-and-labrador-canada/";
 }
 
 .La-Manche1 {
@@ -513,7 +513,7 @@
 	--use-image: url("../images/the-Battery.jpg");
 	--citation-text: "";
 	--citation-full-URL: "";
-	}
+}
 
 .the-Rooms {
 	--use-image: url("../images/the-Rooms.jpg");
@@ -583,27 +583,33 @@
 
 .Tinkers-Point-Path-map {
 	--use-image: url("../images/Tinkers-Point-Path-map.png");
-	--citation-text: "East Coast Trail, OpenStreetMap";
+	--citation-text: "Hiking the East Coast Trail, Gerry Ryall";
 	--citation-full-URL: "https://eastcoasttrail.com/choose-a-path/listing/16-tinkers-point-path/";
 }
 
 .Tinkers-Point-trailhead {
 	--use-image: url("../images/Tinkers-Point-trailhead.jpg");
 	--citation-text: "Whale House Guest House";
-	--citation-full-URL: "https://www.whalehouse.ca/blog/tinkers-point-path-east-coast-trail-hike/";
+	--citation-full-URL: "https://hiketheeastcoasttrail.files.wordpress.com/2013/07/edit_46401.jpg";
+}
+
+.video-water {
+	--use-image: url("../video/water.mp4");
+	--citation-text: "Wkixstatic";
+	--citation-full-URL: "https://video.wixstatic.com/video/11062b_41148c6b0dca4f42b8380089fd183012/720p/mp4/file.mp4";
 }
 
 .whale-breaching {
 	--use-image: url("../images/whale-breaching.jpg");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
 	--citation-full-URL: "";
-	}
+}
 
 .whale-cod-poster {
-	--use-image: url("../images/video/whale-cod-poster.png");
+	--use-image: url("../video/whale-cod-poster.png");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
 	--citation-full-URL: "";
-	}
+}
 
 .whale-slide1 {
 	--use-image: url("../images/whale-slide1.jpg");
@@ -630,10 +636,10 @@
 }
 
 .whale-watching-poster {
-	--use-image: url("../images/video/whale-watching-poster.png");
+	--use-image: url("../video/whale-watching-poster.png");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
 	--citation-full-URL: "";
-	}
+}
 
 .Yellowbelly-beer {
 	--use-image: url("../images/Yellowbelly-Brewery-beer.jpg");

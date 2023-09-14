@@ -360,6 +360,20 @@
 		padding: 2rem 2vw;
 	}
 
+	/*	Images better suited to mobile/portrait screens... */
+
+	.Ferryland-picnic {
+		--use-image: url("../images/Ferryland-picnic2-vertical.jpg");
+		--citation-text: "Lavender and Lovage, Karen Burns-Booth";
+		--citation-full-URL: "https://www.lavenderandlovage.com/2014/07/picnics-in-fairy-land-my-newfoundland-lighthouse-picnics-experience.html";
+	}
+		
+	.whale-breaching {
+		--use-image: url("../images/whale-breaching-vertical.jpg");
+		--citation-text: "Rorqual.com";
+		--citation-full-URL: "https://www.rorqual.com/english/our-whales/humpback-whale";
+	}
+
 }
 
 @media screen and (max-width: 920px) {
