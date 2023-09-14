@@ -8,4 +8,4 @@ My expression of the project contains images and video excerpts independently ac
 
 As I don't own the media or the bulk of the descriptive text, I cannot offer a license, and I ask that none of the media/text be shared/disseminated or used for licensed purposes.
 
-This version of "Avalon Adventures" will become static after the TechPrep program wraps up, as a sort of "before" picture.
+This version of "Avalon Adventures" will become static after the TechPrep program wraps up, as a sort of "before" picture. A separate evolving version will reflect my evolving knowledge of front-end web development, including forays into full accessibility, more elegant CSS and JS solutions, etc.
