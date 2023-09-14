@@ -629,12 +629,6 @@
 	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g499208-d1536457-Reviews-Sea_of_Whales_Adventures-Trinity_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/1536457/47553220:p/?albumid=-160&type=0&category=-160";
 }
 
-.whale-tales {
-	--use-image: url("http://i.ytimg.com/vi/86mCkMCOHkI/0.jpg");
-	--citation-text: "Youtube, Newfoundland & Labrador Tourism";
-	--citation-full-URL: "https://www.youtube.com/watch?v=86mCkMCOHkI";
-}
-
 .whale-watching-poster {
 	--use-image: url("../images/video/whale-watching-poster.png");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
