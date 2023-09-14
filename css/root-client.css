@@ -21,6 +21,12 @@
     recommended. Line-height and some margins are calculated based on "ex" units, and
     differ by text size. Other settings may be changed/added in the future based on
     recommendations and site feedback.
+
+    A note on site-wide accessibility...
+    Improving legibility is a first step toward making the project full accessible, but
+    more needs to be done, including proper ARIA/screen reader annotation, replacing
+    certain HTML semantic structures, etc. The CSS will be updated as needed, possibly
+    by adding an accessibility-specific file.
     ------------------------------------------------------------------------------------- */
 
 /*  -------------------------------
@@ -34,6 +40,9 @@
     --transition-duration-short: 300ms;
     --transition-duration-medium: calc(var(--transition-duration-short) * 2);
     --transition-duration-long: calc(var(--transition-duration-medium)* 2);
+    --transition-duration-very-long: calc(var(--transition-duration-long)* 2);
+    --transition-duration-super-long: calc(var(--transition-duration-very-long)* 2);
+    --transition-duration-longest: calc(var(--transition-duration-super-long)* 2);
     --transition-timing-function: linear; /*cubic-bezier(0.1, 0.7, 1.0, 0.1); */
     --font-size-normal: 1rem;
     --line-height-normal: calc(3ex + 4px);
@@ -61,8 +70,10 @@
 :root {
     --dark-colour: #292929;
     --dark-colour-RGB: 41, 41, 41;
-    --medium-colour: #1d4286;
-    --medium-colour-RGB: 29, 66, 134;
+    --medium-colour1: #1d4286;
+    --medium-colour1-RGB: 29, 66, 134;
+    --medium-colour2: #6cbe4c;
+    --medium-colou12-RGB: 108, 90, 76;
     --light-colour: #0097b2;
     --light-colour-RGB: 0, 151, 178;
     --client-font-family: Tahoma, Helvetica, sans-serif;
@@ -88,7 +99,7 @@
     --use-text-shadow: var(--dark-text-shadow);
     box-sizing: border-box;
     border-width: 0px;
-    --use-border-image: linear-gradient(to right, var(--bg-colour), var(--medium-colour) 40%, var(--light-colour) 60%, var(--bg-colour)) 5;
+    --use-border-image: linear-gradient(to right, var(--bg-colour), var(--medium-colour1) 40%, var(--light-colour) 60%, var(--bg-colour)) 5;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;

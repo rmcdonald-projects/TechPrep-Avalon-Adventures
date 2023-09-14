@@ -47,7 +47,7 @@ address {
 
 blockquote {
 	position: relative;
-	border-left: .25rem solid var(--medium-colour);
+	border-left: .25rem solid var(--medium-colour1);
 	left: -2.25rem;
 	margin-left: 0;
 	margin-top: .75rem;
@@ -75,7 +75,7 @@ fieldset {
 h1 {
 	position: relative;
 	width: 100%;
-	border-left: .25rem solid var(--medium-colour);
+	border-left: .25rem solid var(--medium-colour2);
 	margin-left: 0;
 	margin-top: .75rem;
 	margin-bottom: .75rem;
@@ -312,6 +312,7 @@ video {
 	margin: 0;
 	padding-inline: 1rem;
 	overflow: hidden;
+	height: 0;
 	max-height: 0;
 	line-height: 0;
 }
@@ -327,6 +328,7 @@ video {
 }
 
 .citations-collapsible input:checked~.citations-collapsible-content {
+	height: 100%;
 	max-height: 100%;
 	line-height: var(--line-height-normal);
 	transition: all var(--transition-duration-medium) var(--transition-timing-function);
@@ -438,12 +440,12 @@ video {
 
 .fade-in-up {
 	opacity: 1;
-	animation: fade-in-up calc(2 * var(--transition-duration-medium));
+	animation: fade-in-up var(--transition-duration-long);
 }
 
 .fade-out-down {
 	opacity: 0;
-	animation: fade-in-up calc(2 * var(--transition-duration-medium));
+	animation: fade-in-up var(--transition-duration-long);
 	animation-direction: reverse;
 }
 
@@ -582,6 +584,11 @@ video {
 	margin-inline: .5rem;
 }
 
+.Ken-Burns-in {
+	opacity: 1;
+	animation: Ken-Burns-in var(--transition-duration-longest);
+}
+
 .link-anchor {
 	display: block;
 	height: var(--header-height);
@@ -683,7 +690,7 @@ video {
 
 .newspaper-thin {
 	grid-area: thin-side;
-	border-left: 5px solid var(--medium-colour);
+	border-left: 5px solid var(--medium-colour1);
 	padding-left: 1rem;
 }
 
@@ -809,7 +816,9 @@ video {
 	top: 0;
 	left: 0;
 	height: 100%;
+	max-height: 100%;
 	width: 100%;
+	max-width: 100%;
 	background-image: var(--use-image);
 	background-position: center;
 	background-size: cover;
@@ -818,6 +827,7 @@ video {
 
 .slide.active {
 	animation: calc(var(--transition-duration-medium) * 3) cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
+	/*, Ken-Burns-in calc(3 * var(--transition-duration-longest)); */
 	z-index: 3;
 }
 
@@ -852,7 +862,7 @@ video {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: var(--medium-colour);
+	background-color: var(--medium-colour1);
 }
 
 .slideshow-hype h2 {
@@ -887,7 +897,7 @@ video {
 }
 
 .slideshow-hype *:nth-child(3n) {
-	transition-delay: calc(2 * var(--transition-duration-short));
+	transition-delay: var(--transition-duration-medium);
 }
 
 .slideshow-hype *:nth-child(4n) {
@@ -929,7 +939,7 @@ video {
 }
 
 .slideshow-nav .nav-dot.active {
-	background-color: var(--medium-colour);
+	background-color: transparent;
 }
 
 .spacebr {
@@ -963,7 +973,9 @@ video {
 .split-right-bottom {
 	position: relative;
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
+	max-height: 100%;
 }
 
 .split-left {
@@ -982,6 +994,7 @@ video {
 
 .split-right {
 	grid-area: split-right;
+	overflow: hidden;
 }
 
 .split-right-top {
@@ -1027,7 +1040,7 @@ video {
 	z-index: 10;
 	top: calc(var(--header-height) + 1vh);
 	left: 50%;
-	transform: translate(-50%,0);
+	transform: translate(-50%, 0);
 	min-height: 40%;
 	width: 60vw;
 	padding: 2rem;

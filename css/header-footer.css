@@ -267,7 +267,7 @@ label[for="dark-mode"] {
   background: transparent;
   outline: none;
   transition: all var(--transition-duration-short) ease;
-  border: solid 1px var(--medium-colour);
+  border: solid 1px var(--medium-colour1);
 }
 
 .dark-mode-thumb {
