@@ -40,6 +40,7 @@ const darkModeToggle = document.getElementById(`dark-mode`);
     ---------------- */
 let slideSpeed = defaultSlideSpeed, slideActive = 0, activeInterval = false, isSlideShowPaused = false;
 let sliderNav = function (activateSlide, userClick = false) {
+    //  If the slideshow is paused, set another timeout without making changes...
     if (isSlideShowPaused) {
         let x = document.getElementById(`temp-pause`);
         if (x) {
@@ -48,8 +49,22 @@ let sliderNav = function (activateSlide, userClick = false) {
         }
     }
     if (activeInterval) { clearTimeout(activeInterval); }
+    //  If the last slide just played, start over at the beginning...
     if (activateSlide >= slides.length) { activateSlide = 0; }
+    //  Change the slide if the timer is up or the user requested a specific slide...
     if (!slideshowDiv.classList.contains(`paused`) || userClick == true) {
+        sliderBtns[activateSlide].classList.add(`active`);
+        slides[activateSlide].classList.add(`active`);
+        slideshowHype[activateSlide].classList.remove(`disappear`);
+        slideshowHype[activateSlide].classList.remove(`finished`);
+        slideshowHype[activateSlide].classList.add(`active`);
+        slideActive = activateSlide;
+        if (!slideshowDiv.classList.contains(`paused`)) {
+            slideActive = activateSlide + 1;
+            slideSpeed = defaultSlideSpeed;
+        }
+        if (userClick) { slideSpeed = defaultSlideSpeed * 2; }    //   after a user clicks, let the slide sit before resuming automation...
+        //  Remove active status from other slides, but make sure the previous active slide is "on top" under the current slide...
         sliderBtns.forEach((btn, i) => {
             if (i !== activateSlide) {
                 btn.classList.remove(`active`);
@@ -73,18 +88,8 @@ let sliderNav = function (activateSlide, userClick = false) {
                 slideshowHype[i].classList.remove(`active`);
             }
         });
-        sliderBtns[activateSlide].classList.add(`active`);
-        slides[activateSlide].classList.add(`active`);
-        slideshowHype[activateSlide].classList.remove(`disappear`);
-        slideshowHype[activateSlide].classList.remove(`finished`);
-        slideshowHype[activateSlide].classList.add(`active`);
-        slideActive = activateSlide;
-        if (!slideshowDiv.classList.contains(`paused`)) {
-            slideActive = activateSlide + 1;
-            slideSpeed = defaultSlideSpeed;
-        }
-        if (userClick) { slideSpeed = defaultSlideSpeed * 2; }    //   after a user clicks, let the slide sit before resuming automation...
     }
+    //  Start the timer for the next slide move...
     activeInterval = setTimeout(sliderNav, slideSpeed * 1000, slideActive, false);
 }
 
