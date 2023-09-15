@@ -1,19 +1,26 @@
 `use strict`;
 
-/*  ----------------------------------------------------
+/*  -------------------------------------------------------------
+    "Avalon Adventures": a Murphy Centre TechPrep student project
+    -------------------------------------------------------------
     Initial Coding and "production" release: 22 Sep 2023
-    ----------------------------------------------------
+    -------------------------------------------------------------
     Change log:
-    ----------------------------------------------------
+    -------------------------------------------------------------
 
 
 
 
-    ---------------------------------------------------- */
+    ------------------------------------------------------------- */
 
 /*  ----------
     Globals...
     ---------- */
+
+/*  Note: these globals assume the page is loaded, but the window.onload logic below hasn't run.
+    This works because the JS is loaded at the bottom of the Avalon Adventures pages, just before
+    the body is closed. This isn't ideal; future updates will move most of the logic into the
+    window.onload area... */
 
 const modals = document.querySelectorAll(`.modal-container`);
 const modalPics = document.querySelectorAll(`.is-modal-pic`);
@@ -34,6 +41,8 @@ const slideshowHype = document.querySelectorAll(`.slideshow-hype`);
 const defaultSlideSpeed = parseInt(getComputedStyle(document.body).getPropertyValue('--slide-duration')) || 10;
 const slideRightPanel = document.querySelector(`.split-right`);
 const darkModeToggle = document.getElementById(`dark-mode`);
+const citationContent = document.querySelectorAll(`.citations-collapsible-content a`);
+const allAnchors = document.querySelectorAll(`a`);
 
 /*  ----------------
     Slideshow logic:
@@ -139,6 +148,8 @@ window.onload = (event) => {
     toggleHeaderBG();
     updateMediaCaptions();
     pols.forEach(elem => polaroidSetSize(elem));
+    updateAnchors();
+    updateCitationLinks();
 };
 
 /*  ------------------
@@ -985,5 +996,41 @@ function toggleDarkMode(wasClick = false) {
             break;
         default:
     }
+    return;
+}
+
+//  Adds  target="_blank" and rel="noopener noreferrer external" to all anchor tags...
+function updateAnchors() {
+    allAnchors.forEach(elem => {
+        let href = elem.getAttribute(`href`);
+        if (href && href.toLowerCase().indexOf(`http`) == 0) {
+            elem.setAttribute(`target`, `_blank`);
+        }
+        elem.setAttribute(`rel`, `noopener noreferrer external`);
+    })
+    return;
+}
+
+/*  ------------------------------------------------------------------------------------------
+    Update links and captions in citations...
+
+    On the "Read Me!" page, aka "notes.html", links and citations are offered for the various
+    image and video resources used for the site. Rather than hard-code the links in the HTML,
+    this routine takes advantage of CSS media variables to add hrefs to the anchor tags...
+    ------------------------------------------------------------------------------------------ */
+function updateCitationLinks() {
+    citationContent.forEach(elem => {
+        let citeURL = false;
+        elem.childNodes.forEach(kid => {
+            if (!citeURL && kid.tagName) {
+                let u = getComputedStyle(kid).getPropertyValue('--citation-full-URL') || false;
+                if (u) { citeURL = u.replace(/"/g, ``); }
+            }
+        })
+        if (citeURL) {
+            elem.setAttribute(`target`, `_blank`);
+            elem.setAttribute(`href`, citeURL);
+        }
+    })
     return;
 }
