@@ -816,23 +816,29 @@ video {
 	top: 0;
 	left: 0;
 	height: 100%;
-	max-height: 100%;
 	width: 100%;
-	max-width: 100%;
-	background-image: var(--use-image);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
 .slide.active {
-	animation: calc(var(--transition-duration-medium) * 3) cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
-	/*, Ken-Burns-in calc(3 * var(--transition-duration-longest)); */
 	z-index: 3;
+}
+
+.slide.active .slide-image, .slide.finished .slide-image {
+	animation: calc(var(--transition-duration-medium) * 3) cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both,
+		Ken-Burns-in calc(3 * var(--transition-duration-longest));
 }
 
 .slide.finished {
 	z-index: 2;
+}
+
+.slide-image {
+	height: 100%;
+	width: 100%;
+	background-image: var(--use-image);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .slides-plus-desc {
@@ -870,7 +876,6 @@ video {
 }
 
 .slideshow-hype {
-	padding-top: 15vh;
 	display: flex;
 	flex-flow: column;
 	gap: 2vh;
@@ -957,10 +962,8 @@ video {
 	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 5fr 1fr;
 	gap: 0;
-	grid-template-areas: "split-left-top split-right"
-		"split-left-bottom split-right";
+	grid-template-areas: "split-left split-right";
 	margin: 0;
 	color: var(--light-text);
 }
@@ -980,15 +983,27 @@ video {
 
 .split-left {
 	grid-area: split-left;
+	display: grid;
+	grid-template: "Split-top" "split-bottom";
+	grid-template-rows: 5fr 1fr;
+	justify-content: center;
+	align-items: center;
+	gap: 0;
 }
 
-.split-left-top {
-	grid-area: split-left-top;
+/*	This relies on the :has pseudo-class, which Firefox does not support.
+	Also, this colour has less than ideal contrast possibilities...
+.split-left:has(.split-bottom):has(div:nth-of-type(even).active) {
+	background-color: var(--medium-colour2);
+} */
+
+.split-top {
+	grid-area: split-top;
 	z-index: 7;
 }
 
-.split-left-bottom {
-	grid-area: split-left-bottom;
+.split-bottom {
+	grid-area: split-bottom;
 	z-index: 7;
 }
 
