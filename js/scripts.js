@@ -1,9 +1,9 @@
 `use strict`;
 
 /*  -------------------------------------------------------------
-    "Avalon Adventures": a Murphy Centre TechPrep student project
+    `Avalon Adventures`: a Murphy Centre TechPrep student project
     -------------------------------------------------------------
-    Initial Coding and "production" release: 22 Sep 2023
+    Initial Coding and `production` release: 22 Sep 2023
     -------------------------------------------------------------
     Change log:
     -------------------------------------------------------------
@@ -73,7 +73,7 @@ let sliderNav = function (activateSlide, userClick = false) {
             slideSpeed = defaultSlideSpeed;
         }
         if (userClick) { slideSpeed = defaultSlideSpeed * 2; }    //   after a user clicks, let the slide sit before resuming automation...
-        //  Remove active status from other slides, but make sure the previous active slide is "on top" under the current slide...
+        //  Remove active status from other slides, but make sure the previous active slide is `on top` under the current slide...
         sliderBtns.forEach((btn, i) => {
             if (i !== activateSlide) {
                 btn.classList.remove(`active`);
@@ -257,7 +257,7 @@ if (window.matchMedia) {
 
 /*  Resize events...    */
 
-//  "Polaroid" image resizing...
+//  `Polaroid` image resizing...
 const polWatcher = new ResizeObserver((entries) => {
     for (let entry of entries) {
         if (entry.target.offsetParent) {
@@ -269,7 +269,7 @@ pols.forEach(elem => polWatcher.observe(elem));
 
 /*  Scrolling...    */
 /*  To prevent an overload of scroll events (or infinite recursive loops), the
-    scroll function uses a "throttle". This code is borrowed from Bogdan Bendziukov
+    scroll function uses a `throttle`. This code is borrowed from Bogdan Bendziukov
     (https://medium.com/@bogdanfromkyiv/something-to-know-about-resizing-in-javascript-d2ddcd708bf4). */
 
 window.addEventListener(`scroll`, scrollThrottler, false);
@@ -344,8 +344,8 @@ animatedElements.forEach(element => {
 
 /*  ----------------------------------------------------------------------------------------
     Contact form inputs...
-    "blur":     when the element loses focus, check for errors...
-    "keyup":    while the user is actively changing the values, remove any error messages...
+    `blur`:     when the element loses focus, check for errors...
+    `keyup`:    while the user is actively changing the values, remove any error messages...
     ---------------------------------------------------------------------------------------- */
 formInputs.forEach(elem => {
     //if (elem.type != `tel`) {
@@ -376,7 +376,7 @@ if (formInputs[0]) {
     Header logic:
         The header background should be transparent/translucent
         until the user scrolls the screen, then make it the regular
-        background colour. This allows the main "hero" image to be
+        background colour. This allows the main `hero` image to be
         unobstructed at the top until the user explores below.
     --------------------------------------------------------------- */
 const toggleHeaderBG = () => {
@@ -507,7 +507,7 @@ function validateFormInput(inputElem = null, submitTF = false, clearError = fals
         case `contactemail`:
             errMsg = `Invalid email address...`;
             minLength = 5;
-            //  The following strict regex throws "too much recurcsion" errors in Firefox:
+            //  The following strict regex throws `too much recurcsion` errors in Firefox:
             //  checkRegex = [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/];
             //  A more persmissive regex has been added...
             checkRegex = [/^[^\s@]+@[^\s@]+\.[^\s@]+$/];
@@ -661,9 +661,9 @@ function clearForm(didSubmit = false) {
     -------------------------- */
 
 /*  -----------------------------------------------------------------------------
-/*  Sets the proper size/aspect ratio of elements with the "polaroid" class...
+/*  Sets the proper size/aspect ratio of elements with the `polaroid` class...
     -----------------------------------------------------------------------------
-    Polaroid photo "frames" need to maintain an outer aspect ratio of 35/42
+    Polaroid photo `frames` need to maintain an outer aspect ratio of 35/42
     (3.5 inches/4.2 inches), an image aspect ratio of 1/1, and margins of 2 units
     on the top, left, and right.
     
@@ -672,9 +672,9 @@ function clearForm(didSubmit = false) {
     such that the borders fall within the desired width and the height is
     appropriately set to match the aspect ratio.
 
-    The image within the polaroid "frame" is expected to be "before" content.
+    The image within the polaroid `frame` is expected to be `before` content.
 
-    If the element possesses the "data-polaroid-caption" attribute, the font size
+    If the element possesses the `data-polaroid-caption` attribute, the font size
     is calculated to fit the entire message in the larger bottom border area.
 
     Called on initial page load and on window resizing...
@@ -741,10 +741,10 @@ function textFitter(txt = ``, wide = 0, high = 0, fontFam = ``, elemCheck = null
 }
 
 /*  --------------------------
-    Toggle the "hamburger" menu:
+    Toggle the `hamburger` menu:
 
     (1) opens the main nav as a vertical full-screen modal list;
-    (2) replaces the hamburger with an "x" icon...
+    (2) replaces the hamburger with an `x` icon...
     ------------------------------------------------------------ */
 function toggleHamburgerMenu() {
     const menuButton = document.getElementById(`hamburger-menu`);
@@ -773,8 +773,8 @@ function toggleHamburgerMenu() {
 }
 
 /*  ---------------------------------------------------------------------------------
-    Adds a "data-polaroid-caption" value to all "polaroid" elements that also contain
-    the "media-caption" class. The value is drawn from the --citation-text variable
+    Adds a `data-polaroid-caption` value to all `polaroid` elements that also contain
+    the `media-caption` class. The value is drawn from the --citation-text variable
     of the background image of the element. This allows the media.css sheet to be the
     sole warehouse of images and their sources...
     --------------------------------------------------------------------------------- */
@@ -906,12 +906,12 @@ function scrollToTop() {
 
 /*  -----------------------------------------------------------------------------------
     Get an element or pseudo-element's width & height...
-    "args" is an associative array:
-        "type":     string of what size to return:
-                    "content":  the content w/o padding or border;
-                    "padding":  content and padding;
-                    "all":      content, padding, and border (offsetWidth/Height)
-        "pseudo":   a pseudo-element passed as a string (optional);
+    `args` is an associative array:
+        `type`:     string of what size to return:
+                    `content`:  the content w/o padding or border;
+                    `padding`:  content and padding;
+                    `all`:      content, padding, and border (offsetWidth/Height)
+        `pseudo`:   a pseudo-element passed as a string (optional);
     The function returns an array of [width, height, computedStyle], or false on error;
     ----------------------------------------------------------------------------------- */
 function getElemSize(elem, args) {
@@ -968,7 +968,7 @@ function toggleDarkMode(wasClick = false) {
         //  Currently, localstorage is all strings. In case true Booleans are ever captured...
         if (typeof (storedDark) == Boolean) { useDark = storedDark; }
     }
-    //  User set preference via toggle - note, logic includes options for both "checkbox" and "range" types...
+    //  User set preference via toggle - note, logic includes options for both `checkbox` and `range` types...
     const toggleType = darkModeToggle.type;
     if (wasClick) {
         switch (toggleType) {
@@ -999,7 +999,7 @@ function toggleDarkMode(wasClick = false) {
     return;
 }
 
-//  Adds  target="_blank" and rel="noopener noreferrer external" to all anchor tags...
+//  Adds  target=`_blank` and rel=`noopener noreferrer external` to all anchor tags...
 function updateAnchors() {
     allAnchors.forEach(elem => {
         let href = elem.getAttribute(`href`);
@@ -1014,7 +1014,7 @@ function updateAnchors() {
 /*  ------------------------------------------------------------------------------------------
     Update links and captions in citations...
 
-    On the "Read Me!" page, aka "notes.html", links and citations are offered for the various
+    On the `Read Me!` page, aka `notes.html`, links and citations are offered for the various
     image and video resources used for the site. Rather than hard-code the links in the HTML,
     this routine takes advantage of CSS media variables to add hrefs to the anchor tags...
     ------------------------------------------------------------------------------------------ */
