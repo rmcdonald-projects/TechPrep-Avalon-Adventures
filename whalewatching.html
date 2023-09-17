@@ -28,11 +28,11 @@
                 <li class="adventures">
                     <a href="adventures.html"><span>Adventures!</span></a>
                     <ul>
-                        <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
-                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
-                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
-                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
                         <li class="whale-watching"><a href="whalewatching.html"><span>Whale Watching & Cod Jigging</span></a></li>
+                        <li class="ferryland"><a href="ferryland.html"><span>Family Ferryland Adventure</span></a></li>
+                        <li class="culture-package"><a href="culturepackage.html"><span>Family Culture Package</span></a></li>
+                        <li class="hiking"><a href="hiking.html"><span>Novice East Coast Hiking Adventure</span></a></li>
+                        <li class="brewery-crawl"><a href="brewerycrawl.html"><span>Adult Brewery Crawl</span></a></li>
                     </ul>
                 </li>
                 <li class="about"><a href="about.html"><span>About</span></a></li>
@@ -48,15 +48,26 @@
             <span id="dark-mode-toggle-container" class="centered">
                 <input id="dark-mode" type="checkbox" style="display: none" />
                 <label for="dark-mode"><span class="dark-mode-thumb"></span><span class="dark-mode-clouds"></span><span class="dark-mode-stars"></span></label>
+                <span style="display: none; opacity: 0; visibility: hidden; height: 0; width: 0;">
+                    <input id="dark-mode-question" type="checkbox" style="display: none" />
+                    <label for="dark-mode-question"><strong>?</strong></label>
+                    <div class="tooltip" style="display: none; opacity: 0; visibility: hidden; height: 0; width: 0;">
+                        <p>NOTE! This div will not position properly from within the "hamburger-plus-toggle" div, for reasons unknown. Until that issue is resolved, this element is hidden, and has not been copied to the other Avalon Adventures header. Do not make this visible until resolve.</p>
+                        <p>Note: changing this toggle saves your preference in your browser's "localStorage."</p>
+                        <p>Viewing this site from files stored locally on your device (as a "file:" URL) instead of loaded over the internet (via "HTTP:" or "HTTPS:") means your preference may or may not affect the other pages of the Avalon Adventures site. This is because different browsers handle "file:" URLs differently. For instance, Firefox limits your preference to just the page you're on now, while Edge seems to honour your preference on every page. Don't be surprised if the light and dark modes change as you navigate the local version of Avalon Adventures.</p>
+                        <p>In a live/production environment where the site is being served over the internet, changing your preference on one page should reflect in the others.</p>
+                        <p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">this entry on MDN</a> for more information on localstorage.</p>
+                    </div>
+                </span>
             </span>
             <button id="hamburger-menu" class="hamburger media-link" onclick="toggleHamburgerMenu()"></button>
-        </div>
+            </div>
     </header>
     <div class="true-hero">
         <div class="hero-novideo whale-cod-poster"></div>
         <video class="hero-video" playsinline autoplay muted loop controls controlsList="nodownload">
             <source src="video/whale-cod.mp4" type="video/mp4">
-            <h2 class="scroll-in mixed-caps standout-text centered">Your browser doesn't support HTML5 video!</h2>
+            <h2 class="mixed-caps standout-text centered" data-add-animation="scroll-in">Your browser doesn't support HTML5 video!</h2>
         </video>
         <div class="hero-overlay">
             <div class="hero-splash">
@@ -84,7 +95,7 @@
         <div class="detail-box one-column">
             <span class="subheader mixed-caps">Cod Jigging!</span>
             <div class="slides-plus-desc" data-add-animation="scroll-in">
-                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-jigging07 is-modal-pic" data-polaroid-caption="I caught this many!" data-add-animation="dangling"></span></div>
+                <div class="slides-plus-desc-pic"><span class="in-frame polaroid cod-jigging07 is-modal-pic" data-polaroid-caption="Best kind!" data-add-animation="dangling"></span></div>
                 <div class="slides-plus-desc-slide1 no-frame cod-slide1 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide2 no-frame cod-slide2 is-modal-pic"></div>
                 <div class="slides-plus-desc-slide3 no-frame cod-slide3 is-modal-pic"></div>
