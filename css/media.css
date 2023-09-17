@@ -311,10 +311,10 @@
 	--citation-full-URL: "https://static.wikia.nocookie.net/he-who-fights-with-monsters/images/9/90/Humphrey_Geller_AI.jpg/revision/latest?cb=20230324102355";
 }
 
-.icebergs-whales {
-	--use-image: url("http://i.ytimg.com/vi/5EfDz1jO5qM/maxresdefault.jpg");
-	--citation-text: "Youtube, Northland Discovery Boat Tours";
-	--citation-full-URL: "https://www.youtube.com/watch?v=5EfDz1jO5qM";
+.index-video-poster {
+	--use-image: url("../video/index-video-poster.png");
+	--citation-text: "";
+	--citation-full-URL: "";
 }
 
 .instagram {
@@ -460,12 +460,6 @@
 	--citation-full-URL: "https://suitcaseandheels.com/guide-newfoundland-breweries/";
 }
 
-.RMR {
-	--use-image: url("http://i.ytimg.com/vi/BJlHTTQ-3fA/maxresdefault.jpg");
-	--citation-text: "Youtube, CBC/Mercer Report";
-	--citation-full-URL: "https://www.youtube.com/watch?v=BJlHTTQ-3fA";
-}
-
 .Rufus-Remore {
 	--use-image: url("../images/Rufus-Remore.webp");
 	--citation-text: "He Who Fights with Monsters fandom, AI-generated";
@@ -593,12 +587,6 @@
 	--citation-full-URL: "https://hiketheeastcoasttrail.files.wordpress.com/2013/07/edit_46401.jpg";
 }
 
-.video-water {
-	--use-image: url("../video/water.mp4");
-	--citation-text: "Wkixstatic";
-	--citation-full-URL: "https://video.wixstatic.com/video/11062b_41148c6b0dca4f42b8380089fd183012/720p/mp4/file.mp4";
-}
-
 .whale-breaching {
 	--use-image: url("../images/whale-breaching.jpg");
 	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
@@ -635,12 +623,6 @@
 	--citation-full-URL: "https://www.tripadvisor.ca/Attraction_Review-g499208-d1536457-Reviews-Sea_of_Whales_Adventures-Trinity_Newfoundland_Newfoundland_and_Labrador.html#/media-atf/1536457/47553220:p/?albumid=-160&type=0&category=-160";
 }
 
-.whale-watching-poster {
-	--use-image: url("../video/whale-watching-poster.png");
-	--citation-text: "Official NL site, Newfoundland & Labrador Tourism";
-	--citation-full-URL: "";
-}
-
 .Yellowbelly-beer {
 	--use-image: url("../images/Yellowbelly-Brewery-beer.jpg");
 	--citation-text: "Yellowbelly Brewery";
@@ -652,3 +634,51 @@
 	--citation-text: "Flaticon.com, Flaticon/riajulislam";
 	--citation-full-URL: "https://www.flaticon.com/free-icon/youtube_4494467";
 }
+
+/*	------------------------------------------------------------
+	Source videos used to contruct the videos shown on the site,
+	but not shown in their original format...
+	------------------------------------------------------------ */
+
+	.Johnson-Geo-Centre-source-video {
+		--use-image: url("http://i.ytimg.com/vi/F-jlhLeikro/maxresdefault.jpg");
+		--citation-text: "Youtube, Everyday Adventures";
+		--citation-full-URL: "https://www.youtube.com/watch?v=F-jlhLeikro";
+	}
+	
+	.Ferryland-source-video {
+		--use-image: url("http://i.ytimg.com/vi/kuldcEfnnBA/maxresdefault.jpg");
+		--citation-text: "Youtube, Lighthouse Picnics";
+		--citation-full-URL: "https://www.youtube.com/watch?v=kuldcEfnnBA";
+	}
+
+	.icebergs-whales-source-video {
+		--use-image: url("http://i.ytimg.com/vi/5EfDz1jO5qM/maxresdefault.jpg");
+		--citation-text: "Youtube, Northland Discovery Boat Tours";
+		--citation-full-URL: "https://www.youtube.com/watch?v=5EfDz1jO5qM";
+	}
+	
+	.RMR-source-video {
+		--use-image: url("http://i.ytimg.com/vi/BJlHTTQ-3fA/maxresdefault.jpg");
+		--citation-text: "Youtube, CBC/Mercer Report";
+		--citation-full-URL: "https://www.youtube.com/watch?v=BJlHTTQ-3fA";
+	}
+	
+	.RMR2-source-video {
+		--use-image: url("http://i.ytimg.com/vi/yPllnFhcMpc/maxresdefault.jpg");
+		--citation-text: "Youtube, CBC/Mercer Report";
+		--citation-full-URL: "https://www.youtube.com/watch?v=yPllnFhcMpc";
+	}
+	
+	.Tinkers-Point-source-video {
+		--use-image: url("http://i.ytimg.com/vi/4tg_zK0rAL0/maxresdefault.jpg");
+		--citation-text: "Youtube, East Coast Views";
+		--citation-full-URL: "https://www.youtube.com/watch?v=4tg_zK0rAL0";
+	}
+	
+	.whales-source-video {
+		--use-image: url("http://i.ytimg.com/vi/WXlG2pGM6d8/maxresdefault.jpg");
+		--citation-text: "Youtube, Newfoundland & Labrador Tourism";
+		--citation-full-URL: "https://www.youtube.com/watch?v=WXlG2pGM6d8";
+	}
+		
