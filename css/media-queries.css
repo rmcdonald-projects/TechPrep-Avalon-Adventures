@@ -376,16 +376,16 @@
 		--citation-full-URL: "https://www.lavenderandlovage.com/2014/07/picnics-in-fairy-land-my-newfoundland-lighthouse-picnics-experience.html";
 	}
 
+	.index-video-poster, .whale-breaching, .whale-watching-poster {
+		--use-image: url("../images/whale-watching-mobile.png");
+		--citation-text: "Shutterstock";
+		--citation-full-URL: "https://www.businessinsider.com/best-locations-whale-watching-us-2017-3";
+	}
+
 	.mailboxes {
 		--use-image: url("../images/mailboxes-mobile.jpg");
 		--citation-text: "Flickr, Darron Birgenheier";
 		--citation-full-URL: "https://www.flickr.com/photos/darronb/8421272881/";
-	}
-
-	.whale-breaching, .whale-watching-poster {
-		--use-image: url("../images/whale-watching-mobile.png");
-		--citation-text: "Shutterstock";
-		--citation-full-URL: "https://www.businessinsider.com/best-locations-whale-watching-us-2017-3";
 	}
 
 	.whale-cod-poster {

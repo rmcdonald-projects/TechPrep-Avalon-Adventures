@@ -217,7 +217,7 @@
 
 .Ferryland-lighthouse {
 	--use-image: url("../images/Ferryland-lighthouse.jpg");
-	--citation-text: "Pinterest";
+	--citation-text: "Pinterest, ???";
 	--citation-full-URL: "https://www.pinterest.com/pin/391039180119133763/";
 }
 
@@ -273,12 +273,6 @@
 	--use-image: url("../images/icons/happy-whale.png");
 	--citation-text: "Vecteezy, Nawaz Sharif";
 	--citation-full-URL: "https://www.vecteezy.com/vector-art/12097626-cute-blue-whale-jumping-humpback-happy-isolated-cartoon-animal-illustration-flat-style-sticker-icon-design-premium-logo-vector-mascot-character";
-}
-
-.hiking {
-	--use-image: url("../images/hiking.jpg");
-	--citation-text: "";
-	--citation-full-URL: "";
 }
 
 .hiking3 {
@@ -431,6 +425,12 @@
 	--citation-full-URL: "https://www.facebook.com/photo.php?fbid=734283658307749&set=pb.100051783643176.-2207520000&type=3";
 }
 
+.logo-main {
+	--use-image: url("../images/logos/Avalon-Adventures-Transparent.png");
+	--citation-text: "";
+	--citation-full-URL: "";
+}
+
 .mailboxes {
 	--use-image: url("../images/mailboxes.jpg");
 	--citation-text: "Pinterest, Lisa Peyton";
@@ -577,13 +577,13 @@
 
 .Tinkers-Point-Path-map {
 	--use-image: url("../images/Tinkers-Point-Path-map.png");
-	--citation-text: "Hiking the East Coast Trail, Gerry Ryall";
+	--citation-text: "East Coast Trail, Open Street Map";
 	--citation-full-URL: "https://eastcoasttrail.com/choose-a-path/listing/16-tinkers-point-path/";
 }
 
 .Tinkers-Point-trailhead {
 	--use-image: url("../images/Tinkers-Point-trailhead.jpg");
-	--citation-text: "Whale House Guest House";
+	--citation-text: "Gerry Ryall";
 	--citation-full-URL: "https://hiketheeastcoasttrail.files.wordpress.com/2013/07/edit_46401.jpg";
 }
 
