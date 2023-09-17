@@ -640,45 +640,44 @@
 	but not shown in their original format...
 	------------------------------------------------------------ */
 
-	.Johnson-Geo-Centre-source-video {
-		--use-image: url("http://i.ytimg.com/vi/F-jlhLeikro/maxresdefault.jpg");
-		--citation-text: "Youtube, Everyday Adventures";
-		--citation-full-URL: "https://www.youtube.com/watch?v=F-jlhLeikro";
-	}
-	
-	.Ferryland-source-video {
-		--use-image: url("http://i.ytimg.com/vi/kuldcEfnnBA/maxresdefault.jpg");
-		--citation-text: "Youtube, Lighthouse Picnics";
-		--citation-full-URL: "https://www.youtube.com/watch?v=kuldcEfnnBA";
-	}
+.Johnson-Geo-Centre-source-video {
+	--use-image: url("http://i.ytimg.com/vi/F-jlhLeikro/maxresdefault.jpg");
+	--citation-text: "Youtube, Everyday Adventures";
+	--citation-full-URL: "https://www.youtube.com/watch?v=F-jlhLeikro";
+}
 
-	.icebergs-whales-source-video {
-		--use-image: url("http://i.ytimg.com/vi/5EfDz1jO5qM/maxresdefault.jpg");
-		--citation-text: "Youtube, Northland Discovery Boat Tours";
-		--citation-full-URL: "https://www.youtube.com/watch?v=5EfDz1jO5qM";
-	}
-	
-	.RMR-source-video {
-		--use-image: url("http://i.ytimg.com/vi/BJlHTTQ-3fA/maxresdefault.jpg");
-		--citation-text: "Youtube, CBC/Mercer Report";
-		--citation-full-URL: "https://www.youtube.com/watch?v=BJlHTTQ-3fA";
-	}
-	
-	.RMR2-source-video {
-		--use-image: url("http://i.ytimg.com/vi/yPllnFhcMpc/maxresdefault.jpg");
-		--citation-text: "Youtube, CBC/Mercer Report";
-		--citation-full-URL: "https://www.youtube.com/watch?v=yPllnFhcMpc";
-	}
-	
-	.Tinkers-Point-source-video {
-		--use-image: url("http://i.ytimg.com/vi/4tg_zK0rAL0/maxresdefault.jpg");
-		--citation-text: "Youtube, East Coast Views";
-		--citation-full-URL: "https://www.youtube.com/watch?v=4tg_zK0rAL0";
-	}
-	
-	.whales-source-video {
-		--use-image: url("http://i.ytimg.com/vi/WXlG2pGM6d8/maxresdefault.jpg");
-		--citation-text: "Youtube, Newfoundland & Labrador Tourism";
-		--citation-full-URL: "https://www.youtube.com/watch?v=WXlG2pGM6d8";
-	}
-		
+.Ferryland-source-video {
+	--use-image: url("http://i.ytimg.com/vi/kuldcEfnnBA/maxresdefault.jpg");
+	--citation-text: "Youtube, Lighthouse Picnics";
+	--citation-full-URL: "https://www.youtube.com/watch?v=kuldcEfnnBA";
+}
+
+.icebergs-whales-source-video {
+	--use-image: url("http://i.ytimg.com/vi/5EfDz1jO5qM/maxresdefault.jpg");
+	--citation-text: "Youtube, Northland Discovery Boat Tours";
+	--citation-full-URL: "https://www.youtube.com/watch?v=5EfDz1jO5qM";
+}
+
+.RMR-source-video {
+	--use-image: url("http://i.ytimg.com/vi/BJlHTTQ-3fA/maxresdefault.jpg");
+	--citation-text: "Youtube, CBC/Mercer Report";
+	--citation-full-URL: "https://www.youtube.com/watch?v=BJlHTTQ-3fA";
+}
+
+.RMR2-source-video {
+	--use-image: url("http://i.ytimg.com/vi/yPllnFhcMpc/maxresdefault.jpg");
+	--citation-text: "Youtube, CBC/Mercer Report";
+	--citation-full-URL: "https://www.youtube.com/watch?v=yPllnFhcMpc";
+}
+
+.Tinkers-Point-source-video {
+	--use-image: url("http://i.ytimg.com/vi/4tg_zK0rAL0/maxresdefault.jpg");
+	--citation-text: "Youtube, East Coast Views";
+	--citation-full-URL: "https://www.youtube.com/watch?v=4tg_zK0rAL0";
+}
+
+.whales-source-video {
+	--use-image: url("http://i.ytimg.com/vi/WXlG2pGM6d8/maxresdefault.jpg");
+	--citation-text: "Youtube, Newfoundland & Labrador Tourism";
+	--citation-full-URL: "https://www.youtube.com/watch?v=WXlG2pGM6d8";
+}
