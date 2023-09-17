@@ -117,6 +117,11 @@ hr {
 	color: var(--text-colour);
 }
 
+input, textarea {
+	background-color: var(--bg-colour);
+	color: currentColor;
+}
+
 li {
 	position: relative;
 }
@@ -969,11 +974,7 @@ video {
 }
 
 .split-left,
-.split-left-top,
-.split-left-bottom,
-.split-right,
-.split-right-top,
-.split-right-bottom {
+.split-right {
 	position: relative;
 	width: 100%;
 	max-width: 100%;
@@ -984,40 +985,30 @@ video {
 .split-left {
 	grid-area: split-left;
 	display: grid;
-	grid-template: "Split-top" "split-bottom";
+	grid-template-areas: "split-left-top" "split-bottom";
 	grid-template-rows: 5fr 1fr;
 	justify-content: center;
 	align-items: center;
 	gap: 0;
 }
 
-/*	This relies on the :has pseudo-class, which Firefox does not support.
+/*	This relies on the :has pseudo-class, which Firefox does not currently support (Sep 2023).
 	Also, this colour has less than ideal contrast possibilities...
 .split-left:has(.split-bottom):has(div:nth-of-type(even).active) {
 	background-color: var(--medium-colour2);
 } */
 
 .split-top {
-	grid-area: split-top;
-	z-index: 7;
+	grid-area: split-left-top;
 }
 
 .split-bottom {
 	grid-area: split-bottom;
-	z-index: 7;
 }
 
 .split-right {
 	grid-area: split-right;
 	overflow: hidden;
-}
-
-.split-right-top {
-	grid-area: split-right-top;
-}
-
-.split-right-bottom {
-	grid-area: split-right-bottom;
 }
 
 .standout-text {
