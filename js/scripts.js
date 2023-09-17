@@ -1024,7 +1024,7 @@ function updateCitationLinks() {
         elem.childNodes.forEach(kid => {
             if (!citeURL && kid.tagName) {
                 let u = getComputedStyle(kid).getPropertyValue('--citation-full-URL') || false;
-                if (u) { citeURL = u.replace(/"'/g, ``); }
+                if (u) { citeURL = u.replace(/"/g, ``).replace(/'/g,``); }
             }
         })
         if (citeURL) {
