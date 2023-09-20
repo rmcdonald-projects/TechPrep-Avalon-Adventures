@@ -72,9 +72,36 @@
         </div>
         <section class="two-column">
             <div class="two-column-container">
-                <h2 class="scroll-in mixed-caps">Add CTA, images, and info specified in the specs dox</h2>
+                <h3 class="mixed-caps centered-x mobile-never">Say Yes to Adventure!</h3>
+                <p>Email, call, or visit us to book your experience!</p>
+                <span class="spacebr"></span>
+                <div class="contact-grid">
+                    <div class="media-link email inline-block"></div><a href="tel:1-7095555555" aria-label="A link to email us directly."><span>info@AvalonAdventures.ca</span></a>
+                    <div class="media-link phone inline-block"></div><a href="tel:1-7095555555" aria-label="A link to call our office on Torbay Road in St.John's."><span>1 (709) 555-5555</span></a>
+                    <div class="media-link location inline-block"></div>
+                    <div>
+                        <a href="https://goo.gl/maps/Gwz98FY4P8yJyHwp6" aria-label="A Google Maps link to our address on Torbay Road in St.John's. Opens in a new tab."><span>320 Torbay Road, Suite 201<br>St. John's, NL A1A 0L3</span></a>
+                    </div>
+                    <div class="media-link clock inline-block"></div>
+                    <div>
+                        <p><strong>Hours of Operation:</strong></p>
+                        <div class="hours-grid">
+                            <span>Mon – Fri:</span>
+                            <span>8:00 a.m. – 4:00 p.m.</span>
+                            <span>Saturday:</span>
+                            <span>8:00 a.m. – 3:00 p.m.</span>
+                            <span>Sunday:</span>
+                            <span>Closed – we need adventure, too!</span>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="image-box">
+                    <span class="no-frame adventure is-modal-pic"></span>
+                </div>
             </div>
             <div class="two-column-container">
+                <h3 class="mixed-caps centered-x">Got questions?</h3>
+                <p>We've got you covered! Let us know how we can help...</p>
                 <form id="contact" name="contact" method="post">
                     <span>
                         <input type="text" name="contactname" id="contactname" data-formkey="Name" data-nicetext="A name" required minlength="2" maxlength="30" size="30" placeholder="Enter your name" aria-label="A required input for your name." />
@@ -118,7 +145,7 @@
                     <span class="warning" aria-hidden="true">* indicates required field...</span>
                     <span>
                         <button id="submit" name="submit" type="button" aria-label="A buttton to submit your completed question.">
-                            <p id="submit-text">Say YES to Adventure!</p>
+                            <p id="submit-text">Ask Away, Me Jollies!</p>
                         </button>
                     </span>
                     <span>
@@ -126,26 +153,32 @@
                             <p>Start again?</p>
                         </button>
                     </span>
+                    <h4 class="mobile-only-block">...or, if you're ready...</h4>
+                    <h3 class="mixed-caps centered-x">An Adventurer is You! <a href="https://www.kingdomofloathing.com/">&trade;</a></h3>
                 </form>
             </div>
         </section>
-        <hr>
-        <section id="addresses" class="full-bg-colour">
-            <address>
-                <h4>Prince Philip Drive Location</h4>
-                <div>
-                    <a href="https://goo.gl/maps/LGhvGQg7cmUkntHn6" aria-label="A Google Maps link to our address on Prince Phillip Drive in St.John's. Opens in a new tab."> <span class="brspace"></span>1 Prince Phillip Drive<br>St. John's, NL A1A 5B2</a>
-                </div>
-                <div class="spacebr"></div>
-                <p aria-label="The contact phone number for our Prince Philip Drive location.">709.579.6606</p>
-            </address>
-            <address>
-                <h4>Torbay Road Location</h4>
-                <div>
-                    <a href="https://goo.gl/maps/Gwz98FY4P8yJyHwp6" aria-label="A Google Maps link to our address on Torbay Road in St.John's. Opens in a new tab.">Fall River Plaza<br>320 Torbay Road, Suite 201<br>St. John's, NL A1A 0L3</a>
-                </div>
-                <p aria-label="The contact phone number for our Torbay Road location.">709.753.2830</p>
-            </address>
+        <hr class="mobile-only-block">
+        <section class="two-column">
+            <div class="two-column-container">
+                <address>
+                    <h4>Torbay Road Location</h4>
+                    <div>
+                        <a href="https://goo.gl/maps/Gwz98FY4P8yJyHwp6" aria-label="A Google Maps link to our address on Torbay Road in St.John's. Opens in a new tab.">Fall River Plaza<br>320 Torbay Road, Suite 201<br>St. John's, NL A1A 0L3</a>
+                    </div>
+                    <p aria-label="The contact phone number for our Torbay Road location.">709.555.5555</p>
+                </address>
+            </div>
+            <div class="two-column-container">
+                <address>
+                    <h4>Prince Philip Drive Location</h4>
+                    <div>
+                        <a href="https://goo.gl/maps/LGhvGQg7cmUkntHn6" aria-label="A Google Maps link to our address on Prince Phillip Drive in St.John's. Opens in a new tab.">1 Prince Phillip Drive<br>St. John's, NL A1A 5B2</a>
+                    </div>
+                    <div class="spacebr"></div>
+                    <p aria-label="The contact phone number for our Prince Philip Drive location.">709.555.4444</p>
+                </address>
+            </div>
         </section>
     </main>
     <footer>
@@ -187,7 +220,7 @@
             <span>A TechPrep Student/Imaginations Unlimited, Ltd. <a href="https://en.wikipedia.org/wiki/Jawn" aria-label="The wikipedia entry on the slang word 'jawn.'">Jawn</a>.</span>
         </div>
     </footer>
-    <!-- loading javascript at the end assures complete page load before any execution -->
+    <!-- loading javascript at the end assures complete page load before execution -->
     <script src="js/scripts.js"></script>
 </body>
 
