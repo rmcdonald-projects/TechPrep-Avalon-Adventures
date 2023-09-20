@@ -33,7 +33,7 @@
 }
 
 #contact input[type=button], #contact button {
-	background-color: var(--bg-color);
+	background-color: var(--bg-colour);
 	color: var(--text-colour);
 	margin: 0 2rem;
 	font-size: var(--font-size-large);
@@ -58,6 +58,7 @@
 }
 
 #contact input[type=checkbox] {
+	background-color: var(--bg-colour);
 	accent-color: var(--light-colour);
 }
 
@@ -98,4 +99,25 @@
 	background-position: center;
 	z-index: 8;
 	scale: 2.5;
+}
+
+/*	The reset button was primarily to make testing easier. Make visible if needed... */
+
+#contact input[type="reset"],
+#contact #reset {
+	display: none;
+}
+
+.contact-grid {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	column-gap: 2vw;
+	row-gap: 2rem;
+}
+
+.hours-grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 1vw;
+	row-gap: 1vh;
 }

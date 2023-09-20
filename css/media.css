@@ -11,6 +11,13 @@
     Store names in alphabetical order.
     ------------------------------------------------------------------- */
 
+
+.adventure {
+	--use-image: url("../images/adventure.jpg");
+	--citation-text: "Wildland Tours";
+	--citation-full-URL: "https://wildlands.com/newfoundland-adventure";
+}
+
 .Avalon1 {
 	--use-image: url("../images/Avalon1.jpg");
 	--citation-text: "Trip Advisor, Beachwalker4955";
@@ -71,12 +78,6 @@
 	--citation-full-URL: "https://www.instagram.com/p/CrTmebOunJl/";
 }
 
-.camera {
-	--use-image: url("../images/icons/camera.png");
-	--citation-text: "Flaticon.com, Flaticon/Good Ware";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/camera_685655?term=camera&page=1&position=2&origin=tag&related_id=685655";
-}
-
 .clink {
 	--use-image: url("../images/clink.png");
 	--citation-text: "Bottleneck Management";
@@ -87,12 +88,6 @@
 	--use-image: url("../images/Clive-Standish.jpg");
 	--citation-text: "Daily Mail UK, Ewan Galvin/Solent News";
 	--citation-full-URL: "https://www.dailymail.co.uk/news/article-10676691/Multi-millionaire-investment-banker-estranged-wife-lock-horns-High-Court-battle.html";
-}
-
-.closeX {
-	--use-image: url("../images/icons/closeX.png");
-	--citation-text: "Flaticon.com, Flaticon/bsd";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/cross_8867444?term=close+button&page=1&position=22&origin=tag&related_id=8867444";
 }
 
 .cod-interstitial {
@@ -197,12 +192,6 @@
 	--citation-full-URL: "https://suitcaseandheels.com/guide-newfoundland-breweries/";
 }
 
-.facebook {
-	--use-image: url("../images/icons/facebook.png");
-	--citation-text: "Flaticon.com, Flaticon/Pixel Perfect";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/facebook_733603";
-}
-
 .Ferryland-approach {
 	--use-image: url("../images/Ferryland-approach.jpg");
 	--citation-text: "Lighthouse Picnics";
@@ -263,18 +252,6 @@
 	--citation-full-URL: "https://www.pinterest.ca/pin/811773901570938316/";
 }
 
-.hamburger {
-	--use-image: url("../images/icons/hamburger.png");
-	--citation-text: "Flaticon.com, Flaticon/See Icons";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/menus_10486773";
-}
-
-.happy-whale {
-	--use-image: url("../images/icons/happy-whale.png");
-	--citation-text: "Vecteezy, Nawaz Sharif";
-	--citation-full-URL: "https://www.vecteezy.com/vector-art/12097626-cute-blue-whale-jumping-humpback-happy-isolated-cartoon-animal-illustration-flat-style-sticker-icon-design-premium-logo-vector-mascot-character";
-}
-
 .hiking3 {
 	--use-image: url("../images/hiking3.jpg");
 	--citation-text: "East Coast Trail, Greg Locke";
@@ -309,12 +286,6 @@
 	--use-image: url("../video/index-video-poster.png");
 	--citation-text: "";
 	--citation-full-URL: "";
-}
-
-.instagram {
-	--use-image: url("../images/icons/instagram.png");
-	--citation-text: "Flaticon.com, Flaticon/Freepik";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/instagram_1384015";
 }
 
 .Jason-Asano {
@@ -464,19 +435,6 @@
 	--use-image: url("../images/Rufus-Remore.webp");
 	--citation-text: "He Who Fights with Monsters fandom, AI-generated";
 	--citation-full-URL: "https://he-who-fights-with-monsters.fandom.com/wiki/Rufus_Remore";
-}
-
-.scroll-arrow {
-	--use-image: url("../images/icons/scroll-arrow.png");
-	--citation-text: "Flaticon.com, Flaticon/Freepik";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/scroll-down-arrow_2117";
-}
-
-.scroll-arrow-up {
-	--use-image: url("../images/icons/scroll-arrow.png");
-	transform: rotate(180deg);
-	--citation-text: "Flaticon.com, Flaticon/Freepik";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/scroll-down-arrow_2117";
 }
 
 .Signal-Hill {
@@ -629,12 +587,6 @@
 	--citation-full-URL: "https://www.yellowbellybrewery.com/wp-content/uploads/2021/07/yellowbelly-brewery-pub-floor.jpg";
 }
 
-.youtube {
-	--use-image: url("../images/icons/youtube.png");
-	--citation-text: "Flaticon.com, Flaticon/riajulislam";
-	--citation-full-URL: "https://www.flaticon.com/free-icon/youtube_4494467";
-}
-
 /*	------------------------------------------------------------
 	Source videos used to contruct the videos shown on the site,
 	but not shown in their original format...
@@ -680,4 +632,87 @@
 	--use-image: url("http://i.ytimg.com/vi/WXlG2pGM6d8/maxresdefault.jpg");
 	--citation-text: "Youtube, Newfoundland & Labrador Tourism";
 	--citation-full-URL: "https://www.youtube.com/watch?v=WXlG2pGM6d8";
+}
+
+/*	--------
+	Icons...
+	-------- */
+
+.camera {
+	--use-image: url("../images/icons/camera.png");
+	--citation-text: "Flaticon.com, Flaticon/Good Ware";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/camera_685655?term=camera&page=1&position=2&origin=tag&related_id=685655";
+}
+
+.clock {
+	--use-image: url("../images/icons/clock.png");
+	--citation-text: "Flaticon.com, IconMarketPK";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/memories_10016840";
+}
+
+.closeX {
+	--use-image: url("../images/icons/closeX.png");
+	--citation-text: "Flaticon.com, Flaticon/bsd";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/cross_8867444?term=close+button&page=1&position=22&origin=tag&related_id=8867444";
+}
+
+.email {
+	--use-image: url("../images/icons/email.png");
+	--citation-text: "Flaticon.com, IconMarketPK";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/email_3482194";
+}
+
+.facebook {
+	--use-image: url("../images/icons/facebook.png");
+	--citation-text: "Flaticon.com, Flaticon/Pixel Perfect";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/facebook_733603";
+}
+
+.hamburger {
+	--use-image: url("../images/icons/hamburger.png");
+	--citation-text: "Flaticon.com, Flaticon/See Icons";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/menus_10486773";
+}
+
+.happy-whale {
+	--use-image: url("../images/icons/happy-whale.png");
+	--citation-text: "Vecteezy, Nawaz Sharif";
+	--citation-full-URL: "https://www.vecteezy.com/vector-art/12097626-cute-blue-whale-jumping-humpback-happy-isolated-cartoon-animal-illustration-flat-style-sticker-icon-design-premium-logo-vector-mascot-character";
+}
+
+.instagram {
+	--use-image: url("../images/icons/instagram.png");
+	--citation-text: "Flaticon.com, Flaticon/Freepik";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/instagram_1384015";
+}
+
+.location {
+	--use-image: url("../images/icons/location-pin.png");
+	--citation-text: "Flaticon.com, IconMarketPK";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/location-pin_2776077";
+}
+
+.phone {
+	--use-image: url("../images/icons/phone-call.png");
+	--citation-text: "Flaticon.com, IconMarketPK";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/phone-call_11712734";
+}
+
+.scroll-arrow {
+	--use-image: url("../images/icons/scroll-arrow.png");
+	--citation-text: "Flaticon.com, Flaticon/Freepik";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/scroll-down-arrow_2117";
+}
+
+.scroll-arrow-up {
+	--use-image: url("../images/icons/scroll-arrow.png");
+	transform: rotate(180deg);
+	--citation-text: "Flaticon.com, Flaticon/Freepik";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/scroll-down-arrow_2117";
+}
+
+.youtube {
+	--use-image: url("../images/icons/youtube.png");
+	--citation-text: "Flaticon.com, Flaticon/riajulislam";
+	--citation-full-URL: "https://www.flaticon.com/free-icon/youtube_4494467";
 }
