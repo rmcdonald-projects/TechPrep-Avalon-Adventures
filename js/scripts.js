@@ -313,7 +313,21 @@ const pauseObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: videoThreshold });
 
 videos.forEach(element => {
-    pauseObserver.observe(element);
+    if (element.canPlayType(`video/mp4`)) {
+        pauseObserver.observe(element);
+        element.addEventListener(`error`, function (e) {
+            console.log(`hey`, e);
+            hideVideo(element);
+        })
+        let vidSource = document.querySelector(`source`);
+        console.log(vidSource);
+        if (vidSource) {
+            vidSource.addEventListener(`error`, function (e) {
+                console.log(`they`, e);
+                hideVideo(element);
+            })
+        }
+    }
 });
 
 if (slideshowDiv) {
@@ -1024,7 +1038,7 @@ function updateCitationLinks() {
         elem.childNodes.forEach(kid => {
             if (!citeURL && kid.tagName) {
                 let u = getComputedStyle(kid).getPropertyValue('--citation-full-URL') || false;
-                if (u) { citeURL = u.replace(/"/g, ``).replace(/'/g,``); }
+                if (u) { citeURL = u.replace(/"/g, ``).replace(/'/g, ``); }
             }
         })
         if (citeURL) {
@@ -1032,5 +1046,21 @@ function updateCitationLinks() {
             elem.setAttribute(`href`, citeURL);
         }
     })
+    return;
+}
+
+/*  -----------------------------------------------------------
+    Hide video elements and overlays when video errors occur...
+    ----------------------------------------------------------- */
+function hideVideo(vid) {
+    let hnv = document.querySelector(`.hero-novideo`);
+    if (hnv) {
+        hnv.style.display = `block`;
+        vid.style.display = `none`;
+    }
+    let vho = document.querySelector(`.hero-overlay`);
+    if (vho) {
+        vho.style.display = `none`;
+    }
     return;
 }
