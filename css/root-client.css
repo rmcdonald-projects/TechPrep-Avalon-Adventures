@@ -60,6 +60,12 @@
     --font-size-titanic: calc(var(--font-size-huge) * 1.5);
     --line-height-titanic: calc(1ex / 0.42);
     --font-margin-titanic: calc(.5ex / 0.42) 0;
+    --font-size-ridiculous: calc(var(--font-size-titanic) * 1.5);
+    --line-height-ridiculous: calc(1ex / 0.42);
+    --font-margin-ridiculous: calc(.5ex / 0.42) 0;
+    --font-size-cosmic: calc(var(--font-size-ridiculous) * 1.5);
+    --line-height-cosmic: calc(1ex / 0.42);
+    --font-margin-cosmic: calc(.5ex / 0.42) 0;
     color-scheme: light dark;
 }
 

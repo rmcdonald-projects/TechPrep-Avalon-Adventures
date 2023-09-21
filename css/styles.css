@@ -81,7 +81,8 @@ h1 {
 	margin-bottom: .75rem;
 	padding-top: .5rem;
 	padding-left: 2rem;
-	font-size: var(--font-size-xlarge);
+	font-size: var(--font-size-titanic);
+	line-height: var(--line-height-titanic);
 	font-weight: normal;
 }
 
@@ -224,13 +225,6 @@ video {
 .big-box {
 	height: 80%;
 	width: 80%;
-}
-
-.big-text {
-	font-size: var(--font-size-titanic);
-	line-height: var(--line-height-titanic);
-	margin: var(--font-margin-titanic);
-	font-weight: bold;
 }
 
 .blankspace {
@@ -383,6 +377,13 @@ video {
 	column-gap: 0;
 }
 
+.cosmic-text {
+	font-size: var(--font-size-cosmic);
+	line-height: var(--line-height-cosmic);
+	margin: var(--font-margin-cosmic);
+	font-weight: bold;
+}
+
 .dangling {
 	--end-rotate-angle: 5deg;
 	animation: dangling calc(3 * var(--transition-duration-medium));
@@ -515,6 +516,17 @@ video {
 	width: 100%;
 }
 
+.hero-grid {
+	height: 100%;
+	width: 90%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 2rem;
+	column-gap: 2vw;
+	align-items: center;
+	justify-content: center;
+}
+
 .hero-novideo {
 	display: none;
 	position: relative;
@@ -582,6 +594,26 @@ video {
 	border-top: 1px solid;
 	border-bottom: 3px solid;
 	border-image: var(--use-border-image);
+}
+
+.hero-text {
+	font-size: var(--font-size-ridiculous);
+	line-height: var(--line-height-ridiculous);
+	margin: var(--font-margin-ridiculous);
+	font-weight: bold;
+}
+
+.hero-text-big {
+	font-size: var(--font-size-cosmic);
+	line-height: var(--line-height-cosmic);
+	margin: var(--font-margin-cosmic);
+	font-weight: bold;
+}
+
+.hero-text-small {
+	font-size: var(--font-size-huge);
+	line-height: var(--line-height-huge);
+	font-weight: bold;
 }
 
 .hero-video {
@@ -842,8 +874,20 @@ video {
 	font-weight: bold;
 }
 
+.ridiculous-text {
+	font-size: var(--font-size-ridiculous);
+	line-height: var(--line-height-ridiculous);
+	margin: var(--font-margin-ridiculous);
+	font-weight: bold;
+}
+
 .scroll-in {
 	animation: scroll-in var(--transition-duration-medium);
+}
+
+.slanted {
+	font-style: italic;
+	transform: rotate(-8deg) skew(-8deg);
 }
 
 .slide {
@@ -1063,9 +1107,20 @@ video {
 	margin-bottom: .5rem;
 }
 
+.text-center {
+	text-align: center;
+}
+
 .three-quarter-bg-colour {
 	background-color: rgba(var(--bg-colour-RGB), .75);
 	border-radius: 2rem;
+}
+
+.titanic-text {
+	font-size: var(--font-size-titanic);
+	line-height: var(--line-height-titanic);
+	margin: var(--font-margin-titanic);
+	font-weight: bold;
 }
 
 .tooltip {
@@ -1108,13 +1163,16 @@ video {
 }
 
 .two-column-container {
-	background-color: var(--bg-colour);
 	padding: 2rem 2vw;
 	border-radius: 2rem 0 0 2rem;
 }
 
 .two-column-container:nth-child(2n) {
 	border-radius: 0 2rem 2rem 0;
+}
+
+.use-bg-colour {
+	background-color: var(--bg-colour);
 }
 
 .user-directions {

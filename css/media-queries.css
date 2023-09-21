@@ -39,8 +39,6 @@
 	h1 {
 		left: 0;
 		padding-left: 1rem;
-		font-size: var(--font-size-huge);
-		line-height: var(--line-height-huge);
 	}
 
 	h3 {
@@ -250,6 +248,16 @@
 		column-gap: 4vw;
 	}
 
+	.hero-grid {
+		width: 96%;
+		grid-template-columns: 1fr;
+		margin: 0;
+		row-gap: 10vh;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+	
 	.hero-novideo {
 		display: block;
 	}
@@ -376,10 +384,6 @@
 		width: 100%;
 		padding: 0 2vw;
 		border: none;
-	}
-
-	.two-column-container:nth-child(2n) {
-		order: -1;
 	}
 
 	/*	Images better suited to mobile/portrait screens... */
