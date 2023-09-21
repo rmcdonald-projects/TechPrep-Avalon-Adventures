@@ -122,6 +122,10 @@
 	row-gap: 1vh;
 }
 
+.two-column-container {
+	border-radius: 2rem 0 0 2rem;
+}
+
 .two-column-container:nth-child(2n) {
-	order: -1;
+	border-radius: 0 2rem 2rem 0;
 }

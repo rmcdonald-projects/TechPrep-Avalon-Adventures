@@ -352,11 +352,6 @@
 		z-index: 7;
 	}
 
-	/*	This relies on the :has pseudo-class, which Firefox does not currently support (Sep 2023). */
-	.split-left:has(.split-bottom):has(div:nth-of-type(even).active) {
-		background-color: var(--medium-colour2);
-	}
-
 	.split-right {
 		grid-area: single-screen;
 		height: 90%;
@@ -384,8 +379,13 @@
 		width: 100%;
 		padding: 0 2vw;
 		border: none;
+		border-radius: 2rem;
 	}
 
+	.two-column-container:nth-child(2n) {
+		order: -1;
+	}
+	
 	/*	Images better suited to mobile/portrait screens... */
 
 	.Ferryland-picnic {
